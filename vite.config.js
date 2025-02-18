@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "helloagent", // Replace with your actual repo name
+  base: "/your-repo-name/", // Replace with your actual repo name
 });
