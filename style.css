@@ -3422,3 +3422,8 @@ p{
     }
   }
 }
+
+.colls h2{font-size:86px;
+line-height: 1.2em;}
+.colls:hover h2{color:#fff;}
+.colls:hover p{color:#fff;}
