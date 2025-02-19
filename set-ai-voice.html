@@ -14,88 +14,110 @@
     <div class="flex justify-between items-start min-h-screen relative">
 
         <!-- SIDEBAR -->
-        <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
-                 overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl">
-            <!-- Header with brand + hamburger -->
-            <div class="flex items-center justify-between p-4 bg-white">
-                <div class="flex items-center space-x-2">
-                    <img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" />
-                </div>
-                <button id="hamburgerBtn" class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none">
-                    <!-- Hamburger Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+        <aside
+        id="sidebar"
+        class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
+               overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl">
+        <!-- Header with brand + hamburger -->
+        <div class="flex items-center justify-between p-4 bg-white">
+          <div class="flex items-center space-x-2">
+            <a href="/helloagent/"><img
+              src="images/hellog-agent-logo.svg"
+              alt="Logo"
+              class=" rounded-full"
+            /></a>
+          </div>
+          <button
+            id="hamburgerBtn"
+            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
 
-            <!-- User Info -->
-            <div class="flex items-center p-4 space-x-2 bg-lightGray">
-                <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
-                <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}
-                </p>
-            </div>
+        <!-- User Info -->
+        <div class="flex items-center p-4 space-x-2 bg-lightGray">
+          <img
+            src="images/user-image.png"
+            alt="User"
+            class="w-8 h-8 rounded-full"
+          />
+          <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
+        </div>
 
-            <!-- NAVIGATION -->
-            <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
-                <!-- Home Link -->
-                <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    <!-- Replace with your home icon -->
-                    <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-                    <span class="ml-3 sidebar-text">Home</span>
-                </a>
+        <!-- NAVIGATION -->
+        <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
+          <!-- Home Link -->
+          <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              <!-- Replace with your home icon -->
+              <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+              <span class="ml-3 sidebar-text">Home</span>
+          </a>
 
-                <!-- Call Logs Link -->
-                <a href="/call-logs.html"
-                    class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    <!-- Replace with your call logs icon -->
-                    <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-                    <span class="ml-3 sidebar-text">Call Logs</span>
-                </a>
+          <!-- Call Logs Link -->
+          <a href="/helloagent/call-logs.html"
+              class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              <!-- Replace with your call logs icon -->
+              <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+              <span class="ml-3 sidebar-text">Call Logs</span>
+          </a>
 
-                <!-- SETTINGS (with Submenu) -->
-                <div>
-                    <!-- Settings Toggle -->
-                    <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
-                       dark:hover:teal focus:outline-none">
-                        <!-- Replace with your settings icon -->
-                        <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-                        <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-                        <!-- Optional arrow icon or image to indicate dropdown -->
-                        <i class="ri-arrow-down-s-line"></i>
-                    </button>
+          <!-- SETTINGS (with Submenu) -->
+          <div>
+              <!-- Settings Toggle -->
+              <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
+                 dark:hover:teal focus:outline-none">
+                  <!-- Replace with your settings icon -->
+                  <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+                  <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
+                  <!-- Optional arrow icon or image to indicate dropdown -->
+                  <i class="ri-arrow-down-s-line"></i>
+              </button>
 
-                    <!-- Settings Submenu -->
-                    <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                        <a href="/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
-                            Set Voice
-                        </a>
-                        <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                            Voice Profiles
-                        </a>
-                        <a href="/ai-voice-creation" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                            Voice Creations
-                        </a>
-                        <a href="/ai-voice-collection" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                            Voice Collection
-                        </a>
-                    </div>
-                </div>
+              <!-- Settings Submenu -->
+              <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+                  <a href="/helloagent/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
+                      Set Voice
+                  </a>
+                  <a href="/helloagent/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                      Voice Profiles
+                  </a>
+                  <a href="/helloagent/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                      Voice Creations
+                  </a>
+                  <a href="/helloagent/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                      Voice Collection
+                  </a>
+              </div>
+          </div>
 
-                <!-- Help Link -->
-                <a href="/help" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    <!-- Replace with your help icon -->
-                    <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-                    <span class="ml-3 sidebar-text">Help</span>
-                </a>
-            </nav>
+          <!-- Help Link -->
+          <a href="/helloagent/help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              <!-- Replace with your help icon -->
+              <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+              <span class="ml-3 sidebar-text">Help</span>
+          </a>
+        </nav>
 
-            <!-- Dark/Light Mode Toggle at the Bottom -->
-            <div class="p-4 flex justify-center">
-                <img src="images/toggle.png" alt="">
-            </div>
-        </aside>
+        <!-- Dark/Light Mode Toggle at the Bottom -->
+        <div class="p-4 flex justify-center">
+         <img src="images/toggle.png" alt="">
+        </div>
+      </aside>
         <!-- END SIDEBAR -->
 
         <!-- MAIN CONTENT -->
