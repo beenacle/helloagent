@@ -1,264 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Heroicons (for icons) -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  </head>
-  <body class="bg-gray-50">
 
-    <!-- WRAPPER -->
-    <div class="flex justify-between items-start min-h-screen relative">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Heroicons (for icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
 
-      <!-- SIDEBAR -->
-      <aside
-        id="sidebar"
-        class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
+<body class="bg-gray-50">
+
+  <!-- WRAPPER -->
+  <div class="flex justify-between items-start min-h-screen relative">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
                overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl">
-        <!-- Header with brand + hamburger -->
-        <div class="flex items-center justify-between p-4 bg-white">
-          <div class="flex items-center space-x-2">
-            <a href="/helloagent/"><img
-              src="images/hellog-agent-logo.svg"
-              alt="Logo"
-              class=" rounded-full"
-            /></a>
-          </div>
-          <button
-            id="hamburgerBtn"
-            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none"
-          >
-            <!-- Hamburger Icon -->
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+      <!-- Header with brand + hamburger -->
+      <div class="flex items-center justify-between p-4 bg-white">
+        <div class="flex items-center space-x-2">
+          <a href="/helloagent/"><img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" /></a>
         </div>
+        <button id="hamburgerBtn" class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
 
-        <!-- User Info -->
-        <div class="flex items-center p-4 space-x-2 bg-lightGray">
-          <img
-            src="images/user-image.png"
-            alt="User"
-            class="w-8 h-8 rounded-full"
-          />
-          <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
-        </div>
+      <!-- User Info -->
+      <div class="flex items-center p-4 space-x-2 bg-lightGray">
+        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+        <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
+      </div>
 
-        <!-- NAVIGATION -->
-         <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
-          <!-- Home Link -->
-          <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-            <!-- Replace with your home icon -->
-            <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text">Home</span>
+      <!-- NAVIGATION -->
+      <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
+        <!-- Home Link -->
+        <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+          <!-- Replace with your home icon -->
+          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text">Home</span>
         </a>
 
         <!-- Call Logs Link -->
-        <a href="call-logs.html"
-            class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-            <!-- Replace with your call logs icon -->
-            <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text">Call Logs</span>
+        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+          <!-- Replace with your call logs icon -->
+          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text">Call Logs</span>
         </a>
 
         <!-- SETTINGS (with Submenu) -->
         <div>
-            <!-- Settings Toggle -->
-            <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
+          <!-- Settings Toggle -->
+          <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
                dark:hover:teal focus:outline-none">
-                <!-- Replace with your settings icon -->
-                <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-                <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-                <!-- Optional arrow icon or image to indicate dropdown -->
-                <i class="ri-arrow-down-s-line"></i>
-            </button>
+            <!-- Replace with your settings icon -->
+            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
+            <!-- Optional arrow icon or image to indicate dropdown -->
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
 
-            <!-- Settings Submenu -->
-            <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                <a href="set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
-                    Set Voice
-                </a>
-                <a href="ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    Voice Profiles
-                </a>
-                <a href="ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    Voice Creations
-                </a>
-                <a href="ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                    Voice Collection
-                </a>
-            </div>
+          <!-- Settings Submenu -->
+          <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+            <a href="set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
+              Set Voice
+            </a>
+            <a href="ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              Voice Profiles
+            </a>
+            <a href="ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              Voice Creations
+            </a>
+            <a href="ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+              Voice Collection
+            </a>
+          </div>
         </div>
 
         <!-- Help Link -->
         <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-            <!-- Replace with your help icon -->
-            <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text">Help</span>
+          <!-- Replace with your help icon -->
+          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text">Help</span>
         </a>
-        </nav>
+      </nav>
 
-        <!-- Dark/Light Mode Toggle at the Bottom -->
-        <div class="p-4 flex justify-center">
-         <img src="images/toggle.png" alt="">
-        </div>
-      </aside>
-      <!-- END SIDEBAR -->
+      <!-- Dark/Light Mode Toggle at the Bottom -->
+      <div class="p-4 flex justify-center">
+        <img src="images/toggle.png" alt="">
+      </div>
+    </aside>
+    <!-- END SIDEBAR -->
 
-      <!-- MAIN CONTENT -->
-      <main style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;" class="flex-1 p-6">
-        <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-2xl">
+    <!-- MAIN CONTENT -->
+    <main
+      style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;"
+      class="flex-1 p-6">
+      <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-5xl lg:px-10">
         <!-- Example content header -->
-            <header class="mb-6 relative">
-                <h2 class="text-3xl text-center text-darkTeal font-bold">Home</h2>
-                <img class="mx-auto my-6" src="images/user-edit-image.png" alt="">
-                <img class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="">
-              </header>
-      
-              <!-- Example form content (use your own form) -->
-              <section class="rounded space-y-4">
-                <div class="">
-                  <label for="voiceName" class="block font-semibold text-xl mb-2 text-darkTeal">Name of AI Voice</label>
-                  <input
-                    type="text"
-                    id="voiceName"
-                    class="w-full border border-gray-300 px-3 rounded py-4 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="Enter AI Voice name"
-                  />
-                </div>
-      
-                <div>
-                  <label for="voiceID" class="block font-semibold text-xl mb-2 text-darkTeal">Voice ID for AI Voice</label>
-                  <input
-                    type="text"
-                    id="voiceID"
-                    class="w-full border border-gray-300 px-3 rounded py-4 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="Enter Voice ID"
-                  />
-                </div>
-      
-                <div>
-                  <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Opening Remark</label>
-                  <input
-                  type="text"
-                  id="voiceName"
-                  class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
-                         focus:outline-none focus:ring-2 focus:ring-teal-200"
-                  placeholder="This is the exact phrase that the AI will say first when answering the call"
-                />
-                  <span class="text-darkGray text-sm">Note: In the instructions, [callerPhoneNumber] can be used to refer to the caller's phone number, and [callSid] is the Twilio ID of the call.</span>
-                </div>
+        <header class="mb-6 relative lg:flex-row flex-col flex justify-between lg:items-center">
+          <div class="left-col">
+            <h2 class="text-3xl text-darkTeal font-bold">Home</h2>
+            <p>Welcome back <span class="font-bold">User!</span></p>
+          </div>
+          <div class="mb-6 flex justify-center p-[2px] border-black border rounded-lg overflow-hidden">
+            <input type="text" placeholder="Search here..."
+              class="px-4 py-2 w-full md:w-80  rounded-l-md focus:outline-none">
+            <button class="px-4 py-2 bg-teal text-white rounded-r-md"><svg xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+              </svg></button>
+          </div>
+        </header>
 
-                <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Instruction for AI Voice</label>
-                    <div class="relative">
-                        <input
-                        type="text"
-                        id="voiceName"
-                        class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
-                               focus:outline-none focus:ring-2 focus:ring-teal-200"
-                        placeholder="Tell the AI what you want it to do, how to do it, when to do it, etc..."
-                      />
-                      <img class="absolute -right-10 top-4 cursor-pointer" src="images/delete-icon.svg" alt="">
-                    </div>
-                    <div class="my-5">
-                        <button type="submit" class="flex w-full justify-center rounded-full bg-teal px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-darkTeal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New Instruction</button>
-                      </div>
-                  </div>
-                 
-                  <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Description of AI Voice</label>
-                    <input
-                    type="text"
-                    id="voiceName"
-                    class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="ID of the AI Voice to be used"
-                  />
-                  </div>
-
-                  <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Helium form for AI Voice (Optional)</label>
-                  <select class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200" name="" id="">
-                    <option value="" class="w-14">Select the active Helium Form where the AI will save collected information. Ensure your instructions specify when to save.</option>
-                    <option value="">Option2</option>
-                    <option value="">Option3</option>
-                    <option value="">Option4</option>
-                    <option value="">Option5</option>
-                  </select>
-                <!-- Add more fields as needed... -->
-      
-                <button
-                  type="button"
-                  class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700"
-                >
-                  Save
-                </button>
-              </section>
+        <!-- Example form content (use your own form) -->
+        <div class="flex gap-4">
+          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <p class="leading-relaxed">Total Call</p>
+              <h2 class="title-font font-medium text-darkTeal text-[86px]">74</h2>
+            </div>
+          </div>
+          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <p class="leading-relaxed">Total Call</p>
+              <h2 class="title-font font-medium text-darkTeal text-[86px]">74</h2>
+            </div>
+          </div>
+          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <p class="leading-relaxed">Total Call</p>
+              <h2 class="title-font font-medium text-[86px] text-darkTeal">74</h2>
+            </div>
+          </div>
+          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <p class="leading-relaxed">Total Call</p>
+              <h2 class="title-font font-medium text-darkTeal text-[86px]">74</h2>
+            </div>
+          </div>
         </div>
-        
-      </main>
-      <!-- END MAIN CONTENT -->
-    </div>
-    <!-- END WRAPPER -->
+      </div>
 
-    <!-- Collapsing Sidebar Script -->
+    </main>
+    <!-- END MAIN CONTENT -->
+  </div>
+  <!-- END WRAPPER -->
 
-    <script>const sidebar = document.getElementById("sidebar");
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const settingsBtn = document.getElementById("settingsBtn");
-      const settingsSubmenu = document.getElementById("settingsSubmenu");
-      const themeToggleBtn = document.getElementById("themeToggleBtn");
-      const sunIcon = document.getElementById("sunIcon");
-      const moonIcon = document.getElementById("moonIcon");
-      
-      // 1. Sidebar Collapse
-      hamburgerBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("w-64");
-        sidebar.classList.toggle("w-16");
-      
-        // Hide/show text labels
-        document.querySelectorAll(".sidebar-text").forEach((el) => {
-          el.classList.toggle("hidden");
-        });
-      
-        // Also hide submenus if you want them collapsed in minimal view
-        // settingsSubmenu.classList.add("hidden");
-      });
-      
-      // 2. Settings Dropdown
-      settingsBtn.addEventListener("click", () => {
-        settingsSubmenu.classList.toggle("hidden");
-      });
-      
-      // 3. Dark/Light Mode Toggle
-      themeToggleBtn.addEventListener("click", () => {
-        // Toggle 'dark' class on <html>
-        document.documentElement.classList.toggle("dark");
-      
-        // Switch icon visibility
-        sunIcon.classList.toggle("hidden");
-        moonIcon.classList.toggle("hidden");
-      });
-    </script>
+  <!-- Collapsing Sidebar Script -->
 
-  </body>
+  <script>const sidebar = document.getElementById("sidebar");
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const settingsBtn = document.getElementById("settingsBtn");
+    const settingsSubmenu = document.getElementById("settingsSubmenu");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    // 1. Sidebar Collapse
+    hamburgerBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("w-64");
+      sidebar.classList.toggle("w-16");
+
+      // Hide/show text labels
+      document.querySelectorAll(".sidebar-text").forEach((el) => {
+        el.classList.toggle("hidden");
+      });
+
+      // Also hide submenus if you want them collapsed in minimal view
+      // settingsSubmenu.classList.add("hidden");
+    });
+
+    // 2. Settings Dropdown
+    settingsBtn.addEventListener("click", () => {
+      settingsSubmenu.classList.toggle("hidden");
+    });
+
+    // 3. Dark/Light Mode Toggle
+    themeToggleBtn.addEventListener("click", () => {
+      // Toggle 'dark' class on <html>
+      document.documentElement.classList.toggle("dark");
+
+      // Switch icon visibility
+      sunIcon.classList.toggle("hidden");
+      moonIcon.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+
 </html>
