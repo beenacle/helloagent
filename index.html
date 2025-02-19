@@ -21,7 +21,7 @@
       <!-- Header with brand + hamburger -->
       <div class="flex items-center justify-between p-4 bg-white">
         <div class="flex items-center space-x-2">
-          <a href="/"><img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" /></a>
+          <a href="/helloagent/"><img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" /></a>
         </div>
         <button id="hamburgerBtn" class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none">
           <!-- Hamburger Icon -->
@@ -41,7 +41,7 @@
       <!-- NAVIGATION -->
       <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
         <!-- Home Link -->
-        <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+        <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
           <!-- Replace with your home icon -->
           <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text">Home</span>
@@ -102,7 +102,7 @@
     <main
       style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;"
       class="flex-1 p-6">
-      <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-5xl lg:px-10">
+      <div class="innerContainer md:mx-auto  md:w-full md:max-w-7xl lg:px-10">
         <!-- Example content header -->
         <header class="mb-6 relative lg:flex-row flex-col flex justify-between lg:items-center">
           <div class="left-col">
@@ -121,35 +121,35 @@
         </header>
 
         <!-- Example form content (use your own form) -->
-        <div class="flex gap-4">
-          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="border-2 border-gray-200 px-2 py-4 rounded-lg">
+        <div class="lg:flex md:flex gap-4 gap-y-2">
+          <div class="colls rounded-lg md:mt-0 mt-2 p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
+                        <div class="px-2 py-4 rounded-lg">
               <p class="leading-relaxed">Total Call</p>
-              <h2 class="title-font text-darkTeal font-bold">100</h2>
+              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
             </div>
           </div>
-          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="border-2 border-gray-200 px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Call</p>
-              <h2 class="title-font text-darkTeal font-bold">100</h2>
+          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
+                        <div class="px-2 py-4 rounded-lg">
+              <p class="leading-relaxed">Call Status</p>
+              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
             </div>
           </div>
-          <div class="colls rounded-lg  p-4 md:w-1/4 sm:w-1/2 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="border-2 border-gray-200 px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Call</p>
-              <h2 class="title-font text-darkTeal font-bold">100</h2>
+          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
+                        <div class="px-2 py-4 rounded-lg">
+              <p class="leading-relaxed">Total Leads</p>
+              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
             </div>
           </div>
           
-          <div class="colls rounded-lg  p-4 m4:w-1/4 sm:w-1/2 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="border-2 border-gray-200 px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Call</p>
-              <h2 class="title-font text-darkTeal font-bold">100</h2>
+          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
+                        <div class="px-2 py-4 rounded-lg">
+              <p class="leading-relaxed">Total Costs</p>
+              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
             </div>
           </div>
         </div>
-        <div class="voice-and-calls flex justify-between gap-4 my-6">
-          <div class="ai-voices bg-lightGray rounded-lg p-4 w-1/2">
+        <div class="voice-and-calls w-full flex lg:flex-row flex-col justify-between gap-4 mt-4 my-6">
+          <div class="ai-voices bg-lightGray rounded-lg p-4 lg:w-1/2 w-full">
             <div class="titleBox flex items-center justify-between">
               <h2 class="text-2xl font-bold text-darkTeal">AI Voices</h2>
               <button class="flex items-center justify-between bg-teal px-6 py-2 text-white rounded-full gap-2"><span>Add AI Voice</span>
@@ -159,7 +159,7 @@
             <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
 
             <div class="table-box w-full">
-              <table class="w-full mx-auto rounded-full text-sm md:text-[16px] text-darkTeal">
+              <table class="w-full mx-auto rounded-full text-sm md:text-[10px] text-darkTeal">
                 <thead>
                     <tr class="bg-darkTeal text-white">
                         <th class="py-3 px-4 w-1/4 border-r border-lightGray">Voice Name</th>
@@ -169,7 +169,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-darkGray border-b border-r">
+                    <tr class="border-b border-r">
                         <td class="py-2 px-4 border-r border-darkTeal">Grace</td>
                         <td class="py-2 px-4 border-r border-darkTeal">001</td>
                         <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
@@ -282,132 +282,132 @@
             </table>
             </div>
           </div>
-          <div class="call-logs">
-            <div class="ai-voices bg-lightGray rounded-lg p-4 w-1/2">
-              <div class="titleBox flex items-center justify-between">
-                <h2 class="text-2xl font-bold text-darkTeal">AI Voices</h2>
-                <button class="flex items-center justify-between bg-teal px-6 py-2 text-white rounded-full gap-2"><span>Add AI Voice</span>
-                  <i class="ri-add-circle-line"></i>
-                </button>
-              </div>
-              <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
-              <div clasy="table-box w-full">
-                <table class="w-full mx-auto rounded-full text-base text-darkTeal">
-                  <thead>
-                      <tr class="bg-darkTeal text-white">
-                          <th class="py-3 px-4 w-52 border-r border-lightGray">Time</th>
-                          <th class="py-3 px-4 w-52 border-r border-lightGray">Caller</th>
-                          <th class="py-3 px-4 w-52 border-r border-lightGray">Duration</th>
-                          <th class="py-3 px-4 w-1/4 border-r border-lightGray">Transcript</th>
-                          <th class="py-3 px-4 w-1/4">Recording</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr class="bg-lightGray border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-white border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-lightGray border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-white border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-lightGray border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-white border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-lightGray border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="p-2 border-r border-darkTeal">
-                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
-                      </td>
-                      <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
-                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      
-                      
-                      <tr>
-                          <td colspan="5" class="text-center bg-darkTeal text-white py-3 text-sm"><a href="#" class="font-semibold underline">Load More Calls...</a></td>
-                      </tr>
-                  </tbody>
-              </table>
-              </div>
+          <div class="call-logs bg-lightGray rounded-lg p-4 lg:w-1/2 w-full">
+            <div class="titleBox flex items-center justify-between">
+              <h2 class="text-2xl font-bold text-darkTeal">AI Voices</h2>
+              <div
+                        class="all-filter bg-teal text-white py-1 px-3 flex justify-between items-center rounded-full gap-4 ">
+                        <i class="text-xl  cursor-pointer ri-equalizer-line"></i> <span class="font-bold">All
+                            Filter</span> <i class="text-2xl ri-arrow-down-s-line cursor-pointer"></i> </div>
+            </div>
+            <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
+            <div clasy="table-box w-full">
+              <table class="call-log-table w-full mx-auto rounded-full text-[10px] text-darkTeal">
+                <thead>
+                    <tr class="bg-darkTeal text-white">
+                        <th class="py-3 px-4 w-52 border-r border-lightGray">Time</th>
+                        <th class="py-3 px-4 w-52 border-r border-lightGray">Caller</th>
+                        <th class="py-3 px-4 w-52 border-r border-lightGray">Duration</th>
+                        <th class="py-3 px-4 w-1/4 border-r border-lightGray">Transcript</th>
+                        <th class="py-3 px-4 w-1/4">Recording</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-lightGray border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-white border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-lightGray border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-white border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden" src="images/eye+file.svg" alt="" width="16">
+                        <span class="ply-reading text-white font-bold leading-3">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-lightGray border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-white border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    <tr class="bg-lightGray border-b border-r">
+                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                        <td class="p-2 border-r border-darkTeal">
+                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                    </td>
+                    <td class="p-2 border-r border-darkTeal">
+                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                    </td>
+                       
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td colspan="5" class="text-center bg-darkTeal text-white py-4 text-sm"><a href="#" class="font-semibold underline">Load More Calls...</a></td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
           </div>
         </div>

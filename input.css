@@ -43,3 +43,9 @@ p{
 #settingsSubmenu{
     padding-left: 3rem !important;
 }
+.colls h2{font-size:86px;
+    line-height: 1.2em;}
+    .colls:hover h2{color:#fff !important;}
+    .colls:hover p{color:#fff;}
+    .ply-reading {font-size: 10px !important;}
+    .white-play-icon{width: 18px;}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,134 +9,127 @@
     <!-- Heroicons (for icons) -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
+
 <body>
-     <!-- WRAPPER -->
-     <div class="flex justify-between items-start min-h-screen relative">
+    <!-- WRAPPER -->
+    <div class="flex justify-between items-start min-h-screen relative">
 
         <!-- SIDEBAR -->
-        <aside
-          id="sidebar"
-          class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
+        <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
                  overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl z-[1111]">
-          <!-- Header with brand + hamburger -->
-          <div class="flex items-center justify-between p-4 bg-white">
-            <div class="flex items-center space-x-2">
-              <a href="/"><img
-                src="images/hellog-agent-logo.svg"
-                alt="Logo"
-                class=" rounded-full"
-              /></a>
-            </div>
-            <button
-              id="hamburgerBtn"
-              class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none"
-            >
-              <!-- Hamburger Icon -->
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
-  
-          <!-- User Info -->
-          <div class="flex items-center p-4 space-x-2 bg-lightGray">
-            <img
-              src="images/user-image.png"
-              alt="User"
-              class="w-8 h-8 rounded-full"
-            />
-            <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
-          </div>
-  
-          <!-- NAVIGATION -->
-          <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
-            <!-- Home Link -->
-            <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                <!-- Replace with your home icon -->
-                <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-                <span class="ml-3 sidebar-text">Home</span>
-            </a>
-
-            <!-- Call Logs Link -->
-            <a href="/call-logs.html"
-                class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                <!-- Replace with your call logs icon -->
-                <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-                <span class="ml-3 sidebar-text">Call Logs</span>
-            </a>
-
-            <!-- SETTINGS (with Submenu) -->
-            <div>
-                <!-- Settings Toggle -->
-                <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
-                   dark:hover:teal focus:outline-none">
-                    <!-- Replace with your settings icon -->
-                    <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-                    <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-                    <!-- Optional arrow icon or image to indicate dropdown -->
-                    <i class="ri-arrow-down-s-line"></i>
-                </button>
-
-                <!-- Settings Submenu -->
-                <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                    <a href="/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
-                        Set Voice
-                    </a>
-                    <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                        Voice Profiles
-                    </a>
-                    <a href="/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                        Voice Creations
-                    </a>
-                    <a href="/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                        Voice Collection
-                    </a>
+            <!-- Header with brand + hamburger -->
+            <div class="flex items-center justify-between p-4 bg-white">
+                <div class="flex items-center space-x-2">
+                    <a href="/helloagent/"><img src="images/hellog-agent-logo.svg" alt="Logo"
+                            class=" rounded-full" /></a>
                 </div>
+                <button id="hamburgerBtn" class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none">
+                    <!-- Hamburger Icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Help Link -->
-            <a href="/help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                <!-- Replace with your help icon -->
-                <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-                <span class="ml-3 sidebar-text">Help</span>
-            </a>
-          </nav>
-  
-          <!-- Dark/Light Mode Toggle at the Bottom -->
-          <div class="p-4 flex justify-center">
-           <img src="images/toggle.png" alt="">
-          </div>
+            <!-- User Info -->
+            <div class="flex items-center p-4 space-x-2 bg-lightGray">
+                <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+                <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}
+                </p>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
+                <!-- Home Link -->
+                <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                    <!-- Replace with your home icon -->
+                    <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+                    <span class="ml-3 sidebar-text">Home</span>
+                </a>
+
+                <!-- Call Logs Link -->
+                <a href="/helloagent/call-logs.html"
+                    class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                    <!-- Replace with your call logs icon -->
+                    <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+                    <span class="ml-3 sidebar-text">Call Logs</span>
+                </a>
+
+                <!-- SETTINGS (with Submenu) -->
+                <div>
+                    <!-- Settings Toggle -->
+                    <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
+                   dark:hover:teal focus:outline-none">
+                        <!-- Replace with your settings icon -->
+                        <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+                        <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
+                        <!-- Optional arrow icon or image to indicate dropdown -->
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+
+                    <!-- Settings Submenu -->
+                    <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+                        <a href="/helloagent/set-ai-voice.html"
+                            class="block px-3 py-2 rounded lightGray dark:hover:teal">
+                            Set Voice
+                        </a>
+                        <a href="/helloagent/ai-voice-profile.html"
+                            class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                            Voice Profiles
+                        </a>
+                        <a href="/helloagent/ai-voice-creation.html"
+                            class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                            Voice Creations
+                        </a>
+                        <a href="/helloagent/ai-voice-collection.html"
+                            class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                            Voice Collection
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Help Link -->
+                <a href="/helloagent/help.html"
+                    class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                    <!-- Replace with your help icon -->
+                    <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+                    <span class="ml-3 sidebar-text">Help</span>
+                </a>
+            </nav>
+
+            <!-- Dark/Light Mode Toggle at the Bottom -->
+            <div class="p-4 flex justify-center">
+                <img src="images/toggle.png" alt="">
+            </div>
         </aside>
         <!-- END SIDEBAR -->
-  
+
         <!-- MAIN CONTENT -->
         <main
             style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;"
             class="flex-1 flex-col mx-auto lg:py-6 lg:px-14 md:p-5 sm:p-4 p-2   ">
-           
+
             <div class="mx-auto text-center">
-                <div class="mb-6 flex justify-center p-[2px] border-black border w-fit mx-auto rounded-lg overflow-hidden">
-                    <input type="text" placeholder="Search here..." class="px-4 py-2 w-full md:w-80  rounded-l-md focus:outline-none">
-                    <button class="px-4 py-2 bg-teal text-white rounded-r-md"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
-                    </svg></button>
+                <div
+                    class="mb-6 flex justify-center p-[2px] border-black border w-fit mx-auto rounded-lg overflow-hidden">
+                    <input type="text" placeholder="Search here..."
+                        class="px-4 py-2 w-full md:w-80  rounded-l-md focus:outline-none">
+                    <button class="px-4 py-2 bg-teal text-white rounded-r-md"><svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                        </svg></button>
                 </div>
-            <!-- Example content header -->
-            <header class="lg:mb-6 md:mb-4 lg:mt-20 mt-10 mb-2 relative flex lg:flex-row flex-col">
-                <h2 class="text-3xl text-center text-darkTeal font-bold w-[100%]">Call Logs</h2>
-                <div class="all-filter lg:w-[25%] w-[80%] mx-auto lg:mt-0 md:mt-6 mt-4 bg-teal text-white h-12 px-6 flex justify-between items-center rounded-full lg:absolute static md:right-0 md:top-0 md:-translate-y-1/4"><i class="text-xl  cursor-pointer ri-equalizer-line"></i> <span class="font-bold">All Filter</span> <i class="text-2xl ri-arrow-down-s-line cursor-pointer"></i> </div>
-            </header>                <div class="mt-6 overflow-x-scroll rounded-lg">
+                <!-- Example content header -->
+                <header class="lg:mb-6 md:mb-4 lg:mt-20 mt-10 mb-2 relative flex lg:flex-row flex-col">
+                    <h2 class="text-3xl text-center text-darkTeal font-bold w-[100%]">Call Logs</h2>
+                    <div
+                        class="all-filter lg:w-[25%] w-[80%] mx-auto lg:mt-0 md:mt-6 mt-4 bg-teal text-white h-12 px-6 flex justify-between items-center rounded-full lg:absolute static md:right-0 md:top-0 md:-translate-y-1/4">
+                        <i class="text-xl  cursor-pointer ri-equalizer-line"></i> <span class="font-bold">All
+                            Filter</span> <i class="text-2xl ri-arrow-down-s-line cursor-pointer"></i> </div>
+                </header>
+                <div class="mt-6 overflow-x-scroll rounded-lg">
                     <table class="w-full mx-auto rounded-full text-sm md:text-[14px] lg:text-[20px] text-darkTeal">
                         <thead>
                             <tr class="bg-darkTeal text-white">
@@ -151,125 +145,186 @@
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-white border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-lightGray border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-white border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-lightGray border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-white border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-lightGray border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-white border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-lightGray border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
                             <tr class="bg-white border-b border-r">
                                 <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">001</td>
                                 <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                            </td>
-                            <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                                <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                            </td>
-                               
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read
+                                            Transcript</span></a>
+                                </td>
+                                <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a
+                                        class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto"
+                                        href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
+                                        <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play
+                                            Recording</span></a>
+                                </td>
+
                             </tr>
-                            
+
                             <tr>
-                                <td colspan="5" class="text-center bg-darkTeal text-white py-3 text-sm"><a href="#" class="font-semibold underline">Load More Calls...</a></td>
+                                <td colspan="5" class="text-center bg-darkTeal text-white py-3 text-sm"><a href="#"
+                                        class="font-semibold underline">Load More Calls...</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -277,44 +332,45 @@
             </div>
         </main>
         <!-- END MAIN CONTENT -->
-      </div>
+    </div>
 
-      <script>const sidebar = document.getElementById("sidebar");
+    <script>const sidebar = document.getElementById("sidebar");
         const hamburgerBtn = document.getElementById("hamburgerBtn");
         const settingsBtn = document.getElementById("settingsBtn");
         const settingsSubmenu = document.getElementById("settingsSubmenu");
         const themeToggleBtn = document.getElementById("themeToggleBtn");
         const sunIcon = document.getElementById("sunIcon");
         const moonIcon = document.getElementById("moonIcon");
-        
+
         // 1. Sidebar Collapse
         hamburgerBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("w-64");
-          sidebar.classList.toggle("w-16");
-        
-          // Hide/show text labels
-          document.querySelectorAll(".sidebar-text").forEach((el) => {
-            el.classList.toggle("hidden");
-          });
-        
-          // Also hide submenus if you want them collapsed in minimal view
-          // settingsSubmenu.classList.add("hidden");
+            sidebar.classList.toggle("w-64");
+            sidebar.classList.toggle("w-16");
+
+            // Hide/show text labels
+            document.querySelectorAll(".sidebar-text").forEach((el) => {
+                el.classList.toggle("hidden");
+            });
+
+            // Also hide submenus if you want them collapsed in minimal view
+            // settingsSubmenu.classList.add("hidden");
         });
-        
+
         // 2. Settings Dropdown
         settingsBtn.addEventListener("click", () => {
-          settingsSubmenu.classList.toggle("hidden");
+            settingsSubmenu.classList.toggle("hidden");
         });
-        
+
         // 3. Dark/Light Mode Toggle
         themeToggleBtn.addEventListener("click", () => {
-          // Toggle 'dark' class on <html>
-          document.documentElement.classList.toggle("dark");
-        
-          // Switch icon visibility
-          sunIcon.classList.toggle("hidden");
-          moonIcon.classList.toggle("hidden");
+            // Toggle 'dark' class on <html>
+            document.documentElement.classList.toggle("dark");
+
+            // Switch icon visibility
+            sunIcon.classList.toggle("hidden");
+            moonIcon.classList.toggle("hidden");
         });
-      </script>
+    </script>
 </body>
+
 </html>

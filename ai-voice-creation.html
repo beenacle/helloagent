@@ -21,7 +21,7 @@
         <!-- Header with brand + hamburger -->
         <div class="flex items-center justify-between p-4 bg-white">
           <div class="flex items-center space-x-2">
-            <a href="/"><img
+            <a href="/helloagent/"><img
               src="images/hellog-agent-logo.svg"
               alt="Logo"
               class=" rounded-full"
@@ -62,14 +62,14 @@
         <!-- NAVIGATION -->
         <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
           <!-- Home Link -->
-          <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+          <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your home icon -->
               <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
               <span class="ml-3 sidebar-text">Home</span>
           </a>
 
           <!-- Call Logs Link -->
-          <a href="/call-logs.html"
+          <a href="/helloagent/call-logs.html"
               class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your call logs icon -->
               <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
@@ -90,23 +90,23 @@
 
               <!-- Settings Submenu -->
               <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                  <a href="/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
+                  <a href="/helloagent/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
                       Set Voice
                   </a>
-                  <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="/helloagent/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Profiles
                   </a>
-                  <a href="/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="/helloagent/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Creations
                   </a>
-                  <a href="/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="/helloagent/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Collection
                   </a>
               </div>
           </div>
 
           <!-- Help Link -->
-          <a href="/help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+          <a href="/helloagent/help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your help icon -->
               <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
               <span class="ml-3 sidebar-text">Help</span>
@@ -121,17 +121,17 @@
       <!-- END SIDEBAR -->
 
       <!-- MAIN CONTENT -->
-      <main style="background-image: url(/images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;" class="flex-1 p-6">
-        <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-2xl">
+      <main style="background-image: url(/images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;" class="flex-1 p-6 ">
+        <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-2xl ">
         <!-- Example content header -->
             <header class="mb-6 relative">
                 <h2 class="text-3xl text-center text-darkTeal font-bold">AI Voice Creation</h2>
-                <img class="mx-auto my-6" src="images/user-edit-image.png" alt="">
+                <img id="openPopup" class="mx-auto cursor-pointer my-6" src="images/user-edit-image.png" alt="">
                 <img class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="">
               </header>
       
               <!-- Example form content (use your own form) -->
-              <section class="rounded space-y-4">
+              <section class="rounded space-y-4 relative">
                 <div class="">
                   <label for="voiceName" class="block font-semibold text-xl mb-2 text-darkTeal">Name of AI Voice</label>
                   <input
@@ -212,6 +212,14 @@
                 >
                   Save
                 </button>
+                <div id="popup" class="fixed left-10 top-0 items-center justify-center bg-black bg-opacity-50 hidden">
+                  <img class="mt-2" src="images/new-group-image.png" alt="">
+                      <button id="closePopup" class="absolute top-0 right-0 mt-6 mr-1 text-gray-600 hover:text-red-600">
+                        <i class="bg-darkGray p-2 rounded-full text-white text-xl ri-close-fill"></i>
+                      </button>
+                  </div>
+              </div>
+
               </section>
         </div>
         
@@ -222,13 +230,34 @@
 
     <!-- Collapsing Sidebar Script -->
 
-    <script>const sidebar = document.getElementById("sidebar");
+    <script>
+      
+      const sidebar = document.getElementById("sidebar");
       const hamburgerBtn = document.getElementById("hamburgerBtn");
       const settingsBtn = document.getElementById("settingsBtn");
       const settingsSubmenu = document.getElementById("settingsSubmenu");
       const themeToggleBtn = document.getElementById("themeToggleBtn");
       const sunIcon = document.getElementById("sunIcon");
       const moonIcon = document.getElementById("moonIcon");
+      const openPopup = document.getElementById("openPopup");
+      const closePopup = document.getElementById("closePopup");
+      const popup = document.getElementById("popup");
+
+
+      openPopup.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+    });
+
+    closePopup.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
+
+    // Close popup when clicking outside the modal
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.add("hidden");
+        }
+    });
       
       // 1. Sidebar Collapse
       hamburgerBtn.addEventListener("click", () => {
@@ -258,6 +287,10 @@
         sunIcon.classList.toggle("hidden");
         moonIcon.classList.toggle("hidden");
       });
+
+      userEdit.addEventListener("click", function(){
+      console.log("clicked")
+      })
     </script>
   </body>
 </html>
