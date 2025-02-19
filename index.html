@@ -21,7 +21,7 @@
       <!-- Header with brand + hamburger -->
       <div class="flex items-center justify-between p-4 bg-white">
         <div class="flex items-center space-x-2">
-          <a href="/helloagent/"><img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" /></a>
+          <a href="/"><img src="images/hellog-agent-logo.svg" alt="Logo" class=" rounded-full" /></a>
         </div>
         <button id="hamburgerBtn" class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none">
           <!-- Hamburger Icon -->
@@ -41,7 +41,7 @@
       <!-- NAVIGATION -->
       <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
         <!-- Home Link -->
-        <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+        <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
           <!-- Replace with your home icon -->
           <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text">Home</span>
@@ -292,14 +292,14 @@
               </div>
               <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
               <div clasy="table-box w-full">
-                <table class="w-full mx-auto rounded-full text-sm text-darkTeal">
+                <table class="w-full mx-auto rounded-full text-base text-darkTeal">
                   <thead>
                       <tr class="bg-darkTeal text-white">
-                          <th class="py-3 px-4 w-1/5 border-r border-lightGray">Time</th>
-                          <th class="py-3 px-4 w-1/5 border-r border-lightGray">Caller</th>
-                          <th class="py-3 px-4 w-1/5 border-r border-lightGray">Duration</th>
-                          <th class="py-3 px-4 w-1/5 border-r border-lightGray">Transcript</th>
-                          <th class="py-3 px-4 w-1/5">Recording</th>
+                          <th class="py-3 px-4 w-52 border-r border-lightGray">Time</th>
+                          <th class="py-3 px-4 w-52 border-r border-lightGray">Caller</th>
+                          <th class="py-3 px-4 w-52 border-r border-lightGray">Duration</th>
+                          <th class="py-3 px-4 w-1/4 border-r border-lightGray">Transcript</th>
+                          <th class="py-3 px-4 w-1/4">Recording</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -307,35 +307,13 @@
                           <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                           <td class="py-2 px-4 border-r border-darkTeal">001</td>
                           <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                       </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-white border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                      </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-lightGray border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                      </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                       </td>
                          
                       </tr>
@@ -343,11 +321,13 @@
                           <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                           <td class="py-2 px-4 border-r border-darkTeal">001</td>
                           <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                       </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                       </td>
                          
                       </tr>
@@ -355,27 +335,17 @@
                           <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                           <td class="py-2 px-4 border-r border-darkTeal">001</td>
                           <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                       </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                       </td>
                          
                       </tr>
                       <tr class="bg-white border-b border-r">
-                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                          <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/eye+file.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
-                      </td>
-                      <td class="py-2 lg:px-4 px-[4px] border-r border-darkTeal"><a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-3 lg:w-[90%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Play Recording</span></a>
-                      </td>
-                         
-                      </tr>
-                      <tr class="bg-lightGray border-b border-r">
                           <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
                           <td class="py-2 px-4 border-r border-darkTeal">001</td>
                           <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
@@ -383,8 +353,50 @@
                           <span class="text-white font-bold lg:text-sm text-[12px] leading-3">Read Transcript</span></a>
                       </td>
                       <td class="p-2 border-r border-darkTeal">
-                        <a class="bg-teal px-1 lg:px-3 lg:py-2 py-1 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="lg:block hidden text-sm" src="images/white-play-icon.svg" alt="">
-                          <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                      </td>
+                         
+                      </tr>
+                      <tr class="bg-lightGray border-b border-r">
+                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                      </td>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                      </td>
+                         
+                      </tr>
+                      <tr class="bg-white border-b border-r">
+                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                      </td>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
+                      </td>
+                         
+                      </tr>
+                      <tr class="bg-lightGray border-b border-r">
+                          <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">001</td>
+                          <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
+                          <td class="p-2 border-r border-darkTeal">
+                            <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                              <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                      </td>
+                      <td class="p-2 border-r border-darkTeal">
+                        <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                          <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                       </td>
                          
                       </tr>
