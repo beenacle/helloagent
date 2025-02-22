@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Heroicons (for icons) -->
+  <title>Welcome to Hello Agent</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles.css">
 </head>
 
 <body class="bg-gray-50">
@@ -33,61 +32,64 @@
       </div>
 
       <!-- User Info -->
-      <div class="flex items-center p-4 space-x-2 bg-lightGray">
+      <div class="flex items-center p-4 space-x-2 bg-gray">
         <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
-        <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
+        <p class="font-semibold sidebar-text text-primary"><span class="font-normal">Hello</span>, {Customer}</p>
       </div>
 
       <!-- NAVIGATION -->
-      <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
+      <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-primary dark:text-primary">
         <!-- Home Link -->
-        <a href="/helloagent/" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+        <a href="/" class="flex items-center px-3 py-2 rounded">
           <!-- Replace with your home icon -->
           <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text">Home</span>
+          <span class="ml-3 sidebar-text text-black opacity-50">Home</span>
         </a>
 
         <!-- Call Logs Link -->
-        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+        <a href="/call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray dark:hover:teal">
           <!-- Replace with your call logs icon -->
           <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text">Call Logs</span>
+          <span class="ml-3 sidebar-text text-black opacity-50">Call Logs</span>
         </a>
 
         <!-- SETTINGS (with Submenu) -->
         <div>
           <!-- Settings Toggle -->
-          <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-lightGray
+          <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-gray
                dark:hover:teal focus:outline-none">
             <!-- Replace with your settings icon -->
             <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-            <!-- Optional arrow icon or image to indicate dropdown -->
-            <i class="ri-arrow-down-s-line"></i>
+            <span class="ml-3 sidebar-text flex-1 text-left text-black opacity-50">Settings</span>
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
+                fill="#a4a4a4" />
+            </svg>
           </button>
 
           <!-- Settings Submenu -->
           <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-            <a href="set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
+            <a href="/set-ai-voice.html" class="block px-3 py-2 rounded gray dark:hover:teal text-black opacity-50">
               Set Voice
             </a>
-            <a href="ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+            <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-gray dark:hover:teal text-black opacity-50">
               Voice Profiles
             </a>
-            <a href="ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+            <a href="/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-gray dark:hover:teal text-black opacity-50">
               Voice Creations
             </a>
-            <a href="ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+            <a href="/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-gray dark:hover:teal text-black opacity-50">
               Voice Collection
             </a>
           </div>
         </div>
 
         <!-- Help Link -->
-        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray dark:hover:teal">
           <!-- Replace with your help icon -->
           <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text">Help</span>
+          <span class="ml-3 sidebar-text text-black opacity-50">Help</span>
         </a>
       </nav>
 
@@ -101,18 +103,19 @@
     <!-- MAIN CONTENT -->
     <main
       style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;"
-      class="flex-1 p-6">
-      <div class="innerContainer md:mx-auto  md:w-full md:max-w-7xl lg:px-10">
+      class="flex-1 md:py-12">
+      <div class="innerContainer md:mx-auto lg:px-10">
+
         <!-- Example content header -->
         <header class="mb-6 relative lg:flex-row flex-col flex justify-between lg:items-center">
           <div class="left-col">
-            <h2 class="text-3xl text-darkTeal font-bold">Home</h2>
-            <p>Welcome back <span class="font-bold">User!</span></p>
+            <h2 class="text-3xl lg:text-3xl text-[#0A574E] font-bold mb-2">Home</h2>
+            <p class="text-lg">Welcome back <span class="font-bold">User!</span></p>
           </div>
           <div class="mb-6 flex justify-center p-[2px] border-black border rounded-lg overflow-hidden">
             <input type="text" placeholder="Search here..."
               class="px-4 py-2 w-full md:w-80  rounded-l-md focus:outline-none">
-            <button class="px-4 py-2 bg-teal text-white rounded-r-md"><svg xmlns="http://www.w3.org/2000/svg"
+            <button class="px-4 py-2 bg-secondary text-white rounded-r-md"><svg xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
@@ -122,295 +125,361 @@
 
         <!-- Example form content (use your own form) -->
         <div class="lg:flex md:flex gap-4 gap-y-2">
-          <div class="colls rounded-lg md:mt-0 mt-2 p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Call</p>
-              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
+
+          <!-- Box -->
+          <div
+            class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 lg:w-1/4 w-full bg-gray hover:bg-[#0A574E] hover:text-[#1AFFE4] transition duration-500">
+            <div class="px-2 py-4 rounded-lg">
+              <p class="text-xl leading-relaxed text-[#0A574E] mb-2">Total Call</p>
+              <h2 class="font-bold text-5xl md:text-[5rem] leading-none">100</h2>
             </div>
           </div>
-          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Call Status</p>
-              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
+          <!-- Box -->
+
+          <!-- Box -->
+          <div
+            class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 lg:w-1/4 w-full bg-gray hover:bg-[#0A574E] hover:text-[#1AFFE4] transition duration-500">
+            <div class="px-2 py-4 rounded-lg">
+              <p class="text-xl leading-relaxed text-[#0A574E] mb-2">Call Status</p>
+              <h2 class="font-bold text-5xl md:text-[5rem] leading-none">100</h2>
             </div>
           </div>
-          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full  bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Leads</p>
-              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
+          <!-- Box -->
+
+          <!-- Box -->
+          <div
+            class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 lg:w-1/4 w-full bg-gray hover:bg-[#0A574E] hover:text-[#1AFFE4] transition duration-500">
+            <div class="px-2 py-4 rounded-lg">
+              <p class="text-xl leading-relaxed text-[#0A574E] mb-2">Total Leads</p>
+              <h2 class="font-bold text-5xl md:text-[5rem] leading-none">100</h2>
             </div>
           </div>
-          
-          <div class="colls rounded-lg md:mt-0 mt-2  p-4 lg:w-1/4 w-full bg-lightGray hover:bg-darkTeal transition duration-500">
-                        <div class="px-2 py-4 rounded-lg">
-              <p class="leading-relaxed">Total Costs</p>
-              <h2 class="title-font text-darkTeal font-bold text-8xl">100</h2>
+          <!-- Box -->
+           
+          <!-- Box -->
+          <div
+            class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 lg:w-1/4 w-full bg-gray hover:bg-[#0A574E] hover:text-[#1AFFE4] transition duration-500">
+            <div class="px-2 py-4 rounded-lg">
+              <p class="text-xl leading-relaxed text-[#0A574E] mb-2">Total Costs</p>
+              <h2 class="font-bold text-5xl md:text-[5rem] leading-none">100</h2>
             </div>
           </div>
+          <!-- Box -->
+
         </div>
-        <div class="voice-and-calls w-full flex lg:flex-row flex-col justify-between gap-4 mt-4 my-6">
-          <div class="ai-voices bg-lightGray rounded-lg p-4 lg:w-1/2 w-full">
+
+        <!-- Tables -->
+        <div class="voice-and-calls w-full flex lg:flex-row flex-col justify-between gap-4 mt-9">
+
+          <!-- AI Voice -->
+          <div class="ai-voices bg-gray rounded-lg p-4 lg:w-1/2 w-full">
             <div class="titleBox flex items-center justify-between">
-              <h2 class="text-2xl font-bold text-darkTeal">AI Voices</h2>
-              <button class="flex items-center justify-between bg-teal px-6 py-2 text-white rounded-full gap-2"><span>Add AI Voice</span>
+              <h2 class="text-2xl font-bold text-primary">AI Voices</h2>
+              <button class="flex items-center justify-between bg-secondary px-6 py-2 text-white rounded-full gap-2"><span>Add AI Voice</span>
                 <i class="ri-add-circle-line"></i>
               </button>
             </div>
-            <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
+            <hr class="mt-4 mb-4 border-b border-dashed border-white bg-primary">
 
             <div class="table-box w-full">
-              <table class="w-full mx-auto rounded-full text-sm md:text-[10px] text-darkTeal">
+              <table class="w-full mx-auto bg-white text-sm text-center">
                 <thead>
-                    <tr class="bg-darkTeal text-white">
-                        <th class="py-3 px-4 w-1/4 border-r border-lightGray">Voice Name</th>
-                        <th class="py-3 px-4 w-1/4 border-r border-lightGray">Voice ID</th>
-                        <th class="py-3 px-4 w-1/4 border-r border-lightGray">Creation Date</th>
-                        <th class="py-3 px-4 w-1/4">Sample Voice</th>
-                    </tr>
+                  <tr class="bg-primary text-white">
+                    <th class="p-3 border-r border-gray">Voice Name</th>
+                    <th class="p-3 border-r border-gray">Voice ID</th>
+                    <th class="p-3 border-r border-gray">Creation Date</th>
+                    <th class="p-3">Sample Voice</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr class="border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">Grace</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                          <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                            <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                            </div>
+                  <tr class="border-b border-r">
+                    <td class="p-3 border-r border-primary">Grace</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
                         </div>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b">
-                        <td class="py-2 px-4 border-r border-darkTeal">Leslie</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">002</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                            <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-              
-                    <tr class="bg-lightGray border-b">
-                        <td class="py-2 px-4 border-r border-darkTeal">Kai</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">004</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                           <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">Sean</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                           <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr class=" border-b">
-                        <td class="py-2 px-4 border-r border-darkTeal">Rob</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">002</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                           <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b">
-                        <td class="py-2 px-4 border-r border-darkTeal">Tina</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">003</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                             <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr class=" border-b">
-                        <td class="py-2 px-4 border-r border-darkTeal">Fionna</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">004</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">1/28/25</td>
-                        <td class="py-2 px-4">
-                           <div class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                                  <div class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-teal">
-                                      <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
-                                  </div>
-                                  <div class="eco-box w-full bg-lightGray rounded-lg hidden lg:flex  justify-center p-1 py-1">
-                                      <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
-                                  </div>
-                              </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="text-center bg-darkTeal text-white py-3 text-sm">To create Custom voices click here: <a href="#" class="font-semibold underline">All ElevenLabs Voices</a></td>
-                    </tr>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b">
+                    <td class="p-3 border-r border-primary">Leslie</td>
+                    <td class="p-3 border-r border-primary">002</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="border-b">
+                    <td class="p-3 border-r border-primary">Kai</td>
+                    <td class="p-3 border-r border-primary">004</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b border-r">
+                    <td class="p-3 border-r border-primary">Sean</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-3 border-r border-primary">Rob</td>
+                    <td class="p-3 border-r border-primary">002</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b">
+                    <td class="p-3 border-r border-primary">Tina</td>
+                    <td class="p-3 border-r border-primary">003</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-3 border-r border-primary">Fionna</td>
+                    <td class="p-3 border-r border-primary">004</td>
+                    <td class="p-3 border-r border-primary">1/28/25</td>
+                    <td class="p-3">
+                      <div
+                        class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                        <div
+                          class="play-icon w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                          <i class="ri-play-fill text-white md:text-base text-sm ml-1"></i>
+                        </div>
+                        <div class="eco-box w-full bg-gray rounded-lg hidden lg:flex  justify-center p-1 py-1">
+                          <img class="lg:w-38 w-full" src="images/beats-icon.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="text-center bg-primary text-white py-3 text-sm">To create Custom voices
+                      click here: <a href="#" class="font-semibold underline">All ElevenLabs Voices</a></td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
             </div>
           </div>
-          <div class="call-logs bg-lightGray rounded-lg p-4 lg:w-1/2 w-full">
+          <!-- AI Voice -->
+          
+          <!-- Call Logs -->
+          <div class="call-logs bg-gray rounded-lg p-4 lg:w-1/2 w-full">
             <div class="titleBox flex items-center justify-between">
-              <h2 class="text-2xl font-bold text-darkTeal">AI Voices</h2>
+              <h2 class="text-2xl font-bold text-primary">Call Logs</h2>
               <div
-                        class="all-filter bg-teal text-white py-1 px-3 flex justify-between items-center rounded-full gap-4 ">
-                        <i class="text-xl  cursor-pointer ri-equalizer-line"></i> <span class="font-bold">All
-                            Filter</span> <i class="text-2xl ri-arrow-down-s-line cursor-pointer"></i> </div>
+                class="all-filter bg-secondary text-white py-1 px-3 flex justify-between items-center rounded-full gap-4 ">
+                <i class="text-xl  cursor-pointer ri-equalizer-line"></i> <span class="font-bold">All
+                  Filter</span> <i class="text-2xl ri-arrow-down-s-line cursor-pointer"></i>
+              </div>
             </div>
-            <hr class="mt-4 mb-4 border-b border-dashed border-white bg-darkTeal">
+            <hr class="mt-4 mb-4 border-b border-dashed border-white bg-primary">
             <div clasy="table-box w-full">
-              <table class="call-log-table w-full mx-auto rounded-full text-[10px] text-darkTeal">
+              <table class="call-log-table w-full mx-auto bg-white text-sm text-center">
                 <thead>
-                    <tr class="bg-darkTeal text-white">
-                        <th class="py-3 px-4 w-52 border-r border-lightGray">Time</th>
-                        <th class="py-3 px-4 w-52 border-r border-lightGray">Caller</th>
-                        <th class="py-3 px-4 w-52 border-r border-lightGray">Duration</th>
-                        <th class="py-3 px-4 w-1/4 border-r border-lightGray">Transcript</th>
-                        <th class="py-3 px-4 w-1/4">Recording</th>
-                    </tr>
+                  <tr class="bg-primary text-white">
+                    <th class="py-3 px-4 w-52 border-r border-gray">Time</th>
+                    <th class="py-3 px-4 w-52 border-r border-gray">Caller</th>
+                    <th class="py-3 px-4 w-52 border-r border-gray">Duration</th>
+                    <th class="p-3 border-r border-gray">Transcript</th>
+                    <th class="p-3">Recording</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-lightGray border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+                  <tr class="border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-white border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-lightGray border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+
+                  </tr>
+                  <tr class="border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-white border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden" src="images/eye+file.svg" alt="" width="16">
+
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden" src="images/eye+file.svg" alt=""
+                          width="16">
                         <span class="ply-reading text-white font-bold leading-3">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-lightGray border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+
+                  </tr>
+                  <tr class="border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-white border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+
+                  </tr>
+                  <tr class="bg-[#14B8A640] border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    <tr class="bg-lightGray border-b border-r">
-                        <td class="py-2 px-4 border-r border-darkTeal">12:00:00 PM</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">001</td>
-                        <td class="py-2 px-4 border-r border-darkTeal">12:34 minutes</td>
-                        <td class="p-2 border-r border-darkTeal">
-                          <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
-                            <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
+
+                  </tr>
+                  <tr class="border-b border-r">
+                    <td class="p-3 border-r border-primary">12:00:00 PM</td>
+                    <td class="p-3 border-r border-primary">001</td>
+                    <td class="p-3 border-r border-primary">12:34 minutes</td>
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
+                        <span class="ply-reading text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
-                    <td class="p-2 border-r border-darkTeal">
-                      <a class="bg-teal px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto" href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg" alt="">
+                    <td class="p-2 border-r border-primary">
+                      <a class="bg-secondary px-1 py-2 rounded-lg flex gap-2 lg:w-[100%] items-center justify-center mx-auto"
+                        href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
+                          alt="">
                         <span class="ply-reading text-white font-bold text-[10px]">Play Recording</span></a>
                     </td>
-                       
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td colspan="5" class="text-center bg-darkTeal text-white py-4 text-sm"><a href="#" class="font-semibold underline">Load More Calls...</a></td>
-                    </tr>
+
+                  </tr>
+
+
+                  <tr>
+                    <td colspan="5" class="text-center bg-primary text-white py-4 text-sm"><a href="#"
+                        class="font-semibold underline">Load More Calls...</a></td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
             </div>
           </div>
+          <!-- Call Logs -->
+           
         </div>
+        <!-- Tables -->
+
       </div>
 
     </main>
@@ -418,45 +487,8 @@
   </div>
   <!-- END WRAPPER -->
 
-  <!-- Collapsing Sidebar Script -->
-
-  <script>const sidebar = document.getElementById("sidebar");
-    const hamburgerBtn = document.getElementById("hamburgerBtn");
-    const settingsBtn = document.getElementById("settingsBtn");
-    const settingsSubmenu = document.getElementById("settingsSubmenu");
-    const themeToggleBtn = document.getElementById("themeToggleBtn");
-    const sunIcon = document.getElementById("sunIcon");
-    const moonIcon = document.getElementById("moonIcon");
-
-    // 1. Sidebar Collapse
-    hamburgerBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("w-64");
-      sidebar.classList.toggle("w-16");
-
-      // Hide/show text labels
-      document.querySelectorAll(".sidebar-text").forEach((el) => {
-        el.classList.toggle("hidden");
-      });
-
-      // Also hide submenus if you want them collapsed in minimal view
-      // settingsSubmenu.classList.add("hidden");
-    });
-
-    // 2. Settings Dropdown
-    settingsBtn.addEventListener("click", () => {
-      settingsSubmenu.classList.toggle("hidden");
-    });
-
-    // 3. Dark/Light Mode Toggle
-    themeToggleBtn.addEventListener("click", () => {
-      // Toggle 'dark' class on <html>
-      document.documentElement.classList.toggle("dark");
-
-      // Switch icon visibility
-      sunIcon.classList.toggle("hidden");
-      moonIcon.classList.toggle("hidden");
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="/src/site.js"></script>
 
 </body>
 

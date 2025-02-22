@@ -1,0 +1,104 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* Variables */
+:root {
+    --green: #0A574E;
+    --dark-teal: #14B8A6;
+    --gray: #E6E6E6;
+    --dark: #292929;
+  }
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: "Inter", serif;
+    color: var(--dark);
+}
+
+
+/* Resuable Classes */
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+.bg-primary {
+    background-color: var(--green);
+}
+
+.text-primary {
+    color: var(--green);
+}
+
+.bg-secondary {
+    background-color: var(--dark-teal);
+}
+
+.text-secondary {
+    color: var(--dark-teal);
+}
+
+
+#sidebar {
+    height: 100vh !important;
+}
+
+.ai-voic-creation-col {
+    transition: all ease 0.1s;
+    cursor: pointer;
+}
+
+.ai-voic-creation-col:hover {
+    background-color: #E6E6E6;
+}
+
+.ai-voic-creation-col:hover h2 {
+    color: #0A574E;
+}
+
+.ai-voic-creation-col:hover p {
+    color: #0A574E;
+}
+
+.set-ai-voice-cols {
+    transition: all ease 0.1s;
+    cursor: pointer;
+}
+
+.set-ai-voice-cols:hover {
+    background-color: #0A574E;
+}
+
+.set-ai-voice-cols:hover h2 {
+    color: #fff;
+}
+
+.set-ai-voice-cols:hover p {
+    color: #fff;
+}
+
+#settingsSubmenu {
+    padding-left: 3rem !important;
+}
+
+
+.colls:hover p {
+    color: #fff;
+} 
+
+.ply-reading {
+    font-size: 10px !important;
+}
+
+.white-play-icon {
+    width: 18px;
+}
+
+.ri-close-fill {
+    margin-right: 13px;
+}
