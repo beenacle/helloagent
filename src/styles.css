@@ -110,6 +110,14 @@ body {
     padding: 0;
 }
 
+.sidebar--collapsed .theme-toggle__item:not(.theme-toggle__active) {
+    display: none;
+}
+
+.theme-toggle__active img {
+    filter: brightness(0) invert(1);
+}
+
 
 
 /* Media Queries */

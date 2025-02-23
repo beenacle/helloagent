@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,7 +32,10 @@
 
     <!-- SIDEBAR -->
     <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
-               overflow-hidden hidden xl:flex flex-col fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
+               overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
+
+              <div>
+               
       <!-- Header with brand + hamburger -->
       <div class="flex items-center justify-between p-4">
         <div class="flex items-center space-x-2">
@@ -58,7 +61,6 @@
         <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
           {Customer}</p>
       </div>
-
 
       <!-- NAVIGATION -->
       <nav class="flex flex-col px-2 mt-4 text-primary">
@@ -123,9 +125,16 @@
         </a>
       </nav>
 
+    </div>
+
       <!-- Dark/Light Mode Toggle at the Bottom -->
-      <div class="p-4 flex justify-center">
-        <img src="images/toggle.png" alt="">
+      <div class="p-4 my-5 flex justify-center">
+        <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
+        <ul class="list-none flex items-center bg-gray rounded-3xl">
+        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
+        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+        </ul>
+        </div>
       </div>
     </aside>
     <!-- END SIDEBAR -->
@@ -409,13 +418,13 @@
 
             <!-- Card Header -->
             <div class="flex items-center justify-between border-b-2 border-primary pb-6 mb-6 border-dashed">
-              <h2 class="text-2xl font-bold text-primary">Call Logs</h2>
+              <h2 class="text-xl font-bold text-primary">Call Logs</h2>
 
               <!-- Filters -->
               <div class="relative filter-dropdown">
               
               <!-- Filter Button -->
-              <div class="filter-dropdown__button bg-secondary text-white py-1 px-3 flex justify-between items-center rounded-full gap-4 cursor-pointer ">
+              <div class="filter-dropdown__button bg-secondary text-sm text-white py-2 px-3 flex justify-between items-center rounded-full gap-4 cursor-pointer ">
                 <svg width="20" height="19" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.71521 4.40708H13.1694C13.5147 6.03887 14.9179 7.26392 16.5914 7.26392C18.265 7.26392 19.6682 6.03892 20.0134 4.40708H24.2846C24.7001 4.40708 25.037 4.05728 25.037 3.62583C25.037 3.19438 24.7001 2.84458 24.2846 2.84458H20.0131C19.6672 1.21362 18.262 -0.012207 16.5914 -0.012207C14.92 -0.012207 13.5155 1.21343 13.1697 2.84458H1.71521C1.29974 2.84458 0.962891 3.19438 0.962891 3.62583C0.962891 4.05728 1.29974 4.40708 1.71521 4.40708ZM14.5928 3.62788C14.5928 3.6251 14.5929 3.62227 14.5929 3.61948C14.5962 2.47852 15.4927 1.55034 16.5914 1.55034C17.6886 1.55034 18.5852 2.47725 18.59 3.61768L18.5901 3.62915C18.5884 4.77207 17.6924 5.70146 16.5914 5.70146C15.4909 5.70146 14.5953 4.773 14.5928 3.63076L14.5928 3.62788ZM24.2846 20.5927H20.0131C19.6671 18.9618 18.262 17.7359 16.5914 17.7359C14.92 17.7359 13.5155 18.9616 13.1697 20.5927H1.71521C1.29974 20.5927 0.962891 20.9424 0.962891 21.3739C0.962891 21.8054 1.29974 22.1552 1.71521 22.1552H13.1694C13.5147 23.787 14.9179 25.012 16.5914 25.012C18.265 25.012 19.6682 23.787 20.0134 22.1552H24.2846C24.7001 22.1552 25.037 21.8054 25.037 21.3739C25.037 20.9424 24.7001 20.5927 24.2846 20.5927ZM16.5914 23.4495C15.4909 23.4495 14.5953 22.521 14.5928 21.3788L14.5928 21.376C14.5928 21.3731 14.5929 21.3704 14.5929 21.3676C14.5962 20.2266 15.4927 19.2984 16.5914 19.2984C17.6886 19.2984 18.5852 20.2253 18.59 21.3657L18.5901 21.3771C18.5885 22.5202 17.6925 23.4495 16.5914 23.4495ZM24.2846 11.7187H12.8304C12.4852 10.0869 11.0819 8.86187 9.40842 8.86187C7.7349 8.86187 6.33164 10.0869 5.98643 11.7187H1.71521C1.29974 11.7187 0.962891 12.0685 0.962891 12.4999C0.962891 12.9314 1.29974 13.2812 1.71521 13.2812H5.9868C6.33273 14.9121 7.73786 16.1379 9.40842 16.1379C11.0799 16.1379 12.4844 14.9123 12.8301 13.2812H24.2846C24.7001 13.2812 25.037 12.9314 25.037 12.4999C25.037 12.0685 24.7001 11.7187 24.2846 11.7187ZM11.407 12.4979C11.407 12.5007 11.407 12.5035 11.407 12.5062C11.4037 13.6472 10.5072 14.5754 9.40842 14.5754C8.31122 14.5754 7.41465 13.6485 7.4099 12.5081L7.40976 12.4967C7.4114 11.3536 8.30736 10.4244 9.40842 10.4244C10.509 10.4244 11.4046 11.3528 11.4071 12.4951L11.407 12.4979Z"
