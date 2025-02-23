@@ -3,6 +3,7 @@ const sidebar = document.getElementById("sidebar");
     const settingsBtn = document.getElementById("settingsBtn");
     const settingsSubmenu = document.getElementById("settingsSubmenu");
     const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const menuToggle = document.getElementById("menuToggle");
     // const sunIcon = document.getElementById("sunIcon");
     // const moonIcon = document.getElementById("moonIcon");
 
@@ -10,19 +11,29 @@ const sidebar = document.getElementById("sidebar");
     hamburgerBtn.addEventListener("click", () => {
       sidebar.classList.toggle("w-64");
       sidebar.classList.toggle("w-16");
+      document.querySelector('body').classList.toggle("sidebar--collapsed");
 
       // Hide/show text labels
-      document.querySelectorAll(".sidebar-text").forEach((el) => {
+      document.querySelectorAll(".hide-on-collapse").forEach((el) => {
         el.classList.toggle("hidden");
       });
 
-      // Also hide submenus if you want them collapsed in minimal view
-      // settingsSubmenu.classList.add("hidden");
     });
+
 
     // 2. Settings Dropdown
     settingsBtn.addEventListener("click", () => {
       settingsSubmenu.classList.toggle("hidden");
+    });
+
+    // menuToggle.addEventListener("click", () => {
+    //   sidebar.classList.toggle("hidden");
+    // });
+
+    document.querySelectorAll(".sidebar-toggle").forEach((el) => {
+      el.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+      });
     });
 
     // 3. Dark/Light Mode Toggle
@@ -32,3 +43,8 @@ const sidebar = document.getElementById("sidebar");
     //   sunIcon.classList.toggle("hidden");
     //   moonIcon.classList.toggle("hidden");
     // });
+
+
+    document.querySelector('.filter-dropdown__button').addEventListener('click', function(){
+      document.querySelector('.filter-dropdown__menu').classList.toggle("hidden");
+    });
