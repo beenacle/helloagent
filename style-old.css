@@ -2110,7 +2110,7 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
-.border-darkTeal{
+.border-primary{
   --tw-border-opacity: 1;
   border-color: rgb(10 87 78 / var(--tw-border-opacity, 1));
 }
@@ -2150,7 +2150,7 @@ video {
   background-color: rgb(41 41 41 / var(--tw-bg-opacity, 1));
 }
 
-.bg-darkTeal{
+.bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(10 87 78 / var(--tw-bg-opacity, 1));
 }
@@ -2165,7 +2165,7 @@ video {
   background-color: rgb(230 230 230 / var(--tw-bg-opacity, 1));
 }
 
-.bg-teal{
+.bg-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
 }
@@ -2650,7 +2650,7 @@ video {
   color: rgb(41 41 41 / var(--tw-text-opacity, 1));
 }
 
-.text-darkTeal{
+.text-primary{
   --tw-text-opacity: 1;
   color: rgb(10 87 78 / var(--tw-text-opacity, 1));
 }
@@ -3183,7 +3183,7 @@ p{
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
-.hover\:bg-darkTeal:hover{
+.hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(10 87 78 / var(--tw-bg-opacity, 1));
 }
@@ -3508,7 +3508,7 @@ p{
 }
 
 @media (prefers-color-scheme: dark){
-  .dark\:text-darkTeal{
+  .dark\:text-primary{
     --tw-text-opacity: 1;
     color: rgb(10 87 78 / var(--tw-text-opacity, 1));
   }

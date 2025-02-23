@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ai Voice Creation</title>
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="src/styles.css">
     <!-- Heroicons (for icons) -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   </head>
   <body class="bg-gray-50">
 
     <!-- WRAPPER -->
-    <div class="flex justify-between items-start min-h-screen relative">
+    <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
       <!-- SIDEBAR -->
       <aside
@@ -21,7 +21,7 @@
         <!-- Header with brand + hamburger -->
         <div class="flex items-center justify-between p-4 bg-white">
           <div class="flex items-center space-x-2">
-            <a href="/"><img
+            <a href="index.html"><img
               src="images/logo.svg"
               alt="Logo"
               class=" rounded-full"
@@ -56,20 +56,20 @@
             alt="User"
             class="w-8 h-8 rounded-full"
           />
-          <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
+          <p class="font-semibold sidebar-text text-primary"><span class="font-normal">Hello</span>, {Customer}</p>
         </div>
 
         <!-- NAVIGATION -->
-        <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
+        <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-primary dark:text-primary">
           <!-- Home Link -->
-          <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
+          <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your home icon -->
               <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
               <span class="ml-3 sidebar-text">Home</span>
           </a>
 
           <!-- Call Logs Link -->
-          <a href="/call-logs.html"
+          <a href="call-logs.html"
               class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your call logs icon -->
               <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
@@ -90,23 +90,23 @@
 
               <!-- Settings Submenu -->
               <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                  <a href="/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
+                  <a href="set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
                       Set Voice
                   </a>
-                  <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Profiles
                   </a>
-                  <a href="/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Creations
                   </a>
-                  <a href="/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
+                  <a href="ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
                       Voice Collection
                   </a>
               </div>
           </div>
 
           <!-- Help Link -->
-          <a href="/help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
+          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
               <!-- Replace with your help icon -->
               <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
               <span class="ml-3 sidebar-text">Help</span>
@@ -125,7 +125,7 @@
         <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-2xl ">
         <!-- Example content header -->
             <header class="mb-6 relative">
-                <h2 class="text-3xl text-center text-darkTeal font-bold">AI Voice Creation</h2>
+                <h2 class="text-3xl text-center text-primary font-bold">AI Voice Creation</h2>
                 <img id="openPopup" class="mx-auto cursor-pointer my-6" src="images/user-edit-image.png" alt="">
                 <img class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="">
               </header>
@@ -133,7 +133,7 @@
               <!-- Example form content (use your own form) -->
               <section class="rounded space-y-4 relative">
                 <div class="">
-                  <label for="voiceName" class="block font-semibold text-xl mb-2 text-darkTeal">Name of AI Voice</label>
+                  <label for="voiceName" class="block font-semibold text-xl mb-2 text-primary">Name of AI Voice</label>
                   <input
                     type="text"
                     id="voiceName"
@@ -144,7 +144,7 @@
                 </div>
       
                 <div>
-                  <label for="voiceID" class="block font-semibold text-xl mb-2 text-darkTeal">Voice ID for AI Voice</label>
+                  <label for="voiceID" class="block font-semibold text-xl mb-2 text-primary">Voice ID for AI Voice</label>
                   <input
                     type="text"
                     id="voiceID"
@@ -155,7 +155,7 @@
                 </div>
       
                 <div>
-                  <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Opening Remark</label>
+                  <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Opening Remark</label>
                   <input
                   type="text"
                   id="voiceName"
@@ -167,7 +167,7 @@
                 </div>
 
                 <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Instruction for AI Voice</label>
+                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Instruction for AI Voice</label>
                     <div class="relative">
                         <input
                         type="text"
@@ -179,12 +179,12 @@
                       <img class="absolute -right-10 top-4 cursor-pointer" src="images/delete-icon.svg" alt="">
                     </div>
                     <div class="my-5">
-                        <button type="submit" class="flex w-full justify-center rounded-full bg-teal px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-darkTeal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New Instruction</button>
+                        <button type="submit" class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New Instruction</button>
                       </div>
                   </div>
                  
                   <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Description of AI Voice</label>
+                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Description of AI Voice</label>
                     <input
                     type="text"
                     id="voiceName"
@@ -195,7 +195,7 @@
                   </div>
 
                   <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-darkTeal">Helium form for AI Voice (Optional)</label>
+                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Helium form for AI Voice (Optional)</label>
                   <select class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
                            focus:outline-none focus:ring-2 focus:ring-teal-200" name="" id="">
                     <option value="" class="w-14">Select the active Helium Form where the AI will save collected information. Ensure your instructions specify when to save.</option>
@@ -208,7 +208,7 @@
       
                 <button
                   type="button"
-                  class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700"
+                  class="bg-secondary-600 text-white px-4 py-2 rounded hover:bg-secondary-700"
                 >
                   Save
                 </button>

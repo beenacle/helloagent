@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggleItems = document.querySelectorAll(".theme-toggle__item");
   const body = document.body;
   const html = document.documentElement;
-  const dropdownButton = document.querySelector(".filter-dropdown__button");
-  const dropdownMenu = document.querySelector(".filter-dropdown__menu");
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
@@ -27,25 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
       el.addEventListener("click", () => sidebar.classList.toggle("hidden"));
   });
 
-  // Toggle dropdown on button click
-  dropdownButton.addEventListener("click", (event) => {
-      event.stopPropagation(); // Prevents the event from bubbling to document
-      dropdownMenu.classList.toggle("hidden");
-  });
+    const dropdownButton = document.querySelector(".filter-dropdown__button");
+    const dropdownMenu = document.querySelector(".filter-dropdown__menu");
 
-  // Close dropdown when clicking on an item
-  dropdownMenu.querySelectorAll(".cursor-pointer").forEach(item => {
-      item.addEventListener("click", () => {
-          dropdownMenu.classList.add("hidden");
-      });
-  });
+    // Only run if the dropdown exists on the page
+    if (dropdownButton && dropdownMenu) {
+        // Toggle dropdown on button click
+        dropdownButton.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevents the event from bubbling to document
+            dropdownMenu.classList.toggle("hidden");
+        });
 
-  // Close dropdown when clicking outside
-  document.addEventListener("click", (event) => {
-      if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
-          dropdownMenu.classList.add("hidden");
-      }
-  });
+        // Close dropdown when clicking on an item
+        dropdownMenu.querySelectorAll(".cursor-pointer").forEach(item => {
+            item.addEventListener("click", () => {
+                dropdownMenu.classList.add("hidden");
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (event) => {
+            if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+                dropdownMenu.classList.add("hidden");
+            }
+        });
+    }
+
 
   // Apply Theme
   const applyTheme = mode => {

@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Hello Agent</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 
     <!-- Header -->
     <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
-      <a href="/">
+      <a href="index.html">
         <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
@@ -39,7 +38,7 @@
       <!-- Header with brand + hamburger -->
       <div class="flex items-center justify-between p-4">
         <div class="flex items-center space-x-2">
-          <a href="/">
+          <a href="index.html">
             <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
             <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
           </a>
@@ -68,14 +67,14 @@
         <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
 
         <!-- Home Link -->
-        <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+        <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
           <!-- Replace with your home icon -->
           <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
         </a>
 
         <!-- Call Logs Link -->
-        <a href="/call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
           <!-- Replace with your call logs icon -->
           <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
@@ -98,19 +97,19 @@
 
           <!-- Settings Submenu -->
           <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-            <a href="/set-ai-voice.html"
+            <a href="set-ai-voice.html"
               class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
               Set Voice
             </a>
-            <a href="/ai-voice-profile.html"
+            <a href="ai-voice-profile.html"
               class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
               Voice Profiles
             </a>
-            <a href="/ai-voice-creation.html"
+            <a href="ai-voice-creation.html"
               class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
               Voice Creations
             </a>
-            <a href="/ai-voice-collection.html"
+            <a href="ai-voice-collection.html"
               class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
               Voice Collection
             </a>
@@ -140,8 +139,7 @@
     <!-- END SIDEBAR -->
 
     <!-- MAIN CONTENT -->
-    <main class="flex-1">
-      <div class="innerContainer md:mx-auto p-5 md:p-10">
+    <main class="flex-1 md:mx-auto p-5 md:p-10">
 
         <!-- Example content header -->
         <header class="mb-6 relative md:flex-row flex-col flex justify-between lg:items-center">
@@ -441,10 +439,10 @@
               
               <!-- Filter Dropdown -->
                <div class="filter-dropdown__menu hidden w-full absolute bg-secondary rounded-lg mt-3 text-white border-s border-e border-b border-white border-solid">
-                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer rounded-t-lg hover:bg-teal-300 transition duration-200">Filter 1</div>
-                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer hover:bg-teal-300 transition duration-200">Filter 2</div>
-                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer hover:bg-teal-300 transition duration-200">Filter 3</div>
-                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer rounded-b-lg hover:bg-teal-300 transition duration-200">Filter 4</div>
+                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer rounded-t-lg hover:bg-secondary-300 transition duration-200">Filter 1</div>
+                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer hover:bg-secondary-300 transition duration-200">Filter 2</div>
+                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer hover:bg-secondary-300 transition duration-200">Filter 3</div>
+                <div class="py-2 px-3 border-t border-white border-solid cursor-pointer rounded-b-lg hover:bg-secondary-300 transition duration-200">Filter 4</div>
                </div>
               <!-- Filter Dropdown -->
 
@@ -472,12 +470,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -489,12 +487,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -506,12 +504,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -523,13 +521,13 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden" src="images/eye+file.svg" alt=""
                           width="16">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -541,12 +539,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -558,12 +556,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -575,12 +573,12 @@
                     <td class="px-3 py-2 border-r border-primary">001</td>
                     <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/eye+file.svg" alt="">
                         <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                     </td>
                     <td class="p-2 border-r border-primary">
-                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 flex items-center justify-center min-w-[7.7rem]"
+                      <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
                         href="#"><img class="white-play-icon lg:block hidden size-4" src="images/white-play-icon.svg"
                           alt="">
                         <span class="text-white font-bold text-[10px]">Play Recording</span></a>
@@ -599,8 +597,6 @@
 
         </div>
         <!-- Tables -->
-
-      </div>
 
     </main>
     <!-- END MAIN CONTENT -->

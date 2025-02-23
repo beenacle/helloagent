@@ -5,143 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Ai Voice</title>
-    <link rel="stylesheet" href="/src/styles.css">
-    <!-- Heroicons (for icons) -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-    <div class="flex justify-between items-start min-h-screen relative">
+    <!-- WRAPPER -->
+  <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
-        <!-- SIDEBAR -->
-        <aside
-        id="sidebar"
-        class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
-               overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl">
-        <!-- Header with brand + hamburger -->
-        <div class="flex items-center justify-between p-4 bg-white">
-          <div class="flex items-center space-x-2">
-            <a href="/"><img
-              src="images/logo.svg"
-              alt="Logo"
-              class=" rounded-full"
-            /></a>
-          </div>
-          <button
-            id="hamburgerBtn"
-            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none"
-          >
-            <!-- Hamburger Icon -->
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke-width="2"
-            >
+    <!-- Header -->
+    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
+      </a>
+      <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </header>
+    <!-- Header -->
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+               overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
+
+              <div>
+               
+      <!-- Header with brand + hamburger -->
+      <div class="flex items-center justify-between p-4">
+        <div class="flex items-center space-x-2">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+            <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
+        <button id="hamburgerBtn"
+          class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- User Info -->
+      <div class="flex items-center p-4 space-x-2 bg-gray">
+        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+        <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
+          {Customer}</p>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="flex flex-col px-2 mt-4 text-primary">
+
+        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
+
+        <!-- Home Link -->
+        <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your home icon -->
+          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+        </a>
+
+        <!-- Call Logs Link -->
+        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your call logs icon -->
+          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+        </a>
+
+        <!-- SETTINGS (with Submenu) -->
+        <div class="mb-3">
+          <!-- Settings Toggle -->
+          <button type="button" id="settingsBtn"
+            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
+            <!-- Replace with your settings icon -->
+            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
+                d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
+                fill="#a4a4a4" />
             </svg>
           </button>
-        </div>
 
-        <!-- User Info -->
-        <div class="flex items-center p-4 space-x-2 bg-lightGray">
-          <img
-            src="images/user-image.png"
-            alt="User"
-            class="w-8 h-8 rounded-full"
-          />
-          <p class="font-semibold sidebar-text text-darkTeal"><span class="font-normal">Hello</span>, {Customer}</p>
-        </div>
-
-        <!-- NAVIGATION -->
-        <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-darkTeal dark:text-darkTeal">
-          <!-- Home Link -->
-          <a href="/" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your home icon -->
-              <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Home</span>
-          </a>
-
-          <!-- Call Logs Link -->
-          <a href="/call-logs.html"
-              class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your call logs icon -->
-              <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Call Logs</span>
-          </a>
-
-          <!-- SETTINGS (with Submenu) -->
-          <div>
-              <!-- Settings Toggle -->
-              <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray
-                 dark:hover:teal focus:outline-none">
-                  <!-- Replace with your settings icon -->
-                  <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-                  <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-                  <!-- Optional arrow icon or image to indicate dropdown -->
-                  <i class="ri-arrow-down-s-line"></i>
-              </button>
-
-              <!-- Settings Submenu -->
-              <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                  <a href="/set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
-                      Set Voice
-                  </a>
-                  <a href="/ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Profiles
-                  </a>
-                  <a href="/ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Creations
-                  </a>
-                  <a href="/ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Collection
-                  </a>
-              </div>
+          <!-- Settings Submenu -->
+          <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+            <a href="set-ai-voice.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Set Voice
+            </a>
+            <a href="ai-voice-profile.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Profiles
+            </a>
+            <a href="ai-voice-creation.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Creations
+            </a>
+            <a href="ai-voice-collection.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Collection
+            </a>
           </div>
-
-          <!-- Help Link -->
-          <a href="/help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your help icon -->
-              <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Help</span>
-          </a>
-        </nav>
-
-        <!-- Dark/Light Mode Toggle at the Bottom -->
-        <div class="p-4 flex justify-center">
-         <img src="images/toggle.png" alt="">
         </div>
-      </aside>
-        <!-- END SIDEBAR -->
+
+        <!-- Help Link -->
+        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your help icon -->
+          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+        </a>
+      </nav>
+
+    </div>
+
+      <!-- Dark/Light Mode Toggle at the Bottom -->
+      <div class="p-4 my-5 flex justify-center">
+        <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
+        <ul class="list-none flex items-center bg-gray rounded-3xl">
+        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
+        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+        </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- END SIDEBAR -->
 
         <!-- MAIN CONTENT -->
-        <main
-            style="background-image: url(images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;"
-            class="flex-1 flex-col mx-auto lg:py-6 lg:px-10 md:p-5 sm:p-4 p-2   ">
+        <main class="flex-1 md:mx-auto p-5 md:p-10">
             <!-- Example content header -->
             <header class="lg:mb-6 md:mb-4 mb-2 relative flex justify-end lg:px-4 items-center gap-4">
-                <h2 class="lg:text-3xl text-xl lg:text-center text-darkTeal font-bold w-full">Set Ai Voice</h2>
-               <a href="#"><button class="bg-teal lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full">Publish</button></a>
+                <h2 class="lg:text-3xl text-xl lg:text-center text-primary font-bold w-full">Set Ai Voice</h2>
+               <a href="#"><button class="bg-secondary lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full">Publish</button></a>
             </header>
 
             <div class="flex flex-wrap">
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray md:px-3 md:py-6 px-6 py-10 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/grace-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Grace</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Grace</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                             <div class="player-box mt-5 flex justify-between gap-2 w-full">
                                 <div
-                                    class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                    class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                     <i class="ri-play-fill text-white text-xl ml-1"></i>
                                 </div>
                                 <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -152,13 +167,13 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/Leslie-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Leslie</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Leslie</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. nec ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -169,15 +184,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/Sydney-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Sydney</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Sydney</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -188,15 +203,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/Kai-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Kai</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Kai</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -207,15 +222,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/sean-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Sean</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Sean</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -226,15 +241,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/rob.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Rob</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Rob</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -245,15 +260,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/tina-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Tina</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Tina</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -264,15 +279,15 @@
                 </div>
                 <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
                     <div
-                        class="set-ai-voice-cols bg-lightGray px-3 py-6 flex  flex-col items-center justify-center gap-2 rounded-xl">
+                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
                         <img class="rounded w-20 object-cover object-center" src="images/fionna-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-darkTeal">Fionna</h2>
+                        <h2 class="text-2xl font-semibold title-font text-primary">Fionna</h2>
                         <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
                             ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                         <div class="player-box mt-5 flex justify-between gap-2 w-full">
                             <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-teal">
+                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
                                 <i class="ri-play-fill text-white text-xl ml-1"></i>
                             </div>
                             <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
@@ -287,43 +302,9 @@
         <!-- END MAIN CONTENT -->
     </div>
 
-    <script>const sidebar = document.getElementById("sidebar");
-        const hamburgerBtn = document.getElementById("hamburgerBtn");
-        const settingsBtn = document.getElementById("settingsBtn");
-        const settingsSubmenu = document.getElementById("settingsSubmenu");
-        const themeToggleBtn = document.getElementById("themeToggleBtn");
-        const sunIcon = document.getElementById("sunIcon");
-        const moonIcon = document.getElementById("moonIcon");
-        
-        // 1. Sidebar Collapse
-        hamburgerBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("w-64");
-          sidebar.classList.toggle("w-16");
-        
-          // Hide/show text labels
-          document.querySelectorAll(".sidebar-text").forEach((el) => {
-            el.classList.toggle("hidden");
-          });
-        
-          // Also hide submenus if you want them collapsed in minimal view
-          // settingsSubmenu.classList.add("hidden");
-        });
-        
-        // 2. Settings Dropdown
-        settingsBtn.addEventListener("click", () => {
-          settingsSubmenu.classList.toggle("hidden");
-        });
-        
-        // 3. Dark/Light Mode Toggle
-        themeToggleBtn.addEventListener("click", () => {
-          // Toggle 'dark' class on <html>
-          document.documentElement.classList.toggle("dark");
-        
-          // Switch icon visibility
-          sunIcon.classList.toggle("hidden");
-          moonIcon.classList.toggle("hidden");
-        });
-      </script>
+    <!-- Scripts -->
+  <script src="/src/site.js"></script>
+
 </body>
 
 </html>
