@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Ai Voice</title>
-    <link rel="stylesheet" href="src/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Ai Voice</title>
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-    <!-- WRAPPER -->
+  <!-- WRAPPER -->
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
@@ -29,280 +29,306 @@
     <!-- Header -->
 
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+    <aside id="sidebar"
+      class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
+      <div>
 
-              <div>
-               
-      <!-- Header with brand + hamburger -->
-      <div class="flex items-center justify-between p-4">
-        <div class="flex items-center space-x-2">
-          <a href="index.html">
-            <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
-            <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
-          </a>
-        </div>
-        <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
-        <button id="hamburgerBtn"
-          class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
-          <!-- Hamburger Icon -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- User Info -->
-      <div class="flex items-center p-4 space-x-2 bg-gray">
-        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
-        <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
-          {Customer}</p>
-      </div>
-
-      <!-- NAVIGATION -->
-      <nav class="flex flex-col px-2 mt-4 text-primary">
-
-        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
-
-        <!-- Home Link -->
-        <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your home icon -->
-          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
-        </a>
-
-        <!-- Call Logs Link -->
-        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your call logs icon -->
-          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
-        </a>
-
-        <!-- SETTINGS (with Submenu) -->
-        <div class="mb-3">
-          <!-- Settings Toggle -->
-          <button type="button" id="settingsBtn"
-            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
-            <!-- Replace with your settings icon -->
-            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
-            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
-                fill="#a4a4a4" />
-            </svg>
-          </button>
-
-          <!-- Settings Submenu -->
-          <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-            <a href="set-ai-voice.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Set Voice
-            </a>
-            <a href="ai-voice-profile.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Profiles
-            </a>
-            <a href="ai-voice-creation.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Creations
-            </a>
-            <a href="ai-voice-collection.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Collection
+        <!-- Header with brand + hamburger -->
+        <div class="flex items-center justify-between p-4">
+          <div class="flex items-center space-x-2">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+              <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
             </a>
           </div>
+          <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
+          <button id="hamburgerBtn"
+            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+            <!-- Hamburger Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
 
-        <!-- Help Link -->
-        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your help icon -->
-          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
-        </a>
-      </nav>
+        <!-- User Info -->
+        <div class="flex items-center p-4 space-x-2 bg-gray">
+          <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+          <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
+            {Customer}</p>
+        </div>
 
-    </div>
+        <!-- NAVIGATION -->
+        <nav class="flex flex-col px-2 mt-4 text-primary">
+
+          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
+
+          <!-- Home Link -->
+          <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your home icon -->
+            <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+          </a>
+
+          <!-- Call Logs Link -->
+          <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your call logs icon -->
+            <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+          </a>
+
+          <!-- SETTINGS (with Submenu) -->
+          <div class="mb-3">
+            <!-- Settings Toggle -->
+            <button type="button" id="settingsBtn"
+              class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
+              <!-- Replace with your settings icon -->
+              <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
+              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
+                  fill="#a4a4a4" />
+              </svg>
+            </button>
+
+            <!-- Settings Submenu -->
+            <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+              <a href="set-ai-voice.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Set Voice
+              </a>
+              <a href="ai-voice-profile.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Voice Profiles
+              </a>
+              <a href="ai-voice-creation.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Voice Creations
+              </a>
+              <a href="ai-voice-collection.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Voice Collection
+              </a>
+            </div>
+          </div>
+
+          <!-- Help Link -->
+          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your help icon -->
+            <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+          </a>
+        </nav>
+
+      </div>
 
       <!-- Dark/Light Mode Toggle at the Bottom -->
       <div class="p-4 my-5 flex justify-center">
         <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
-        <ul class="list-none flex items-center bg-gray rounded-3xl">
-        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
-        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
-        </ul>
+          <ul class="list-none flex items-center bg-gray rounded-3xl">
+            <li data-toggle="light"
+              class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer">
+              <img width="20" src="images/icons/light-mode.svg" alt="Light Mode">
+            </li>
+            <li data-toggle="dark"
+              class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img
+                width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+          </ul>
         </div>
       </div>
     </aside>
     <!-- END SIDEBAR -->
 
-        <!-- MAIN CONTENT -->
-        <main class="flex-1 md:mx-auto p-5 md:p-10">
-            <!-- Example content header -->
-            <header class="lg:mb-6 md:mb-4 mb-2 relative flex justify-end lg:px-4 items-center gap-4">
-                <h2 class="lg:text-3xl text-xl lg:text-center text-primary font-bold w-full">Set Ai Voice</h2>
-               <a href="#"><button class="bg-secondary lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full">Publish</button></a>
-            </header>
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 md:mx-auto p-5 md:p-10">
+      <!-- Example content header -->
+      <header class="lg:mb-6 md:mb-4 mb-2 relative flex justify-end lg:px-4 items-center gap-4">
+        <h2 class="lg:text-3xl text-xl lg:text-center text-primary font-bold w-full">Set Ai Voice</h2>
+        <a href="#"><span
+            class="bg-secondary lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full">Publish</span></a>
+      </header>
 
-            <div class="flex flex-wrap">
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/grace-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Grace</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                            <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                                <div
-                                    class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                    <i class="ri-play-fill text-white text-xl ml-1"></i>
-                                </div>
-                                <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                    <img class="w-38  " src="images/beats-icon.png" alt="">
-                                </div>
-                            </div>
-                    </div>
+      <div class="flex flex-wrap">
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/grace-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Grace</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+              <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div
+                  class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                  </svg>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Leslie-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Leslie</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. nec ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                  <div class="w-full waveform"></div>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Sydney-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Sydney</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+              </div>
+          </div>
+          
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/Leslie-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Leslie</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Suspendisse consectetur mollis libero. nec ligula metus. Aenean risus velit, lobortis vitae nibh
+              eget, imperdiet faucibus.</p>
+              <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div
+                  class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                  </svg>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Kai-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Kai</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                  <div class="w-full waveform"></div>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/sean-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Sean</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/rob.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Rob</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/tina-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Tina</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/fionna-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold title-font text-primary">Fionna</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
-                            <div
-                                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                                <i class="ri-play-fill text-white text-xl ml-1"></i>
-                            </div>
-                            <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                                <img class="w-38  " src="images/beats-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/Sydney-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Sydney</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
             </div>
-        </main>
-        <!-- END MAIN CONTENT -->
-    </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/Kai-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Kai</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/sean-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Sean</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/rob.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Rob</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/tina-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Tina</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
+          <div
+            class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
+            <img class="rounded w-20 object-cover object-center" src="images/fionna-img.svg" alt="content">
+            <h2 class="text-2xl font-semibold title-font text-primary">Fionna</h2>
+            <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+              ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
+            <div class="player-box mt-5 flex justify-between gap-2 w-full">
+              <div
+                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                </svg>
+              </div>
+              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
+                <div class="w-full waveform"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- Scripts -->
+      </div>
+    </main>
+    <!-- END MAIN CONTENT -->
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/wavesurfer.js"></script>
   <script src="/src/site.js"></script>
 
 </body>
