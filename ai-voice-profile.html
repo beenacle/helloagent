@@ -13,9 +13,9 @@
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
-    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
+    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center justify-between">
       <a href="index.html">
-        <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
+        <img src="/images/logo.svg" alt="Logo" class="w-[9rem]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
         <!-- Hamburger Icon -->
@@ -38,8 +38,8 @@
       <div class="flex items-center justify-between p-4">
         <div class="flex items-center space-x-2">
           <a href="index.html">
-            <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
-            <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
+            <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+            <img class="hidden sidebar__logo-icon hide-on-collapse" src="/images/logo-icon.svg" alt="Logo">
           </a>
         </div>
         <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
@@ -55,7 +55,7 @@
 
       <!-- User Info -->
       <div class="flex items-center p-4 space-x-2 bg-gray">
-        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+        <img src="/images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
         <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
           {Customer}</p>
       </div>
@@ -63,19 +63,19 @@
       <!-- NAVIGATION -->
       <nav class="flex flex-col px-2 mt-4 text-primary">
 
-        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
+        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
 
         <!-- Home Link -->
         <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
           <!-- Replace with your home icon -->
-          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+          <img src="/images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
         </a>
 
         <!-- Call Logs Link -->
         <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
           <!-- Replace with your call logs icon -->
-          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+          <img src="/images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
         </a>
 
@@ -83,9 +83,9 @@
         <div class="mb-3">
           <!-- Settings Toggle -->
           <button type="button" id="settingsBtn"
-            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
+            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none bg-gray-100">
             <!-- Replace with your settings icon -->
-            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+            <img src="/images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
             <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
             <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -101,7 +101,7 @@
               Set Voice
             </a>
             <a href="ai-voice-profile.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50 bg-gray-100">
               Voice Profiles
             </a>
             <a href="ai-voice-creation.html"
@@ -118,7 +118,7 @@
         <!-- Help Link -->
         <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
           <!-- Replace with your help icon -->
-          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+          <img src="/images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
           <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
         </a>
       </nav>
@@ -129,8 +129,8 @@
       <div class="p-4 my-5 flex justify-center">
         <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
         <ul class="list-none flex items-center bg-gray rounded-3xl">
-        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
-        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="/images/icons/light-mode.svg" alt="Light Mode"></li>
+        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="/images/icons/dark-mode.svg" alt="Dark Mode"></li>
         </ul>
         </div>
       </div>
@@ -139,187 +139,239 @@
 
         <!-- MAIN CONTENT -->
         <main class="flex-1 md:mx-auto p-5 md:p-10">
+
             <!-- Example content header -->
             <header class="lg:mb-6 md:mb-4 mb-2 relative">
                 <h2 class="lg:text-3xl text-xl text-center text-primary font-bold">AI Voice Profile</h2>
             </header>
 
-            <div class="flex flex-wrap">
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/grace-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Grace</h2>
-                        <p class="leading-5 text-base text-center lg:text-sm">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-4">
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/grace-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Grace</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Leslie-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Leslie</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. nec ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                    <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                     <!-- Play Icon (visible by default) -->
+                     <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                   </svg>
+                   <!-- Pause Icon (hidden by default) -->
+                   <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                   </svg>
+                    </div>
+                    <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                      <div class="w-full waveform"></div>
+                    </div>
+                  </div>
+              </div>
+      
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Leslie-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Leslie</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Sydney-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Sydney</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Sydney-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Sydney</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/Kai-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Kai</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Kai-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Kai</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/sean-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Sean</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/sean-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Sean</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/rob.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Rob</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/rob.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Rob</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/tina-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Tina</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/tina-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Tina</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
-                <div class="xl:w-1/4 md:w-1/2 lg:p-4 p-1">
-                    <div
-                        class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-center gap-2 rounded-xl hover:text-white transition duration-500 profile-card">
-                        <img class="rounded w-20 object-cover object-center" src="images/fionna-img.svg" alt="content">
-                        <h2 class="text-2xl font-semibold text-primary">Fionna</h2>
-                        <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
-                            ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
-                        <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
               <div
-                class="play-icon w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                </svg>
-              </div>
-              <div class="eco-box w-full bg-white rounded-lg flex justify-center p-1">
-                <div class="w-full waveform"></div>
-              </div>
-            </div>
-                    </div>
+                class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full">
+                <div class="text-center">
+                <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/fionna-img.svg" alt="content">
+                <h2 class="text-2xl font-semibold title-font text-primary">Fionna</h2>
+                <p class="leading-5 text-base text-center lg:text-[14px]">Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Suspendisse consectetur mollis libero. Praesent nec
+                  ligula metus. Aenean risus velit, lobortis vitae nibh eget, imperdiet faucibus.</p>
                 </div>
+                <div class="player-box mt-5 flex justify-between gap-2 w-full">
+                  <div class="play-icon cursor-pointer w-12 h-10 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                   <!-- Play Icon (visible by default) -->
+                   <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                 </svg>
+                 <!-- Pause Icon (hidden by default) -->
+                 <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                 </svg>
+                  </div>
+                  <div class="eco-box w-full bg-white rounded-lg flex items-center px-1">
+                    <div class="w-full waveform"></div>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
 
-            </div>
         </main>
         <!-- END MAIN CONTENT -->
     </div>
 
    <!-- Scripts -->
    <script src="https://unpkg.com/wavesurfer.js"></script>
-  <script src="/src/site.js"></script>
+  <script src="/src/site.js" type="module"></script>
 
 </body>
 

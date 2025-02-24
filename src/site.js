@@ -81,9 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
       players.forEach((player) => {
         const playButton = player.querySelector(".play-icon");
         const waveformContainer = player.querySelector(".waveform");
+        const playIcon = player.querySelector(".play-btn");
+        const pauseIcon = player.querySelector(".pause-btn");
   
-        // Ensure both elements exist before proceeding
-        if (!playButton || !waveformContainer) return;
+        // Ensure all elements exist before proceeding
+        if (!playButton || !waveformContainer || !playIcon || !pauseIcon) return;
   
         // Initialize WaveSurfer
         const waveSurfer = WaveSurfer.create({
@@ -92,18 +94,30 @@ document.addEventListener("DOMContentLoaded", () => {
           progressColor: "#14B8A6",
           height: 30,
           responsive: true,
-          url: "audio/1.mp3",
+          url: "/audio/1.mp3",
         });
   
         let isPlaying = false;
   
+        // Play/Pause toggle
         playButton.addEventListener("click", () => {
           if (isPlaying) {
             waveSurfer.pause();
+            playIcon.classList.remove("hidden");
+            pauseIcon.classList.add("hidden");
           } else {
             waveSurfer.play();
+            playIcon.classList.add("hidden");
+            pauseIcon.classList.remove("hidden");
           }
           isPlaying = !isPlaying;
+        });
+  
+        // Reset to play icon when audio finishes
+        waveSurfer.on("finish", () => {
+          isPlaying = false;
+          playIcon.classList.remove("hidden");
+          pauseIcon.classList.add("hidden");
         });
       });
     }

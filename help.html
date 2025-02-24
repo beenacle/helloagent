@@ -14,9 +14,9 @@
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
-    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
+    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center justify-between">
       <a href="index.html">
-        <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
+        <img src="/images/logo.svg" alt="Logo" class="w-[9rem]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
         <!-- Hamburger Icon -->
@@ -40,8 +40,8 @@
         <div class="flex items-center justify-between p-4">
           <div class="flex items-center space-x-2">
             <a href="index.html">
-              <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
-              <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
+              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+              <img class="hidden sidebar__logo-icon hide-on-collapse" src="/images/logo-icon.svg" alt="Logo">
             </a>
           </div>
           <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
@@ -57,7 +57,7 @@
 
         <!-- User Info -->
         <div class="flex items-center p-4 space-x-2 bg-gray">
-          <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+          <img src="/images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
           <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
             {Customer}</p>
         </div>
@@ -65,19 +65,19 @@
         <!-- NAVIGATION -->
         <nav class="flex flex-col px-2 mt-4 text-primary">
 
-          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
+          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
 
           <!-- Home Link -->
           <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
             <!-- Replace with your home icon -->
-            <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+            <img src="/images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
             <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
           </a>
 
           <!-- Call Logs Link -->
           <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
             <!-- Replace with your call logs icon -->
-            <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+            <img src="/images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
             <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
           </a>
 
@@ -87,7 +87,7 @@
             <button type="button" id="settingsBtn"
               class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
               <!-- Replace with your settings icon -->
-              <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+              <img src="/images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
               <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
               <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -118,9 +118,9 @@
           </div>
 
           <!-- Help Link -->
-          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 bg-gray-100">
             <!-- Replace with your help icon -->
-            <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+            <img src="/images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
             <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
           </a>
         </nav>
@@ -133,11 +133,11 @@
           <ul class="list-none flex items-center bg-gray rounded-3xl">
             <li data-toggle="light"
               class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer">
-              <img width="20" src="images/icons/light-mode.svg" alt="Light Mode">
+              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode">
             </li>
             <li data-toggle="dark"
               class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img
-                width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+                width="20" src="/images/icons/dark-mode.svg" alt="Dark Mode"></li>
           </ul>
         </div>
       </div>
@@ -256,7 +256,7 @@
   <!-- END WRAPPER -->
 
   <!-- Scripts -->
-  <script src="/src/site.js"></script>
+  <script src="/src/site.js" type="module"></script>
 
 </body>
 

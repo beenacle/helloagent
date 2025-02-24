@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ai Voice Creation</title>
-    <link rel="stylesheet" href="/src/styles.css">
-  </head>
-  <body>
 
-    <!-- WRAPPER -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ai Voice Creation</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+
+<body>
+
+  <!-- WRAPPER -->
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
-    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
+    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center justify-between">
       <a href="index.html">
-        <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
+        <img src="/images/logo.svg" alt="Logo" class="w-[9rem]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
         <!-- Hamburger Icon -->
@@ -28,109 +30,114 @@
     <!-- Header -->
 
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+    <aside id="sidebar"
+      class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
-              <div>
-               
-      <!-- Header with brand + hamburger -->
-      <div class="flex items-center justify-between p-4">
-        <div class="flex items-center space-x-2">
-          <a href="index.html">
-            <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
-            <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
-          </a>
-        </div>
-        <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
-        <button id="hamburgerBtn"
-          class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
-          <!-- Hamburger Icon -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+      <div>
 
-      <!-- User Info -->
-      <div class="flex items-center p-4 space-x-2 bg-gray">
-        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
-        <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
-          {Customer}</p>
-      </div>
-
-      <!-- NAVIGATION -->
-      <nav class="flex flex-col px-2 mt-4 text-primary">
-
-        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
-
-        <!-- Home Link -->
-        <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your home icon -->
-          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
-        </a>
-
-        <!-- Call Logs Link -->
-        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your call logs icon -->
-          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
-        </a>
-
-        <!-- SETTINGS (with Submenu) -->
-        <div class="mb-3">
-          <!-- Settings Toggle -->
-          <button type="button" id="settingsBtn"
-            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
-            <!-- Replace with your settings icon -->
-            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-            <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
-            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
-                fill="#a4a4a4" />
-            </svg>
-          </button>
-
-          <!-- Settings Submenu -->
-          <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-            <a href="set-ai-voice.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Set Voice
-            </a>
-            <a href="ai-voice-profile.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Profiles
-            </a>
-            <a href="ai-voice-creation.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Creations
-            </a>
-            <a href="ai-voice-collection.html"
-              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
-              Voice Collection
+        <!-- Header with brand + hamburger -->
+        <div class="flex items-center justify-between p-4">
+          <div class="flex items-center space-x-2">
+            <a href="index.html">
+              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+              <img class="hidden sidebar__logo-icon hide-on-collapse" src="/images/logo-icon.svg" alt="Logo">
             </a>
           </div>
+          <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
+          <button id="hamburgerBtn"
+            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+            <!-- Hamburger Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
 
-        <!-- Help Link -->
-        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
-          <!-- Replace with your help icon -->
-          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
-        </a>
-      </nav>
+        <!-- User Info -->
+        <div class="flex items-center p-4 space-x-2 bg-gray">
+          <img src="/images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+          <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
+            {Customer}</p>
+        </div>
 
-    </div>
+        <!-- NAVIGATION -->
+        <nav class="flex flex-col px-2 mt-4 text-primary">
+
+          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
+
+          <!-- Home Link -->
+          <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your home icon -->
+            <img src="/images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+          </a>
+
+          <!-- Call Logs Link -->
+          <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your call logs icon -->
+            <img src="/images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+          </a>
+
+          <!-- SETTINGS (with Submenu) -->
+          <div class="mb-3">
+            <!-- Settings Toggle -->
+            <button type="button" id="settingsBtn"
+              class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none bg-gray-100">
+              <!-- Replace with your settings icon -->
+              <img src="/images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
+              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
+                  fill="#a4a4a4" />
+              </svg>
+            </button>
+
+            <!-- Settings Submenu -->
+            <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+              <a href="set-ai-voice.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Set Voice
+              </a>
+              <a href="ai-voice-profile.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Voice Profiles
+              </a>
+              <a href="ai-voice-creation.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50 bg-gray-100">
+                Voice Creations
+              </a>
+              <a href="ai-voice-collection.html"
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                Voice Collection
+              </a>
+            </div>
+          </div>
+
+          <!-- Help Link -->
+          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+            <!-- Replace with your help icon -->
+            <img src="/images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+          </a>
+        </nav>
+
+      </div>
 
       <!-- Dark/Light Mode Toggle at the Bottom -->
       <div class="p-4 my-5 flex justify-center">
         <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
-        <ul class="list-none flex items-center bg-gray rounded-3xl">
-        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
-        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
-        </ul>
+          <ul class="list-none flex items-center bg-gray rounded-3xl">
+            <li data-toggle="light"
+              class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer">
+              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode"></li>
+            <li data-toggle="dark"
+              class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img
+                width="20" src="/images/icons/dark-mode.svg" alt="Dark Mode"></li>
+          </ul>
         </div>
       </div>
     </aside>
@@ -141,145 +148,199 @@
       <div class="sm:mx-auto sm:w-full sm:max-w-2xl">
 
         <!-- Example content header -->
-            <header class="mb-6 relative">
-                <h2 class="text-3xl text-center text-primary font-bold">AI Voice Creation</h2>
-                <img width="90" id="changePicture" class="mx-auto cursor-pointer my-6" src="images/user-edit-image.png" alt="Image">
-                <img width="24" class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="Image">
-              </header>
-      
-              <!-- Example form content (use your own form) -->
-              <section class="rounded space-y-4 relative">
-                <div class="">
-                  <label for="voiceName" class="block font-bold text-lg mb-2 text-primary">Name of AI Voice</label>
-                  <input
-                    type="text"
-                    id="voiceName"
-                    class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="Enter AI Voice name"
-                  />
-                </div>
-      
-                <div>
-                  <label for="voiceID" class="block font-bold text-lg mb-2 text-primary">Voice ID for AI Voice</label>
-                  <input
-                    type="text"
-                    id="voiceID"
-                    class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="Enter Voice ID"
-                  />
-                </div>
-      
-                <div>
-                  <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Opening Remark</label>
-                  <input
-                  type="text"
-                  id="voiceName"
-                  class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
-                         focus:outline-none focus:ring-2 focus:ring-teal-200"
-                  placeholder="This is the exact phrase that the AI will say first when answering the call"
-                />
-                  <span class="text-darkGray text-sm">Note: In the instructions, [callerPhoneNumber] can be used to refer to the caller's phone number, and [callSid] is the Twilio ID of the call.</span>
-                </div>
-
-                <div>
-                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Instruction for AI Voice</label>
-                    <div class="relative">
-                        <input
-                        type="text"
-                        id="voiceName"
-                        class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
-                               focus:outline-none focus:ring-2 focus:ring-teal-200"
-                        placeholder="Tell the AI what you want it to do, how to do it, when to do it, etc..."
-                      />
-                      <img width="28" class="absolute -right-10 top-4 cursor-pointer" src="images/delete-icon.svg" alt="Image">
-                    </div>
-                    <div class="my-5">
-                        <button type="submit" class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New Instruction</button>
-                      </div>
-                  </div>
-                 
-                  <div>
-                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Description of AI Voice</label>
-                    <input
-                    type="text"
-                    id="voiceName"
-                    class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200"
-                    placeholder="ID of the AI Voice to be used"
-                  />
-                  </div>
-
-                  <div>
-                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Helium form for AI Voice (Optional)</label>
-                  <select class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
-                           focus:outline-none focus:ring-2 focus:ring-teal-200" name="" id="">
-                    <option value="" class="w-14">Select the active Helium Form where the AI will save collected information. Ensure your instructions specify when to save.</option>
-                    <option value="">Option2</option>
-                    <option value="">Option3</option>
-                    <option value="">Option4</option>
-                    <option value="">Option5</option>
-                  </select>
-                <!-- Add more fields as needed... -->
-      
-                <button
-                  type="button"
-                  class="bg-secondary-600 text-white px-4 py-2 rounded hover:bg-secondary-700"
-                >
-                  Save
-                </button>
-                <div id="popup" class="fixed left-10 top-0 items-center justify-center bg-black bg-opacity-50 hidden">
-                  <img class="mt-2" src="images/new-group-image.png" alt="Image">
-                      <button id="closePopup" class="absolute top-0 right-0 mt-6 mr-1 text-gray-600 hover:text-red-600">
-                        <i class="bg-darkGray p-2 rounded-full text-white text-xl ri-close-fill"></i>
-                      </button>
-                  </div>
-              </div>
-
-              </section>
-        
+        <header class="mb-6 relative text-center">
+          <h2 class="text-3xl text-primary font-bold">AI Voice Creation</h2>
+          <div class="inline-block relative my-6">
+          <img width="90" id="changePicture" class="object-cover" src="/images/grace-img.svg"
+            alt="Image">
+            <div class="absolute end-0 bottom-0 cursor-pointer">
+              <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.731445" y="0.0571289" width="24.9429" height="24.9429" rx="12.4714" fill="#1AFFE4"/>
+                <g clip-path="url(#clip0_2_653)">
+                <path d="M9.80421 16.5676C9.92231 16.5676 9.94593 16.5558 10.0522 16.5322L12.178 16.107C12.4024 16.048 12.6268 15.9417 12.8039 15.7645L17.9531 10.6154C18.7444 9.82412 18.7444 8.46598 17.9531 7.67471L17.5161 7.21412C16.7249 6.42285 15.3549 6.42285 14.5636 7.21412L9.41448 12.3751C9.24915 12.5404 9.13105 12.7766 9.072 13.001L8.62322 15.1504C8.56417 15.552 8.68227 15.9417 8.96571 16.2251C9.1901 16.4495 9.52077 16.5676 9.80421 16.5676ZM10.2058 13.2254L15.3549 8.06444C15.6974 7.72195 16.3233 7.72195 16.654 8.06444L17.1028 8.51322C17.5043 8.91476 17.5043 9.48163 17.1028 9.87136L11.9654 15.0323L9.78059 15.3984L10.2058 13.2254Z" fill="#0A574E"/>
+                <path d="M17.9057 17.2998H9.18993C8.84744 17.2998 8.62305 17.5242 8.62305 17.8667C8.62305 18.2092 8.90649 18.4336 9.18993 18.4336H17.8585C18.2009 18.4336 18.4844 18.2092 18.4844 17.8667C18.4726 17.5242 18.1891 17.2998 17.9057 17.2998Z" fill="#0A574E"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_2_653">
+                <rect width="11.81" height="11.81" fill="white" transform="translate(7.67822 6.6236)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
             </div>
-      </main>
-      <!-- END MAIN CONTENT -->
-    </div>
-    <!-- END WRAPPER -->
+          </div>
+          <div class="absolute right-0 top-1/2 cursor-pointer w-7">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_3_28)">
+              <path d="M26.2677 0H3.75C1.68225 0 0 1.68225 0 3.75V28.25C0 30.3177 1.68225 32 3.75 32H28.25C30.3177 32 32 30.3177 32 28.25V5.73225L26.2677 0ZM9.8125 2.5H17.25V7.25H19.75V2.5H22.25V8.5C22.25 9.18925 21.6893 9.75 21 9.75H11.0625C10.3733 9.75 9.8125 9.18925 9.8125 8.5V2.5ZM24.75 29.5H7.3125V18.5C7.3125 17.8107 7.87325 17.25 8.5625 17.25H23.5C24.1893 17.25 24.75 17.8107 24.75 18.5V29.5ZM29.5 28.25C29.5 28.9393 28.9393 29.5 28.25 29.5H27.25V18.5C27.25 16.4323 25.5677 14.75 23.5 14.75H8.5625C6.49475 14.75 4.8125 16.4323 4.8125 18.5V29.5H3.75C3.06075 29.5 2.5 28.9393 2.5 28.25V3.75C2.5 3.06075 3.06075 2.5 3.75 2.5H7.3125V8.5C7.3125 10.5677 8.99475 12.25 11.0625 12.25H21C23.0677 12.25 24.75 10.5677 24.75 8.5V2.5H25.2323L29.5 6.76775V28.25Z" fill="#14B8A6"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_3_28">
+              <rect width="32" height="32" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              
+          </div>
+        </header>
 
-    <div class="change-picture-popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary rounded-lg shadow-lg p-6  w-full max-w-[400px] md:max-w-[550px] z-30 hidden">
+        <!-- Example form content (use your own form) -->
+        <section class="rounded space-y-4 relative">
+          <div class="">
+            <label for="voiceName" class="block font-bold text-lg mb-2 text-primary">Name of AI Voice</label>
+            <input type="text" id="voiceName" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+                           focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter AI Voice name" />
+          </div>
 
-      <!-- Row -->
-      <div class="grid grid-cols-3 md:grid-cols-4 gap-5 p-4">
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/grace-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Leslie-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Sydney-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Kai-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/sean-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/rob.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/tina-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/fionna-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/grace-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Leslie-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Sydney-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Kai-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/sean-img.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/rob.svg" alt="content"></div>
-      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/tina-img.svg" alt="content"></div>
-      <div class="cursor-pointer text-center text-sm">
-      <div class="mx-auto rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto h-20 bg-tertiary flex items-center justify-center">
-        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.7679 10.2679H15.1786C14.932 10.2679 14.7321 10.068 14.7321 9.82143V2.23214C14.7321 0.999451 13.7327 0 12.5 0C11.2673 0 10.2679 0.999451 10.2679 2.23214V9.82143C10.2679 10.068 10.068 10.2679 9.82143 10.2679H2.23214C0.999451 10.2679 0 11.2673 0 12.5C0 13.7327 0.999451 14.7321 2.23214 14.7321H9.82143C10.068 14.7321 10.2679 14.932 10.2679 15.1786V22.7679C10.2679 24.0006 11.2673 25 12.5 25C13.7327 25 14.7321 24.0006 14.7321 22.7679V15.1786C14.7321 14.932 14.932 14.7321 15.1786 14.7321H22.7679C24.0006 14.7321 25 13.7327 25 12.5C25 11.2673 24.0006 10.2679 22.7679 10.2679Z" fill="#0A574E"/>
+          <div>
+            <label for="voiceID" class="block font-bold text-lg mb-2 text-primary">Voice ID for AI Voice</label>
+            <input type="text" id="voiceID" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+                           focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter Voice ID" />
+          </div>
+
+          <div>
+            <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Opening Remark</label>
+            <input type="text" id="voiceName" class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
+                         focus:outline-none focus:ring-2 focus:ring-teal-200"
+              placeholder="This is the exact phrase that the AI will say first when answering the call" />
+            <span class="text-darkGray text-sm">Note: In the instructions, [callerPhoneNumber] can be used to refer to
+              the caller's phone number, and [callSid] is the Twilio ID of the call.</span>
+          </div>
+
+          <div>
+            <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Instruction for AI
+              Voice</label>
+            <div class="relative">
+              <input type="text" id="voiceName" class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
+                               focus:outline-none focus:ring-2 focus:ring-teal-200"
+                placeholder="Tell the AI what you want it to do, how to do it, when to do it, etc..." />
+              <div class="absolute -right-10 top-4 cursor-pointer">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.3335 9.33337C24.9799 9.33337 24.6407 9.47385 24.3907 9.7239C24.1406 9.97395 24.0002 10.3131 24.0002 10.6667V25.588C23.9619 26.2623 23.6588 26.8941 23.1568 27.3459C22.6549 27.7977 21.9947 28.0328 21.3202 28H10.6802C10.0056 28.0328 9.34547 27.7977 8.8435 27.3459C8.34153 26.8941 8.03841 26.2623 8.00016 25.588V10.6667C8.00016 10.3131 7.85969 9.97395 7.60964 9.7239C7.35959 9.47385 7.02045 9.33337 6.66683 9.33337C6.31321 9.33337 5.97407 9.47385 5.72402 9.7239C5.47397 9.97395 5.3335 10.3131 5.3335 10.6667V25.588C5.37155 26.9697 5.95561 28.2799 6.95774 29.2318C7.95987 30.1837 9.29839 30.6997 10.6802 30.6667H21.3202C22.7019 30.6997 24.0405 30.1837 25.0426 29.2318C26.0447 28.2799 26.6288 26.9697 26.6668 25.588V10.6667C26.6668 10.3131 26.5264 9.97395 26.2763 9.7239C26.0263 9.47385 25.6871 9.33337 25.3335 9.33337Z" fill="#14B8A6"/>
+                  <path d="M26.6667 5.33337H21.3333V2.66671C21.3333 2.31309 21.1929 1.97395 20.9428 1.7239C20.6928 1.47385 20.3536 1.33337 20 1.33337H12C11.6464 1.33337 11.3072 1.47385 11.0572 1.7239C10.8071 1.97395 10.6667 2.31309 10.6667 2.66671V5.33337H5.33333C4.97971 5.33337 4.64057 5.47385 4.39052 5.7239C4.14048 5.97395 4 6.31309 4 6.66671C4 7.02033 4.14048 7.35947 4.39052 7.60952C4.64057 7.85956 4.97971 8.00004 5.33333 8.00004H26.6667C27.0203 8.00004 27.3594 7.85956 27.6095 7.60952C27.8595 7.35947 28 7.02033 28 6.66671C28 6.31309 27.8595 5.97395 27.6095 5.7239C27.3594 5.47385 27.0203 5.33337 26.6667 5.33337ZM13.3333 5.33337V4.00004H18.6667V5.33337H13.3333Z" fill="#14B8A6"/>
+                  <path d="M14.6667 22.6667V13.3333C14.6667 12.9797 14.5262 12.6406 14.2761 12.3905C14.0261 12.1405 13.687 12 13.3333 12C12.9797 12 12.6406 12.1405 12.3905 12.3905C12.1405 12.6406 12 12.9797 12 13.3333V22.6667C12 23.0203 12.1405 23.3594 12.3905 23.6095C12.6406 23.8595 12.9797 24 13.3333 24C13.687 24 14.0261 23.8595 14.2761 23.6095C14.5262 23.3594 14.6667 23.0203 14.6667 22.6667Z" fill="#14B8A6"/>
+                  <path d="M20.0002 22.6667V13.3333C20.0002 12.9797 19.8597 12.6406 19.6096 12.3905C19.3596 12.1405 19.0205 12 18.6668 12C18.3132 12 17.9741 12.1405 17.724 12.3905C17.474 12.6406 17.3335 12.9797 17.3335 13.3333V22.6667C17.3335 23.0203 17.474 23.3594 17.724 23.6095C17.9741 23.8595 18.3132 24 18.6668 24C19.0205 24 19.3596 23.8595 19.6096 23.6095C19.8597 23.3594 20.0002 23.0203 20.0002 22.6667Z" fill="#14B8A6"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="my-5">
+              <button type="submit"
+                class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New
+                Instruction</button>
+            </div>
+          </div>
+
+          <div>
+            <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Description of AI Voice</label>
+            <input type="text" id="voiceName" class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
+                           focus:outline-none focus:ring-2 focus:ring-teal-200"
+              placeholder="ID of the AI Voice to be used" />
+          </div>
+
+          <div>
+            <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Helium form for AI Voice
+              (Optional)</label>
+            <select class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
+                           focus:outline-none focus:ring-2 focus:ring-teal-200" name="" id="">
+              <option value="" class="w-14">Select the active Helium Form where the AI will save collected information.
+                Ensure your instructions specify when to save.</option>
+              <option value="">Option2</option>
+              <option value="">Option3</option>
+              <option value="">Option4</option>
+              <option value="">Option5</option>
+            </select>
+            <!-- Add more fields as needed... -->
+
+            <button type="button" class="bg-secondary-600 text-white px-4 py-2 rounded hover:bg-secondary-700">
+              Save
+            </button>
+            <div id="popup" class="fixed left-10 top-0 items-center justify-center bg-black bg-opacity-50 hidden">
+              <img class="mt-2" src="/images/new-group-image.png" alt="Image">
+              <button id="closePopup" class="absolute top-0 right-0 mt-6 mr-1 text-gray-600 hover:text-red-600">
+                <i class="bg-darkGray p-2 rounded-full text-white text-xl ri-close-fill"></i>
+              </button>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+    <!-- END MAIN CONTENT -->
+  </div>
+  <!-- END WRAPPER -->
+
+  <div
+    class="change-picture-popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary rounded-lg shadow-lg p-6  w-full max-w-[400px] md:max-w-[550px] z-30 hidden">
+
+    <!-- Row -->
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-5 p-4">
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/grace-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Leslie-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Sydney-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Kai-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/sean-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/rob.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/tina-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/fionna-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/grace-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Leslie-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Sydney-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/Kai-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/sean-img.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/rob.svg" alt="content"></div>
+      <div><img
+          class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center"
+          src="/images/tina-img.svg" alt="content"></div>
+      <div class="cursor-pointer text-center text-sm relative">
+        <input type="file" class="absolute start-0 top-0 opacity-0 z-1 w-full h-full cursor-pointer">
+        <div
+          class="mx-auto rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto h-20 bg-tertiary flex items-center justify-center">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.7679 10.2679H15.1786C14.932 10.2679 14.7321 10.068 14.7321 9.82143V2.23214C14.7321 0.999451 13.7327 0 12.5 0C11.2673 0 10.2679 0.999451 10.2679 2.23214V9.82143C10.2679 10.068 10.068 10.2679 9.82143 10.2679H2.23214C0.999451 10.2679 0 11.2673 0 12.5C0 13.7327 0.999451 14.7321 2.23214 14.7321H9.82143C10.068 14.7321 10.2679 14.932 10.2679 15.1786V22.7679C10.2679 24.0006 11.2673 25 12.5 25C13.7327 25 14.7321 24.0006 14.7321 22.7679V15.1786C14.7321 14.932 14.932 14.7321 15.1786 14.7321H22.7679C24.0006 14.7321 25 13.7327 25 12.5C25 11.2673 24.0006 10.2679 22.7679 10.2679Z"
+              fill="#0A574E" />
           </svg>
+        </div>
+        <div class="mt-1">Upload <br> Custom Picture</div>
       </div>
-      <div class="mt-1">Upload <br> Custom Picture</div>
-      </div>
-      </div>
-      <!-- Row -->
-
     </div>
+    <!-- Row -->
 
-    <div class="popup-overlay cursor-pointer fixed inset-0 bg-black bg-opacity-75 z-20 hidden"></div>
+  </div>
 
-    <!-- Scripts -->
-  <script src="/src/site.js"></script>
-  </body>
+  <div class="popup-overlay cursor-pointer fixed inset-0 bg-black bg-opacity-75 z-20 hidden"></div>
+
+  <!-- Scripts -->
+  <script src="/src/site.js" type="module"></script>
+</body>
+
 </html>

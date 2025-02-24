@@ -14,8 +14,31 @@ export default defineConfig({
         login: resolve(__dirname, 'login.html'),
         signUp: resolve(__dirname, 'sign-up.html'),
         help: resolve(__dirname, 'help.html'),
+        site: resolve(__dirname, 'src/site.js'),
+        passwordToggle: resolve(__dirname, 'src/password-toggle.js'),
+      },
+      output: {
+        entryFileNames: '[name].js', // e.g., dist/site.js
+        assetFileNames: 'assets/[name]-[hash][extname]', // CSS, images
+        // Remove chunkFileNames to disable splitting
       },
     },
-    outDir: 'dist', // Default, just confirming
+    outDir: 'dist',
   },
+  base: './',
+  plugins: [
+    {
+      name: 'move-scripts-to-body',
+      transformIndexHtml(html) {
+        const externalScriptRegex = /<script\b(?![^>]*type="module")[^>]*>([\s\S]*?)<\/script>/gi;
+        const moduleScriptRegex = /<script\b[^>]*type="module"[^>]*>([\s\S]*?)<\/script>/gi;
+        const externalScripts = html.match(externalScriptRegex) || [];
+        const moduleScripts = html.match(moduleScriptRegex) || [];
+        let modifiedHtml = html.replace(externalScriptRegex, '').replace(moduleScriptRegex, '');
+        const allScripts = externalScripts.concat(moduleScripts).join('\n');
+        modifiedHtml = modifiedHtml.replace('</body>', allScripts + '\n</body>');
+        return modifiedHtml;
+      },
+    },
+  ],
 });
