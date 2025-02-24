@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         callLogs: resolve(__dirname, 'call-logs.html'),
         aiVoiceCollection: resolve(__dirname, 'ai-voice-collection.html'),
+        aiVoiceCreation: resolve(__dirname, 'ai-voice-creation.html'),
         aiVoiceProfile: resolve(__dirname, 'ai-voice-profile.html'),
         setAiVoice: resolve(__dirname, 'set-ai-voice.html'),
         login: resolve(__dirname, 'login.html'),

@@ -5,6 +5,7 @@
 :root {
     --green: #0A574E;
     --dark-teal: #14B8A6;
+    --light-teal: #1AFFE4;
     --gray: #E6E6E6;
     --dark: #292929;
   }
@@ -45,8 +46,24 @@ body {
     background-color: var(--dark-teal);
 }
 
+.border-secondary {
+    border-color: var(--dark-teal);
+}
+
 .text-secondary {
     color: var(--dark-teal);
+}
+
+.bg-tertiary {
+    background-color: var(--light-teal);
+}
+
+.border-tertiary {
+    border-color: var(--light-teal);
+}
+
+.text-tertiary {
+    color: var(--light-teal);
 }
 
 .text-dark {

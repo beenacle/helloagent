@@ -4,162 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ai Voice Creation</title>
-    <link rel="stylesheet" href="src/styles.css">
-    <!-- Heroicons (for icons) -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css">
   </head>
-  <body class="bg-gray-50">
+  <body>
 
     <!-- WRAPPER -->
-    <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
+  <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
-      <!-- SIDEBAR -->
-      <aside
-        id="sidebar"
-        class="bg-white border-r border-gray-200 w-64 h-screen transition-all duration-200
-               overflow-hidden flex flex-col sticky left-0 top-0 justify-start shadow-xl">
-        <!-- Header with brand + hamburger -->
-        <div class="flex items-center justify-between p-4 bg-white">
-          <div class="flex items-center space-x-2">
-            <a href="index.html"><img
-              src="images/logo.svg"
-              alt="Logo"
-              class=" rounded-full"
-            /></a>
-          </div>
-          <button
-            id="hamburgerBtn"
-            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none"
-          >
-            <!-- Hamburger Icon -->
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke-width="2"
-            >
+    <!-- Header -->
+    <header class="py-4 px-5 md:px-10 xl:hidden flex items-center">
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Logo" class="w-[9rem]">
+      </a>
+      <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </header>
+    <!-- Header -->
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+               overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
+
+              <div>
+               
+      <!-- Header with brand + hamburger -->
+      <div class="flex items-center justify-between p-4">
+        <div class="flex items-center space-x-2">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+            <img class="hidden sidebar__logo-icon hide-on-collapse" src="images/logo-icon.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
+        <button id="hamburgerBtn"
+          class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- User Info -->
+      <div class="flex items-center p-4 space-x-2 bg-gray">
+        <img src="images/user-image.png" alt="User" class="w-8 h-8 rounded-full" />
+        <p class="font-semibold sidebar-text hide-on-collapse text-primary"><span class="font-normal">Hello</span>,
+          {Customer}</p>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="flex flex-col px-2 mt-4 text-primary">
+
+        <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3">Menu</h6>
+
+        <!-- Home Link -->
+        <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your home icon -->
+          <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+        </a>
+
+        <!-- Call Logs Link -->
+        <a href="call-logs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your call logs icon -->
+          <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+        </a>
+
+        <!-- SETTINGS (with Submenu) -->
+        <div class="mb-3">
+          <!-- Settings Toggle -->
+          <button type="button" id="settingsBtn"
+            class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
+            <!-- Replace with your settings icon -->
+            <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
+            <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
+                d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
+                fill="#a4a4a4" />
             </svg>
           </button>
-        </div>
 
-        <!-- User Info -->
-        <div class="flex items-center p-4 space-x-2 bg-lightGray">
-          <img
-            src="images/user-image.png"
-            alt="User"
-            class="w-8 h-8 rounded-full"
-          />
-          <p class="font-semibold sidebar-text text-primary"><span class="font-normal">Hello</span>, {Customer}</p>
-        </div>
-
-        <!-- NAVIGATION -->
-        <nav class="flex flex-col h-[380px] px-2 space-y-1 mt-4 text-primary dark:text-primary">
-          <!-- Home Link -->
-          <a href="" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your home icon -->
-              <img src="images/home-icon.svg" alt="Home Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Home</span>
-          </a>
-
-          <!-- Call Logs Link -->
-          <a href="call-logs.html"
-              class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your call logs icon -->
-              <img src="images/call-log-icon.svg" alt="Call Logs Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Call Logs</span>
-          </a>
-
-          <!-- SETTINGS (with Submenu) -->
-          <div>
-              <!-- Settings Toggle -->
-              <button type="button" id="settingsBtn" class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray
-                 dark:hover:teal focus:outline-none">
-                  <!-- Replace with your settings icon -->
-                  <img src="images/setting-icon.svg" alt="Settings Icon" class="w-5 h-5" />
-                  <span class="ml-3 sidebar-text flex-1 text-left">Settings</span>
-                  <!-- Optional arrow icon or image to indicate dropdown -->
-                  <i class="ri-arrow-down-s-line"></i>
-              </button>
-
-              <!-- Settings Submenu -->
-              <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
-                  <a href="set-ai-voice.html" class="block px-3 py-2 rounded lightGray dark:hover:teal">
-                      Set Voice
-                  </a>
-                  <a href="ai-voice-profile.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Profiles
-                  </a>
-                  <a href="ai-voice-creation.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Creations
-                  </a>
-                  <a href="ai-voice-collection.html" class="block px-3 py-2 rounded hover:bg-lightGray dark:hover:teal">
-                      Voice Collection
-                  </a>
-              </div>
+          <!-- Settings Submenu -->
+          <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
+            <a href="set-ai-voice.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Set Voice
+            </a>
+            <a href="ai-voice-profile.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Profiles
+            </a>
+            <a href="ai-voice-creation.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Creations
+            </a>
+            <a href="ai-voice-collection.html"
+              class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+              Voice Collection
+            </a>
           </div>
-
-          <!-- Help Link -->
-          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 hover:bg-lightGray dark:hover:teal">
-              <!-- Replace with your help icon -->
-              <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
-              <span class="ml-3 sidebar-text">Help</span>
-          </a>
-        </nav>
-
-        <!-- Dark/Light Mode Toggle at the Bottom -->
-        <div class="p-4 flex justify-center">
-         <img src="images/toggle.png" alt="">
         </div>
-      </aside>
-      <!-- END SIDEBAR -->
 
-      <!-- MAIN CONTENT -->
-      <main style="background-image: url(/images/hello-agent-bg.png);background-position: bottom right;background-repeat: no-repeat;background-size: 43%;" class="flex-1 p-6 ">
-        <div class="innerContainer sm:mx-auto sm:w-full sm:max-w-2xl ">
+        <!-- Help Link -->
+        <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
+          <!-- Replace with your help icon -->
+          <img src="images/help-icon.svg" alt="Help Icon" class="w-5 h-5" />
+          <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+        </a>
+      </nav>
+
+    </div>
+
+      <!-- Dark/Light Mode Toggle at the Bottom -->
+      <div class="p-4 my-5 flex justify-center">
+        <div class="theme-toggle p-2 bg-white shadow-xl rounded-3xl">
+        <ul class="list-none flex items-center bg-gray rounded-3xl">
+        <li data-toggle="light" class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/light-mode.svg" alt="Light Mode"></li>
+        <li data-toggle="dark" class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img width="20" src="images/icons/dark-mode.svg" alt="Dark Mode"></li>
+        </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- END SIDEBAR -->
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 md:mx-auto p-5 md:p-10">
+      <div class="sm:mx-auto sm:w-full sm:max-w-2xl">
+
         <!-- Example content header -->
             <header class="mb-6 relative">
                 <h2 class="text-3xl text-center text-primary font-bold">AI Voice Creation</h2>
-                <img id="openPopup" class="mx-auto cursor-pointer my-6" src="images/user-edit-image.png" alt="">
-                <img class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="">
+                <img width="90" id="changePicture" class="mx-auto cursor-pointer my-6" src="images/user-edit-image.png" alt="">
+                <img width="24" class="absolute right-0 top-1/2 cursor-pointer w-7" src="images/save-icon.svg" alt="">
               </header>
       
               <!-- Example form content (use your own form) -->
               <section class="rounded space-y-4 relative">
                 <div class="">
-                  <label for="voiceName" class="block font-semibold text-xl mb-2 text-primary">Name of AI Voice</label>
+                  <label for="voiceName" class="block font-bold text-lg mb-2 text-primary">Name of AI Voice</label>
                   <input
                     type="text"
                     id="voiceName"
-                    class="w-full border border-gray-300 px-3 rounded py-4 bg-[#F8F8F8]
+                    class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
                            focus:outline-none focus:ring-2 focus:ring-teal-200"
                     placeholder="Enter AI Voice name"
                   />
                 </div>
       
                 <div>
-                  <label for="voiceID" class="block font-semibold text-xl mb-2 text-primary">Voice ID for AI Voice</label>
+                  <label for="voiceID" class="block font-bold text-lg mb-2 text-primary">Voice ID for AI Voice</label>
                   <input
                     type="text"
                     id="voiceID"
-                    class="w-full border border-gray-300 px-3 rounded py-4 bg-[#F8F8F8]
+                    class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
                            focus:outline-none focus:ring-2 focus:ring-teal-200"
                     placeholder="Enter Voice ID"
                   />
                 </div>
       
                 <div>
-                  <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Opening Remark</label>
+                  <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Opening Remark</label>
                   <input
                   type="text"
                   id="voiceName"
-                  class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
+                  class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
                          focus:outline-none focus:ring-2 focus:ring-teal-200"
                   placeholder="This is the exact phrase that the AI will say first when answering the call"
                 />
@@ -167,16 +184,16 @@
                 </div>
 
                 <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Instruction for AI Voice</label>
+                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Instruction for AI Voice</label>
                     <div class="relative">
                         <input
                         type="text"
                         id="voiceName"
-                        class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
+                        class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
                                focus:outline-none focus:ring-2 focus:ring-teal-200"
                         placeholder="Tell the AI what you want it to do, how to do it, when to do it, etc..."
                       />
-                      <img class="absolute -right-10 top-4 cursor-pointer" src="images/delete-icon.svg" alt="">
+                      <img width="28" class="absolute -right-10 top-4 cursor-pointer" src="images/delete-icon.svg" alt="">
                     </div>
                     <div class="my-5">
                         <button type="submit" class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">New Instruction</button>
@@ -184,19 +201,19 @@
                   </div>
                  
                   <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Description of AI Voice</label>
+                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Description of AI Voice</label>
                     <input
                     type="text"
                     id="voiceName"
-                    class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
+                    class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
                            focus:outline-none focus:ring-2 focus:ring-teal-200"
                     placeholder="ID of the AI Voice to be used"
                   />
                   </div>
 
                   <div>
-                    <label for="openingRemark" class="block font-semibold text-xl mb-2 text-primary">Helium form for AI Voice (Optional)</label>
-                  <select class="w-full border border-gray-300 px-3 rounded py-5 bg-[#F8F8F8]
+                    <label for="openingRemark" class="block font-bold text-lg mb-2 text-primary">Helium form for AI Voice (Optional)</label>
+                  <select class="w-full border border-[#1AFFE459] px-3 rounded py-5 bg-[#F8F8F8]
                            focus:outline-none focus:ring-2 focus:ring-teal-200" name="" id="">
                     <option value="" class="w-14">Select the active Helium Form where the AI will save collected information. Ensure your instructions specify when to save.</option>
                     <option value="">Option2</option>
@@ -221,76 +238,48 @@
               </div>
 
               </section>
-        </div>
         
+            </div>
       </main>
       <!-- END MAIN CONTENT -->
     </div>
     <!-- END WRAPPER -->
 
-    <!-- Collapsing Sidebar Script -->
+    <div class="change-picture-popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary rounded-lg shadow-lg p-6  w-full max-w-[400px] md:max-w-[550px] z-30 hidden">
 
-    <script>
-      
-      const sidebar = document.getElementById("sidebar");
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const settingsBtn = document.getElementById("settingsBtn");
-      const settingsSubmenu = document.getElementById("settingsSubmenu");
-      const themeToggleBtn = document.getElementById("themeToggleBtn");
-      const sunIcon = document.getElementById("sunIcon");
-      const moonIcon = document.getElementById("moonIcon");
-      const openPopup = document.getElementById("openPopup");
-      const closePopup = document.getElementById("closePopup");
-      const popup = document.getElementById("popup");
+      <!-- Row -->
+      <div class="grid grid-cols-3 md:grid-cols-4 gap-5 p-4">
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/grace-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Leslie-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Sydney-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Kai-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/sean-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/rob.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/tina-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/fionna-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/grace-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Leslie-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Sydney-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/Kai-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/sean-img.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/rob.svg" alt="content"></div>
+      <div><img class="cursor-pointer transition duration-500 hover:scale-125 rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto object-cover object-center" src="images/tina-img.svg" alt="content"></div>
+      <div class="cursor-pointer text-center text-sm">
+      <div class="mx-auto rounded-[2.5rem] border-4 border-secondary border-solid w-20 mx-auto h-20 bg-tertiary flex items-center justify-center">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.7679 10.2679H15.1786C14.932 10.2679 14.7321 10.068 14.7321 9.82143V2.23214C14.7321 0.999451 13.7327 0 12.5 0C11.2673 0 10.2679 0.999451 10.2679 2.23214V9.82143C10.2679 10.068 10.068 10.2679 9.82143 10.2679H2.23214C0.999451 10.2679 0 11.2673 0 12.5C0 13.7327 0.999451 14.7321 2.23214 14.7321H9.82143C10.068 14.7321 10.2679 14.932 10.2679 15.1786V22.7679C10.2679 24.0006 11.2673 25 12.5 25C13.7327 25 14.7321 24.0006 14.7321 22.7679V15.1786C14.7321 14.932 14.932 14.7321 15.1786 14.7321H22.7679C24.0006 14.7321 25 13.7327 25 12.5C25 11.2673 24.0006 10.2679 22.7679 10.2679Z" fill="#0A574E"/>
+          </svg>
+      </div>
+      <div class="mt-1">Upload <br> Custom Picture</div>
+      </div>
+      </div>
+      <!-- Row -->
 
+    </div>
 
-      openPopup.addEventListener("click", () => {
-        popup.classList.remove("hidden");
-    });
+    <div class="popup-overlay cursor-pointer fixed inset-0 bg-black bg-opacity-75 z-20 hidden"></div>
 
-    closePopup.addEventListener("click", () => {
-        popup.classList.add("hidden");
-    });
-
-    // Close popup when clicking outside the modal
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-            popup.classList.add("hidden");
-        }
-    });
-      
-      // 1. Sidebar Collapse
-      hamburgerBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("w-64");
-        sidebar.classList.toggle("w-16");
-      
-        // Hide/show text labels
-        document.querySelectorAll(".sidebar-text").forEach((el) => {
-          el.classList.toggle("hidden");
-        });
-      
-        // Also hide submenus if you want them collapsed in minimal view
-        // settingsSubmenu.classList.add("hidden");
-      });
-      
-      // 2. Settings Dropdown
-      settingsBtn.addEventListener("click", () => {
-        settingsSubmenu.classList.toggle("hidden");
-      });
-      
-      // 3. Dark/Light Mode Toggle
-      themeToggleBtn.addEventListener("click", () => {
-        // Toggle 'dark' class on <html>
-        document.documentElement.classList.toggle("dark");
-      
-        // Switch icon visibility
-        sunIcon.classList.toggle("hidden");
-        moonIcon.classList.toggle("hidden");
-      });
-
-      userEdit.addEventListener("click", function(){
-      console.log("clicked")
-      })
-    </script>
+    <!-- Scripts -->
+  <script src="/src/site.js"></script>
   </body>
 </html>
