@@ -1,3 +1,5 @@
+import audioFile from '../audio/1.mp3';
+
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
   const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -73,20 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("click", () => applyTheme(item.getAttribute("data-toggle")));
   });
 
-  
+
   // Audio Player
     const players = document.querySelectorAll(".player-box");
-  
+
     if (players.length > 0) {
       players.forEach((player) => {
         const playButton = player.querySelector(".play-icon");
         const waveformContainer = player.querySelector(".waveform");
         const playIcon = player.querySelector(".play-btn");
         const pauseIcon = player.querySelector(".pause-btn");
-  
+
         // Ensure all elements exist before proceeding
         if (!playButton || !waveformContainer || !playIcon || !pauseIcon) return;
-  
+
         // Initialize WaveSurfer
         const waveSurfer = WaveSurfer.create({
           container: waveformContainer,
@@ -94,11 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
           progressColor: "#14B8A6",
           height: 30,
           responsive: true,
-          url: "audio/1.mp3",
+          url: audioFile,
         });
-  
+
         let isPlaying = false;
-  
+
         // Play/Pause toggle
         playButton.addEventListener("click", () => {
           if (isPlaying) {
@@ -112,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           isPlaying = !isPlaying;
         });
-  
+
         // Reset to play icon when audio finishes
         waveSurfer.on("finish", () => {
           isPlaying = false;
@@ -121,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     }
-  
+
 
     // Change Picture Popup
     const changePictureBtn = document.getElementById("changePicture");
@@ -132,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".change-picture-popup").classList.remove("hidden");
         document.querySelector(".popup-overlay").classList.remove("hidden");
       });
-  
+
       document.querySelector(".popup-overlay").addEventListener("click", function() {
         document.querySelector(".change-picture-popup").classList.add("hidden");
         document.querySelector(".popup-overlay").classList.add("hidden");
@@ -146,13 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Find the associated content (next sibling)
         const content = toggle.nextElementSibling;
         const icon = toggle.querySelector(".faq-icon i");
-  
+
         // Toggle the content visibility
         content.classList.toggle("hidden");
-  
+
         // Toggle the active class on the button
         toggle.classList.toggle("faq-toggle--active");
-  
+
       });
     });
 
@@ -160,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Play Recording
 
       const playButtons = document.querySelectorAll(".play-recording-btn");
-    
+
       // Only run if at least one .play-recording-btn exists
       if (playButtons.length > 0) {
         playButtons.forEach((button) => {
@@ -168,10 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
           const playIcon = button.querySelector(".play-icon");
           const pauseIcon = button.querySelector(".pause-icon");
           let isPlaying = false;
-    
+
           // Ensure all required elements exist within the button
           if (!audio || !playIcon || !pauseIcon) return;
-    
+
           // Toggle play/pause on click
           button.addEventListener("click", () => {
             if (isPlaying) {
@@ -185,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             isPlaying = !isPlaying;
           });
-    
+
           // Reset to play icon when audio finishes
           audio.addEventListener("ended", () => {
             isPlaying = false;

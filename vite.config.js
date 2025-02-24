@@ -18,14 +18,24 @@ export default defineConfig({
         passwordToggle: resolve(__dirname, 'src/password-toggle.js'),
       },
       output: {
-        entryFileNames: '[name].js', // e.g., dist/site.js
-        assetFileNames: 'assets/[name]-[hash][extname]', // CSS, images in dist/assets/
-        // Removed chunkFileNames to disable splitting
+        entryFileNames: 'assets/js/[name].js', // JavaScript files in assets/js
+        assetFileNames: assetInfo => {
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return 'assets/css/[name]-[hash][extname]'; // CSS files in assets/css
+          }
+          if (/\.(png|jpe?g|gif|svg)$/.test(assetInfo.name)) {
+            return 'assets/images/[name]-[hash][extname]'; // Images in assets/images
+          }
+          if (/\.(mp3)$/.test(assetInfo.name)) {
+            return 'assets/audio/[name]-[hash][extname]'; // Audio files in assets/audio
+          }
+          return 'assets/[name]-[hash][extname]'; // Other assets
+        },
       },
     },
     outDir: 'dist',
   },
-  base: '/', // Changed from './' to '/' for absolute paths
+  base: './',
   plugins: [
     {
       name: 'move-scripts-to-body',
