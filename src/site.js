@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const changePictureBtn = document.getElementById("changePicture");
   const waveSurferPlayers = document.querySelectorAll(".player-box");
   const basicPlayers = document.querySelectorAll(".play-recording-btn");
-  const waveSurfers = []; 
-  const audioElements = []; 
+  const waveSurfers = [];
+  const audioElements = [];
+  const selectButtons = document.querySelectorAll(".profile-card__select");
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
@@ -111,8 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-   // WaveSurfer Players
-   if (waveSurferPlayers.length > 0) {
+  // WaveSurfer Players
+  if (waveSurferPlayers.length > 0) {
     waveSurferPlayers.forEach((player) => {
       const playButton = player.querySelector(".play-icon");
       const waveformContainer = player.querySelector(".waveform");
@@ -129,6 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
         height: 30,
         responsive: true,
         url: audio.src,
+        barWidth: 1,
+        barGap: 1,
       });
 
       waveSurfers.push({
@@ -225,5 +228,34 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+
+  // Profile Card Select
+  if (selectButtons.length > 0) {
+    selectButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const profileCard = button.closest(".profile-card");
+        if (profileCard) {
+          profileCard.classList.toggle("profile-card--selected");
+          profileCard.classList.toggle("bg-primary");
+          profileCard.classList.toggle("text-white");
+          button.classList.toggle("border-white");
+          button.classList.toggle("border-primary");
+          button.classList.toggle("bg-white");
+          button.classList.toggle("bg-secondary");
+  
+          const profileSelectNext = document.querySelector('.profile-select-next');
+          
+          // Show the button when at least one card is selected
+          profileSelectNext.classList.remove('opacity-0');
+  
+          // If no cards are selected, hide it again
+          if (document.querySelectorAll('.profile-card--selected').length === 0) {
+            profileSelectNext.classList.add('opacity-0');
+          }
+        }
+      });
+    });
+  }  
 
 });
