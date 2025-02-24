@@ -19,13 +19,13 @@ export default defineConfig({
       },
       output: {
         entryFileNames: '[name].js', // e.g., dist/site.js
-        assetFileNames: 'assets/[name]-[hash][extname]', // CSS, images
-        // Remove chunkFileNames to disable splitting
+        assetFileNames: 'assets/[name]-[hash][extname]', // CSS, images in dist/assets/
+        // Removed chunkFileNames to disable splitting
       },
     },
     outDir: 'dist',
   },
-  base: './',
+  base: '/', // Changed from './' to '/' for absolute paths
   plugins: [
     {
       name: 'move-scripts-to-body',
