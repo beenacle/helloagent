@@ -4,6 +4,7 @@
 /* Variables */
 :root {
     --green: #0A574E;
+    --dark-mode-green: #0cad9b;
     --dark-teal: #14B8A6;
     --light-teal: #1AFFE4;
     --gray: #E6E6E6;
@@ -25,9 +26,12 @@ body {
 
 
 /* Resuable Classes */
-
 .bg-gray {
     background-color: var(--gray);
+}
+
+.border-gray {
+    border-color: var(--gray);
 }
 
 .bg-primary {
@@ -97,7 +101,7 @@ body {
     padding: 0;
 }
 
-.sidebar--collapsed .theme-toggle__item:not(.theme-toggle__active) {
+.sidebar--collapsed .theme-toggle__item:not(.theme-toggle__active), .sidebar--collapsed #settingsSubmenu {
     display: none;
 }
 
@@ -108,6 +112,58 @@ body {
 .faq-toggle--active .faq-icon {
     transform: rotate(180deg);
 }
+
+
+/* Dark Mode */
+.dark body {
+    background: #1A1A1A;
+    color: #fff;
+}
+
+.dark .bg-gray {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark .text-dark, .dark .text-black {
+    color: #fff;
+}
+
+.dark .bg-white {
+    background-color: #202020;
+}
+
+.dark .text-primary {
+    color: var(--dark-mode-green);
+}
+
+.dark .border-primary {
+    border-color: var(--dark-mode-green);
+}
+
+.dark .bg-primary {
+    background-color: var(--dark-mode-green);
+}
+
+.dark .eco-box.bg-gray {
+    background-color: #fff
+}
+
+.dark #sidebar svg path {
+    fill: #fff;
+}
+
+.dark .hover\:bg-gray-100:hover, .dark .bg-gray-100 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark .bg-\[\#F8F8F8\] {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark td, .dark th, .dark tr {
+    border: 0 !important;
+}
+
 
 /* Media Queries */
 @media (min-width: 1200px) {
