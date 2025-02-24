@@ -110,14 +110,36 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
     // Change Picture Popup
-    document.getElementById("changePicture").addEventListener("click", function(){
-      document.querySelector(".change-picture-popup").classList.remove("hidden");
-      document.querySelector(".popup-overlay").classList.remove("hidden");
-    });
+    const changePictureBtn = document.getElementById("changePicture");
 
-    document.querySelector(".popup-overlay").addEventListener("click", function(){
-      document.querySelector(".change-picture-popup").classList.add("hidden");
-      document.querySelector(".popup-overlay").classList.add("hidden");
+    // Check if changePicture exists
+    if (changePictureBtn) {
+      changePictureBtn.addEventListener("click", function() {
+        document.querySelector(".change-picture-popup").classList.remove("hidden");
+        document.querySelector(".popup-overlay").classList.remove("hidden");
+      });
+  
+      document.querySelector(".popup-overlay").addEventListener("click", function() {
+        document.querySelector(".change-picture-popup").classList.add("hidden");
+        document.querySelector(".popup-overlay").classList.add("hidden");
+      });
+    }
+
+
+    // FAQ
+    document.querySelectorAll(".faq-toggle").forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        // Find the associated content (next sibling)
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector(".faq-icon i");
+  
+        // Toggle the content visibility
+        content.classList.toggle("hidden");
+  
+        // Toggle the active class on the button
+        toggle.classList.toggle("faq-toggle--active");
+  
+      });
     });
 
 

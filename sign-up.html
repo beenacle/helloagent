@@ -2,100 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="/src/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/src/styles.css">
 </head>
 
-<body>
+<body class="bg-gray">
 
-    <div style="background-image: url(images/hello-agent-bg.png);background-position: center right;background-repeat: no-repeat;background-size: 43%;"
-        class="flex min-h-screen flex-col justify-center items-center px-6 py-12 lg:px-8 bg-lightGray relative overflow-hidden">
-        <div class="relative z-10 sm:mx-auto sm:w-full sm:max-w-lg bg-white pb-10 pt-5 px-10 rounded-3xl">
-            <div class="backLink "><a class="flex gap-3" href="login.html"><i class="leftIconArrow ri-arrow-left-line"></i>
-                <p>Back</p></a>
-            </div>
-            <a href="index.html"><img class="mx-auto h-10 w-auto" src="images/logo.svg" alt="Hello Agent Logo"></a>
-            <h2 class="mt-10 text-center text-[42px] font-bold tracking-tight text-primary">Sign Up</h2>
-            <p class="text-[16px] text-center">Join Us Today!</p>
-
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-lg">
-                <form class="space-y-6" action="#" method="POST">
-                        <div class="mt-2">
-                            <input type="text" id="name" placeholder="Name"
-                                class="w-full border border-teal-400 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200" />
-                        </div>
-                           <!-- Username -->
-      <div>
-        <input
-          type="text"
-          id="username"
-          placeholder="Username"
-          class="w-full border border-teal-400 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        />
+  <div class="flex min-h-screen flex-col justify-center items-center px-6 py-12 lg:px-8 relative overflow-hidden">
+    <div class="relative z-10 sm:mx-auto sm:w-full sm:max-w-lg bg-white pb-10 pt-5 px-10 rounded-3xl">
+      <div><a class="flex items-center text-primary gap-3" href="login.html">
+      <span>
+        <svg width="15" height="16" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.393 8.39285H2.68008L9.35865 1.71427L8.50015 0.855774L0.785185 8.57074C0.671363 8.6846 0.607422 8.839 0.607422 8.99999C0.607422 9.16098 0.671363 9.31538 0.785185 9.42924L8.50015 17.1442L9.35865 16.2857L2.68008 9.60713H16.393V8.39285Z" fill="#0A574E"/>
+          </svg>          
+      </span>
+          <p>Back</p>
+        </a>
       </div>
-
-      <!-- Email -->
-      <div>
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          class="w-full border border-teal-400 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        />
-      </div>
-
-      <!-- Phone Number -->
-      <div>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Phone Number"
-          class="w-full border border-teal-400 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        />
-      </div>
-
-      <!-- Password -->
-      <div class="relative">
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          class="w-full border border-teal-400 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        />
-        <!-- Eye Icon -->
-  
-      </div>
-
-      <!-- Confirm Password -->
-      <div class="relative">
-        <label for="confirmPassword" class="block text-gray-700 mb-1">Confirm Password</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          placeholder="Confirm Password"
-          class="w-full border border-teal-400 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-200"
-        />
-        <!-- Eye Icon -->
-    
-      </div>
-
-      <!-- Sign Up Button -->
-      <div>
-        <button type="submit" class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign</button>
-      </div>
-                </form>
-
-            </div>
-        </div>
-        <div class="absolute -left-[21rem] -top-[20rem] -z-1  border-1  rounded-full overflow-hidden">
-            <img src="images/Ellipse-bg1.png" alt="">
-        </div>
-
-      
+      <div class="text-center">
+      <a href="index.html"><img width="140" class="mx-auto" src="images/logo.svg" alt="Hello Agent Logo"></a>
+      <h2 class="text-3xl text-primary font-bold mt-10 mb-2">Sign Up</h2>
+      <p class="text-[16px] text-center">Join Us Today!</p>
     </div>
+
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-lg">
+        <form class="space-y-6" action="#" method="POST">
+          <div class="mt-2">
+            <input type="text" id="name" placeholder="Name" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+              focus:outline-none focus:ring-2 focus:ring-teal-200" />
+          </div>
+          <!-- Username -->
+          <div>
+            <input type="text" id="username" placeholder="Username" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+              focus:outline-none focus:ring-2 focus:ring-teal-200" />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <input type="email" id="email" placeholder="Email" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+              focus:outline-none focus:ring-2 focus:ring-teal-200" />
+          </div>
+
+          <!-- Phone Number -->
+          <div>
+            <input type="tel" id="phone" placeholder="Phone Number" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8]
+              focus:outline-none focus:ring-2 focus:ring-teal-200" />
+          </div>
+
+          <!-- Password -->
+          <div class="relative">
+            <input type="password" id="password" placeholder="Password"
+              class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-2000" />
+            <div class="cursor-pointer absolute end-0 me-2 top-[50%] translate-y-[-50%]"><svg width="27" height="18"
+                viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.4632 10.5104C30.3213 5.50536 24.0517 0.687531 17.5001 0.687531C10.9472 0.687531 4.67608 5.50872 0.536979 10.5104C-0.178993 11.3753 -0.178993 12.6307 0.536979 13.4956C1.5776 14.7531 3.75919 17.1805 6.67292 19.3015C14.0111 24.6434 20.9729 24.6552 28.3272 19.3015C31.2409 17.1805 33.4225 14.7531 34.4632 13.4956C35.177 12.6324 35.1807 11.3781 34.4632 10.5104ZM17.5001 4.45935C21.6598 4.45935 25.0437 7.84321 25.0437 12.003C25.0437 16.1628 21.6598 19.5466 17.5001 19.5466C13.3403 19.5466 9.95643 16.1628 9.95643 12.003C9.95643 7.84321 13.3403 4.45935 17.5001 4.45935Z"
+                  fill="#14B8A6" />
+              </svg></div>
+            <!-- Eye Icon -->
+
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="relative">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password"
+              class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-2000" />
+            <div class="cursor-pointer absolute end-0 me-2 top-[50%] translate-y-[-50%]"><svg width="27" height="18"
+                viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.4632 10.5104C30.3213 5.50536 24.0517 0.687531 17.5001 0.687531C10.9472 0.687531 4.67608 5.50872 0.536979 10.5104C-0.178993 11.3753 -0.178993 12.6307 0.536979 13.4956C1.5776 14.7531 3.75919 17.1805 6.67292 19.3015C14.0111 24.6434 20.9729 24.6552 28.3272 19.3015C31.2409 17.1805 33.4225 14.7531 34.4632 13.4956C35.177 12.6324 35.1807 11.3781 34.4632 10.5104ZM17.5001 4.45935C21.6598 4.45935 25.0437 7.84321 25.0437 12.003C25.0437 16.1628 21.6598 19.5466 17.5001 19.5466C13.3403 19.5466 9.95643 16.1628 9.95643 12.003C9.95643 7.84321 13.3403 4.45935 17.5001 4.45935Z"
+                  fill="#14B8A6" />
+              </svg></div>
+            <!-- Eye Icon -->
+
+          </div>
+
+          <!-- Sign Up Button -->
+          <div>
+            <button type="submit"
+              class="flex w-full justify-center rounded-full bg-secondary px-3 py-2 text-sm/6 font-semibold text-white shadow-xs hover:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign Up</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="absolute -left-[21rem] -top-[20rem] -z-1  border-1  rounded-full overflow-hidden">
+      <img src="images/Ellipse-bg1.png" alt="Image">
+    </div>
+
+
+  </div>
 
 </body>
 
