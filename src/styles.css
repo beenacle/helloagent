@@ -85,7 +85,7 @@ body {
 }
 
 .colls:hover p, .profile-card:hover h2,.profile-card--selected h2 {
-    color: #fff;
+    color: #fff !important;
 }
 
 .colls:hover h2 {
