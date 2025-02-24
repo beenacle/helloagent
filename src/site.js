@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
           progressColor: "#14B8A6",
           height: 30,
           responsive: true,
-          url: "/audio/1.mp3",
+          url: "audio/1.mp3",
         });
   
         let isPlaying = false;
@@ -155,6 +155,45 @@ document.addEventListener("DOMContentLoaded", () => {
   
       });
     });
+
+
+    // Play Recording
+
+      const playButtons = document.querySelectorAll(".play-recording-btn");
+    
+      // Only run if at least one .play-recording-btn exists
+      if (playButtons.length > 0) {
+        playButtons.forEach((button) => {
+          const audio = button.querySelector("audio");
+          const playIcon = button.querySelector(".play-icon");
+          const pauseIcon = button.querySelector(".pause-icon");
+          let isPlaying = false;
+    
+          // Ensure all required elements exist within the button
+          if (!audio || !playIcon || !pauseIcon) return;
+    
+          // Toggle play/pause on click
+          button.addEventListener("click", () => {
+            if (isPlaying) {
+              audio.pause();
+              playIcon.classList.remove("hidden");
+              pauseIcon.classList.add("hidden");
+            } else {
+              audio.play();
+              playIcon.classList.add("hidden");
+              pauseIcon.classList.remove("hidden");
+            }
+            isPlaying = !isPlaying;
+          });
+    
+          // Reset to play icon when audio finishes
+          audio.addEventListener("ended", () => {
+            isPlaying = false;
+            playIcon.classList.remove("hidden");
+            pauseIcon.classList.add("hidden");
+          });
+        });
+      }
 
 
 });

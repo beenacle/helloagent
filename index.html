@@ -133,7 +133,8 @@
           <ul class="list-none flex items-center bg-gray rounded-3xl">
             <li data-toggle="light"
               class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer">
-              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode"></li>
+              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode">
+            </li>
             <li data-toggle="dark"
               class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img
                 width="20" src="/images/icons/dark-mode.svg" alt="Dark Mode"></li>
@@ -155,8 +156,9 @@
         <div class="mb-3 md:mb-6 flex justify-center p-[2px] border-black border rounded-lg overflow-hidden">
           <input type="text" placeholder="Search here..."
             class="px-4 py-2 w-full md:w-80  rounded-l-md focus:outline-none">
-          <button class="w-10 h-10 flex items-center justify-center bg-secondary text-white rounded-md"><svg xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <button class="w-10 h-10 flex items-center justify-center bg-secondary text-white rounded-md"><svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-5 h-5">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
             </svg></button>
@@ -518,10 +520,33 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
+
                   </td>
 
                 </tr>
@@ -536,10 +561,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
@@ -554,10 +600,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
@@ -572,10 +639,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
@@ -590,10 +678,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
@@ -608,10 +717,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
@@ -626,10 +756,31 @@
                       <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
                   </td>
                   <td class="p-2 border-r border-primary">
-                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
-                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/white-play-icon.svg"
-                        alt="Image">
-                      <span class="text-white font-bold text-[10px]">Play Recording</span></a>
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
                   </td>
 
                 </tr>
