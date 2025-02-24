@@ -84,6 +84,10 @@ body {
     border-bottom-right-radius: 0 !important;
 }
 
+.z-11 {
+    z-index: 11 !important;
+}
+
 .colls:hover p, .profile-card:hover h2,.profile-card--selected h2 {
     color: #fff !important;
 }
