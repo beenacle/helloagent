@@ -7,10 +7,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         callLogs: resolve(__dirname, 'call-logs.html'),
-        aiVoiceCollection: resolve(__dirname, 'ai-voice-collection.html'),
-        aiVoiceCreation: resolve(__dirname, 'ai-voice-creation.html'),
-        aiVoiceProfile: resolve(__dirname, 'ai-voice-profile.html'),
-        setAiVoice: resolve(__dirname, 'set-ai-voice.html'),
+        aiVoiceCollection: resolve(__dirname, 'voice-collection.html'),
+        aiVoiceCreation: resolve(__dirname, 'voice-creation.html'),
+        aiVoiceProfile: resolve(__dirname, 'voice-profile.html'),
+        setAiVoice: resolve(__dirname, 'set-voice.html'),
         login: resolve(__dirname, 'login.html'),
         signUp: resolve(__dirname, 'sign-up.html'),
         help: resolve(__dirname, 'help.html'),
@@ -18,18 +18,18 @@ export default defineConfig({
         passwordToggle: resolve(__dirname, 'src/password-toggle.js'),
       },
       output: {
-        entryFileNames: 'assets/js/[name].js', // JavaScript files in assets/js
+        entryFileNames: 'assets/js/[name].js',
         assetFileNames: assetInfo => {
           if (/\.(css)$/.test(assetInfo.name)) {
-            return 'assets/css/[name]-[hash][extname]'; // CSS files in assets/css
+            return 'assets/css/[name]-[hash][extname]';
           }
           if (/\.(png|jpe?g|gif|svg)$/.test(assetInfo.name)) {
-            return 'assets/images/[name]-[hash][extname]'; // Images in assets/images
+            return 'assets/images/[name]-[hash][extname]';
           }
           if (/\.(mp3)$/.test(assetInfo.name)) {
-            return 'assets/audio/[name]-[hash][extname]'; // Audio files in assets/audio
+            return 'assets/audio/[name]-[hash][extname]';
           }
-          return 'assets/[name]-[hash][extname]'; // Other assets
+          return 'assets/[name]-[hash][extname]';
         },
       },
     },
