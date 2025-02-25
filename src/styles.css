@@ -171,6 +171,10 @@ body {
     border: 0 !important;
 }
 
+.dark .faq-icon path {
+    fill: var(--dark-teal)
+}
+
 
 /* Media Queries */
 @media (min-width: 1200px) {
