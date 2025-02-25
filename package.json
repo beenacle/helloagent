@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "datatables.net": "^2.2.2",
+    "datatables.net-dt": "^2.2.2",
     "wavesurfer.js": "^7.9.1"
   }
 }

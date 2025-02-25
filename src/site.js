@@ -1,4 +1,6 @@
 import WaveSurfer from 'wavesurfer.js';
+import DataTable from 'datatables.net';
+import 'datatables.net-dt/css/dataTables.dataTables.min.css';
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
@@ -305,4 +307,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Datatables
+  document.querySelectorAll('.table').forEach((table) => {
+    new DataTable(table);
+  });
+  
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tabs a"); // Select all tab links
+  const tabContents = document.querySelectorAll(".tab-pane"); // Select all tab content
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Remove active classes from all tabs
+      tabs.forEach((t) => {
+        t.classList.remove("border-primary", "text-primary");
+        t.classList.add("border-transparent", "text-gray-500");
+      });
+
+      // Add active styles to the clicked tab
+      tab.classList.remove("border-transparent", "text-gray-500");
+      tab.classList.add("border-primary", "text-primary");
+
+      // Hide all tab content
+      tabContents.forEach((content) => content.classList.add("hidden"));
+
+      // Show the corresponding tab content
+      const target = document.querySelector(tab.getAttribute("href"));
+      if (target) target.classList.remove("hidden");
+    });
+  });
 });
