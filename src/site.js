@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const waveSurfers = [];
   const audioElements = [];
   const selectButtons = document.querySelectorAll(".profile-card__select");
-  const currentPage = window.location.pathname.split('/').pop() || 'index';
   const navLinks = document.querySelectorAll('nav a[href]');
 
   // Sidebar Collapse
@@ -263,18 +262,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Loop through each nav link and add active class if it matches the current pag
+  // Loop through each nav link and add active class if it matches the current page
+  let currentPage = window.location.pathname.split('/').pop() || 'index';
+
+  // Remove .html if present
+  currentPage = currentPage.replace(/\.html$/, '');
+
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
+    let linkPage = link.getAttribute('href').replace(/\.html$/, '');
     if (linkPage === currentPage) {
-      link.classList.add('bg-gray-100');
-      const submenu = link.closest('#settingsSubmenu');
-      if (submenu) {
-        const settingsBtn = document.getElementById('settingsBtn');
-        settingsBtn.classList.add('bg-gray-100');
-        submenu.classList.remove('hidden');
-      }
+        link.classList.add('bg-gray-100');
+        const submenu = link.closest('#settingsSubmenu');
+        if (submenu) {
+            document.getElementById('settingsBtn').classList.add('bg-gray-100');
+            submenu.classList.remove('hidden');
+        }
     }
-  });
+});
 
 });
