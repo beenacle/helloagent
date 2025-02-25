@@ -1,3 +1,5 @@
+import WaveSurfer from 'wavesurfer.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
   const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -243,12 +245,12 @@ document.addEventListener("DOMContentLoaded", () => {
           button.classList.toggle("border-primary");
           button.classList.toggle("bg-white");
           button.classList.toggle("bg-secondary");
-  
+
           const profileSelectNext = document.querySelector('.profile-select-next');
-          
+
           // Show the button when at least one card is selected
           profileSelectNext.classList.remove('opacity-0');
-  
+
           // If no cards are selected, hide it again
           if (document.querySelectorAll('.profile-card--selected').length === 0) {
             profileSelectNext.classList.add('opacity-0');
@@ -256,6 +258,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-  }  
+  }
 
 });
