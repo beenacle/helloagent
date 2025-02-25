@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="/src/styles.css">
 </head>
 
-<body>
+<body class="dark:text-white dark:bg-stone-900">
 
   <!-- WRAPPER -->
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
     <header class="py-4 px-5 md:px-10 xl:hidden flex items-center justify-between">
-      <a href="index.html">
-        <img src="/images/logo.svg" alt="Logo" class="relative z-11 w-[9rem]">
+      <a href="/">
+        <img src="/images/logo.svg" alt="Logo" class="relative z-11 w-[9rem] dark:brightness-[1.5]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
         <!-- Hamburger Icon -->
@@ -31,22 +31,21 @@
 
     <!-- SIDEBAR -->
     <aside id="sidebar"
-      class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+      class="bg-white border-r border-gray-200 dark:border-black w-64 h-screen transition duration-200
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
       <div>
 
         <!-- Header with brand + hamburger -->
-        <div class="flex items-center justify-between p-4">
+        <div class="flex items-center justify-between p-4 sidebar-header">
           <div class="flex items-center space-x-2">
             <a class="hidden xl:inline" href="index.html">
-              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
-              <img class="hidden sidebar__logo-icon hide-on-collapse" src="/images/logo-icon.svg" alt="Logo">
+              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse dark:brightness-[1.5]">
             </a>
           </div>
           <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
           <button id="hamburgerBtn"
-            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+            class="p-2 text-gray-600 dark:text-white hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
             <!-- Hamburger Icon -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg" stroke-width="2">
@@ -65,7 +64,7 @@
         <!-- NAVIGATION -->
         <nav class="flex flex-col px-2 mt-4 text-primary">
 
-          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
+          <h6 class="sidebar__menu-text font-bold text-dark dark:text-white ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
 
           <!-- Home Link -->
           <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 bg-gray-100">
@@ -83,7 +82,7 @@
                   fill="#292929" />
               </g>
             </svg>
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Home</span>
           </a>
 
           <!-- Call Logs Link -->
@@ -108,7 +107,7 @@
                   fill="#292929" />
               </g>
             </svg>
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Call Logs</span>
           </a>
 
           <!-- SETTINGS (with Submenu) -->
@@ -130,8 +129,8 @@
                 </defs>
               </svg>
 
-              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
-              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black dark:text-white opacity-50">Settings</span>
+              <svg class="sidebar-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
                   fill="#a4a4a4" />
@@ -141,19 +140,19 @@
             <!-- Settings Submenu -->
             <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
               <a href="set-voice.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Set Voice
               </a>
               <a href="voice-profiles.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Profiles
               </a>
               <a href="voice-creations.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Creations
               </a>
               <a href="voice-collection.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Collection
               </a>
             </div>
@@ -179,7 +178,7 @@
                 </defs>
               </svg>
             </span>
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Help</span>
           </a>
         </nav>
 
@@ -311,7 +310,7 @@
               </thead>
               <tbody>
                 <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Grace</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Grace</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -332,7 +331,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/1.mp3" preload="auto"></audio>
@@ -342,7 +341,7 @@
                   </td>
                 </tr>
                 <tr class="bg-[#14B8A640] border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Leslie</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Leslie</td>
                   <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -362,7 +361,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/1.mp3" preload="auto"></audio>
@@ -371,7 +370,7 @@
                   </td>
                 </tr>
                 <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Kai</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Kai</td>
                   <td class="px-3 py-2 border-r border-primary">004</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -391,7 +390,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/1.mp3" preload="auto"></audio>
@@ -400,7 +399,7 @@
                   </td>
                 </tr>
                 <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Sean</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Sean</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -420,7 +419,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/1.mp3" preload="auto"></audio>
@@ -429,7 +428,7 @@
                   </td>
                 </tr>
                 <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Rob</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Rob</td>
                   <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -449,7 +448,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/2.mp3" preload="auto"></audio>
@@ -458,7 +457,7 @@
                   </td>
                 </tr>
                 <tr class="bg-[#14B8A640] border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Tina</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Tina</td>
                   <td class="px-3 py-2 border-r border-primary">003</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -478,7 +477,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/1.mp3" preload="auto"></audio>
@@ -487,7 +486,7 @@
                   </td>
                 </tr>
                 <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark">Fionna</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Fionna</td>
                   <td class="px-3 py-2 border-r border-primary">004</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -507,7 +506,7 @@
                           <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
                         </svg>
                       </div>
-                      <div class="eco-box w-full bg-gray rounded-lg flex justify-center px-1">
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
                       <audio src="/audio/3.mp3" preload="auto"></audio>
@@ -591,7 +590,7 @@
               </thead>
               <tbody>
                 <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -632,7 +631,7 @@
 
                 </tr>
                 <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -671,7 +670,7 @@
 
                 </tr>
                 <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -710,7 +709,7 @@
 
                 </tr>
                 <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -749,7 +748,7 @@
 
                 </tr>
                 <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -788,7 +787,7 @@
 
                 </tr>
                 <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -827,7 +826,7 @@
 
                 </tr>
                 <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">

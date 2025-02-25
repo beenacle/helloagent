@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="/src/styles.css">
 </head>
 
-<body>
+<body class="dark:text-white dark:bg-stone-900">
   <!-- WRAPPER -->
   <div class="xl:flex justify-between items-start xl:min-h-screen xl:relative">
 
     <!-- Header -->
     <header class="py-4 px-5 md:px-10 xl:hidden flex items-center justify-between">
-      <a href="index.html">
-        <img src="/images/logo.svg" alt="Logo" class="relative z-11 w-[9rem]">
+      <a href="/">
+        <img src="/images/logo.svg" alt="Logo" class="relative z-11 w-[9rem] dark:brightness-[1.5]">
       </a>
       <button class="sidebar-toggle p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none ms-3">
         <!-- Hamburger Icon -->
@@ -30,22 +30,22 @@
 
     <!-- SIDEBAR -->
     <aside id="sidebar"
-      class="bg-white border-r border-gray-200 w-64 h-screen transition duration-200
+      class="bg-white border-r border-gray-200 dark:border-black w-64 h-screen transition duration-200
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
       <div>
 
         <!-- Header with brand + hamburger -->
-        <div class="flex items-center justify-between p-4">
+        <div class="flex items-center justify-between p-4 sidebar-header">
           <div class="flex items-center space-x-2">
             <a class="hidden xl:inline" href="index.html">
-              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse">
+              <img src="/images/logo.svg" alt="Logo" class="w-[9rem] sidebar__logo-icon hide-on-collapse dark:brightness-[1.5]">
               <img class="hidden sidebar__logo-icon hide-on-collapse" src="/images/logo-icon.svg" alt="Logo">
             </a>
           </div>
           <div class="sidebar-toggle xl:hidden text-3xl">&times;</div>
           <button id="hamburgerBtn"
-            class="p-2 text-gray-600 hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
+            class="p-2 text-gray-600 dark:text-white hover:bg-gray-200 rounded focus:outline-none hide-on-collapse hidden xl:block">
             <!-- Hamburger Icon -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg" stroke-width="2">
@@ -64,7 +64,7 @@
         <!-- NAVIGATION -->
         <nav class="flex flex-col px-2 mt-4 text-primary">
 
-          <h6 class="sidebar__menu-text font-bold text-dark ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
+          <h6 class="sidebar__menu-text font-bold text-dark dark:text-white ps-3 opacity-50 mb-3 uppercase text-sm">Menu</h6>
 
           <!-- Home Link -->
           <a href="index.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
@@ -83,7 +83,7 @@
               </g>
             </svg>
 
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Home</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Home</span>
           </a>
 
           <!-- Call Logs Link -->
@@ -109,7 +109,7 @@
               </g>
             </svg>
 
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Call Logs</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Call Logs</span>
           </a>
 
           <!-- SETTINGS (with Submenu) -->
@@ -131,8 +131,9 @@
                 </defs>
               </svg>
 
-              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black opacity-50">Settings</span>
-              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <span class="ml-3 sidebar-text hide-on-collapse flex-1 text-left text-black dark:text-white opacity-50">Settings</span>
+              <svg class="sidebar-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.3296 0.32959L6.49996 5.15921L1.67034 0.32959L0.0795898 1.92034L6.49996 8.34071L12.9203 1.92034L11.3296 0.32959Z"
                   fill="#a4a4a4" />
@@ -142,19 +143,19 @@
             <!-- Settings Submenu -->
             <div id="settingsSubmenu" class="hidden pl-8 mt-1 space-y-1 sidebar-submenu">
               <a href="set-voice.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Set Voice
               </a>
               <a href="voice-profiles.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50 bg-gray-100">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50 bg-gray-100">
                 Voice Profiles
               </a>
               <a href="voice-creations.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Creations
               </a>
               <a href="voice-collection.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Collection
               </a>
             </div>
@@ -181,7 +182,7 @@
                 </defs>
               </svg>
             </span>
-            <span class="ml-3 sidebar-text hide-on-collapse text-black opacity-50">Help</span>
+            <span class="ml-3 sidebar-text hide-on-collapse text-black dark:text-white opacity-50">Help</span>
           </a>
         </nav>
 
@@ -193,7 +194,8 @@
           <ul class="list-none flex items-center bg-gray rounded-3xl">
             <li data-toggle="light"
               class="shadow-lg bg-secondary theme-toggle__active theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer">
-              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode"></li>
+              <img width="20" src="/images/icons/light-mode.svg" alt="Light Mode">
+            </li>
             <li data-toggle="dark"
               class="theme-toggle__item w-9 h-9 rounded-[50%] flex items-center justify-center cursor-pointer"><img
                 width="20" src="/images/icons/dark-mode.svg" alt="Dark Mode"></li>
@@ -208,7 +210,8 @@
 
       <header class="lg:mb-6 md:mb-4 mb-2 relative flex justify-end lg:px-4 items-center gap-4">
         <h2 class="lg:text-3xl text-xl lg:text-center text-primary font-bold w-full">AI Voice Profile</h2>
-        <span class="bg-secondary lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full profile-select-next cursor-pointer opacity-0">Add</span>
+        <span
+          class="bg-secondary lg:px-[110px] px-7 py-1 lg:py-2 text-white rounded-full profile-select-next cursor-pointer opacity-0">Add</span>
       </header>
 
       <!-- Cards Grid -->
@@ -217,7 +220,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/grace-img.svg"
               alt="content">
@@ -255,7 +260,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Leslie-img.svg"
               alt="content">
@@ -290,7 +297,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Sydney-img.svg"
               alt="content">
@@ -326,7 +335,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/Kai-img.svg"
               alt="content">
@@ -362,7 +373,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/sean-img.svg"
               alt="content">
@@ -398,7 +411,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/rob.svg" alt="content">
             <h2 class="text-2xl font-semibold title-font text-primary">Rob</h2>
@@ -433,7 +448,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/tina-img.svg"
               alt="content">
@@ -469,7 +486,9 @@
         <!-- Card -->
         <div
           class="hover:bg-[#0A574E] bg-gray px-3 py-6 flex flex-col items-center justify-between gap-2 rounded-xl hover:text-white transition duration-500 profile-card h-full relative hover:translate-x-[3px]">
-          <div class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3"></div>
+          <div
+            class="profile-card__select w-4 h-4 border-2 border-primary bg-secondary rounded-lg cursor-pointer transition duration-500 hover:scale-125 absolute top-3 start-3">
+          </div>
           <div class="text-center">
             <img class="rounded mx-auto block mb-2 w-20 object-cover object-center" src="/images/fionna-img.svg"
               alt="content">
