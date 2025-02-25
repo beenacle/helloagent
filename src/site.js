@@ -265,14 +265,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Loop through each nav link and add active class if it matches the current page
   let currentPage = window.location.pathname.split('/').pop() || 'index';
 
-  // Remove `.html` if present
-  currentPage = currentPage.replace(/\.html$/, '').toLowerCase();
+  // Remove `.html` if present and normalize
+  currentPage = currentPage.replace(/\.html$/, '').replace(/^\//, '').toLowerCase();
 
   navLinks.forEach(link => {
     let linkPage = link.getAttribute('href') || '';
 
-    // Normalize link (remove .html and lowercase)
-    linkPage = linkPage.replace(/\.html$/, '').toLowerCase();
+    // Normalize link (remove `.html`, leading slash, and lowercase)
+    linkPage = linkPage.replace(/\.html$/, '').replace(/^\//, '').toLowerCase();
 
     if (linkPage === currentPage) {
         link.classList.add('bg-gray-100');
