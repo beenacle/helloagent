@@ -14,6 +14,7 @@ export default defineConfig({
         login: resolve(__dirname, 'login.html'),
         signUp: resolve(__dirname, 'sign-up.html'),
         help: resolve(__dirname, 'help.html'),
+        account: resolve(__dirname, 'account.html'),
         site: resolve(__dirname, 'src/site.js'),
         passwordToggle: resolve(__dirname, 'src/password-toggle.js'),
       },

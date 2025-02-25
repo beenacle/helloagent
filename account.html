@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <title>Account</title>
   <link rel="stylesheet" href="/src/styles.css">
 </head>
 
@@ -117,7 +117,7 @@
           <div class="mb-3">
             <!-- Settings Toggle -->
             <button type="button" id="settingsBtn"
-              class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none">
+              class="w-full flex items-center px-3 py-2 rounded hover:bg-gray-100 focus:outline-none bg-gray-100">
               <!-- Replace with your settings icon -->
               <svg width="20" height="20" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.5" clip-path="url(#clip0_2_467)">
@@ -152,13 +152,14 @@
                 Voice Profiles
               </a>
               <a href="voice-creations.html"
-                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
+                class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50 bg-gray-100">
                 Voice Creations
               </a>
               <a href="voice-collection.html"
                 class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Voice Collection
-                <a href="account.html"
+              </a>
+<a href="account.html"
                 class="block px-3 py-2 -ml-3 hover:bg-gray-100 rounded gray text-black dark:text-white opacity-50">
                 Account
               </a>
@@ -166,7 +167,7 @@
           </div>
 
           <!-- Help Link -->
-          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3 bg-gray-100">
+          <a href="help.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 mb-3">
             <!-- Replace with your help icon -->
             <span>
               <svg width="20" height="20" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,110 +212,43 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-1 md:mx-auto p-5 md:p-10">
-      <div class="sm:mx-auto max-w-4xl">
+      <div class="sm:mx-auto sm:w-full sm:max-w-2xl">
+
         <!-- Example content header -->
-        <header class="mb-6 relative">
-          <h1 class="text-3xl text-center text-primary font-bold">Help Page</h1>
-          <p class="text-center mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolore mollitia.
-          </p>
+        <header class="mb-6 relative text-center">
+          <h1 class="text-3xl text-primary font-bold">Account</h1>
         </header>
-        <!----- content section start here ----->
 
-        <section class="get-started-section">
-          <div class="container my-5">
-            <div class="content-row">
-              <h3 class="text-2xl text-center text-primary font-bold mt-12 mb-6">Getting Started</h3>
-              <p class="text-center font-light">Lorem ipsum dvcffdsvfdsolor sit amet, consectetur adipiscing elit.
-                Nulla tempor, libero vel porttitor accumsan, erat ipsum pulvinar nisl, at euismod tellus nibh sit amet
-                enim. Maecenas at ligula velit. Integer in sapien euismod, semper turpis quis, volutpat neque. Duis
-                commodo et sem non ultrices. Aliquam et odio vitae ligula tempor cursus nec non nisl. Mauris nulla
-                turpis, ornare quis nibh non, tincidunt euismod nibh. Vestibulum id laoreet nibh, non tincidunt
-                ante.<br><br>
-                Etiam sed libero mauris. In convallis dictum auctor. Curabitur nibh elit, condimentum id dapibus non,
-                sollicitudin nec lacus. Quisque nisi magna, tristique sed consectetur non, venenatis at tortor. In eu
-                dui eu urna tempus eleifend. Nunc at vestibulum arcu. Phasellus lacinia orci risus, quis dictum orci
-                porttitor at.</p>
-            </div>
-            <div class="max-w-3xl mx-auto mt-10 p-6 rounded-lg">
-              <h2 class="text-2xl font-bold text-center text-primary mb-5">FAQ</h2>
-
-              <div class="space-y-4">
-
-                <!-- FAQ Item 1 -->
-                <div class="border-b border-gray-300 pb-3 text-primary">
-                  <button class="faq-toggle w-full text-left flex justify-between items-center font-semibold py-2">
-                    <span>Q: What exactly does Hello Agents AI do?</span>
-                    <span class="faq-icon transition duration-500"><svg width="17" height="17" viewBox="0 0 20 20"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M18.6942 9.28585C18.6942 9.66514 18.5378 10.0337 18.2814 10.2901L11.0157 17.5666C10.7478 17.823 10.3792 17.9794 9.99995 17.9794C9.62066 17.9794 9.25209 17.823 8.99566 17.5666L1.72995 10.2901C1.46209 10.0337 1.30566 9.66514 1.30566 9.28585C1.30566 8.90657 1.46209 8.538 1.72995 8.27014L2.55566 7.433C2.82352 7.17657 3.19209 7.02014 3.57138 7.02014C3.95066 7.02014 4.31924 7.17657 4.57566 7.433L7.85709 10.7144V2.85728C7.85709 2.07585 8.50424 1.42871 9.28566 1.42871H10.7142C11.4957 1.42871 12.1428 2.07585 12.1428 2.85728V10.7144L15.4242 7.433C15.6807 7.17657 16.0492 7.02014 16.4285 7.02014C16.8078 7.02014 17.1764 7.17657 17.4442 7.433L18.2814 8.27014C18.5378 8.538 18.6942 8.90657 18.6942 9.28585Z"
-                          fill="#042925" />
-                      </svg>
-                    </span>
-                  </button>
-                  <p class="faq-content hidden text-dark dark:text-white py-4">
-                    Hello Agents AI provides intelligent voice AI solutions that automate and enhance your business
-                    communications. Our services include 24/7 powered call answering, automated outbound calling,
-                    appointment scheduling, customer service, and more.
-                  </p>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="border-b border-gray-300 text-primary pb-3">
-                  <button class="faq-toggle w-full text-left flex justify-between items-center font-semibold py-2">
-                    <span>Q: How does voice AI benefit my business?</span>
-                    <span class="faq-icon transition duration-500"><svg width="17" height="17" viewBox="0 0 20 20"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M18.6942 9.28585C18.6942 9.66514 18.5378 10.0337 18.2814 10.2901L11.0157 17.5666C10.7478 17.823 10.3792 17.9794 9.99995 17.9794C9.62066 17.9794 9.25209 17.823 8.99566 17.5666L1.72995 10.2901C1.46209 10.0337 1.30566 9.66514 1.30566 9.28585C1.30566 8.90657 1.46209 8.538 1.72995 8.27014L2.55566 7.433C2.82352 7.17657 3.19209 7.02014 3.57138 7.02014C3.95066 7.02014 4.31924 7.17657 4.57566 7.433L7.85709 10.7144V2.85728C7.85709 2.07585 8.50424 1.42871 9.28566 1.42871H10.7142C11.4957 1.42871 12.1428 2.07585 12.1428 2.85728V10.7144L15.4242 7.433C15.6807 7.17657 16.0492 7.02014 16.4285 7.02014C16.8078 7.02014 17.1764 7.17657 17.4442 7.433L18.2814 8.27014C18.5378 8.538 18.6942 8.90657 18.6942 9.28585Z"
-                          fill="#042925" />
-                      </svg>
-                    </span>
-                  </button>
-                  <p class="faq-content hidden text-dark dark:text-white py-4">
-                    Voice AI increases efficiency, reduces costs, improves customer satisfaction, and enhances
-                    productivity. Our AI solutions allow you to capture every lead, provide instant support, streamline
-                    workflows, and focus on strategic business goals.
-                  </p>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="border-b border-gray-300 pb-3 text-primary">
-                  <button class="faq-toggle w-full text-left flex justify-between items-center font-semibold py-2">
-                    <span>Q: Is your AI technology truly available 24/7?</span>
-                    <span class="faq-icon transition duration-500"><svg width="17" height="17" viewBox="0 0 20 20"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M18.6942 9.28585C18.6942 9.66514 18.5378 10.0337 18.2814 10.2901L11.0157 17.5666C10.7478 17.823 10.3792 17.9794 9.99995 17.9794C9.62066 17.9794 9.25209 17.823 8.99566 17.5666L1.72995 10.2901C1.46209 10.0337 1.30566 9.66514 1.30566 9.28585C1.30566 8.90657 1.46209 8.538 1.72995 8.27014L2.55566 7.433C2.82352 7.17657 3.19209 7.02014 3.57138 7.02014C3.95066 7.02014 4.31924 7.17657 4.57566 7.433L7.85709 10.7144V2.85728C7.85709 2.07585 8.50424 1.42871 9.28566 1.42871H10.7142C11.4957 1.42871 12.1428 2.07585 12.1428 2.85728V10.7144L15.4242 7.433C15.6807 7.17657 16.0492 7.02014 16.4285 7.02014C16.8078 7.02014 17.1764 7.17657 17.4442 7.433L18.2814 8.27014C18.5378 8.538 18.6942 8.90657 18.6942 9.28585Z"
-                          fill="#042925" />
-                      </svg>
-                    </span>
-                  </button>
-                  <p class="faq-content hidden text-dark dark:text-white py-4">
-                    Yes, our AI voice systems are available 24 hours a day, 7 days a week, 365 days a year. We ensure
-                    your business is always responsive and available to your customers, no matter the time or day.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <div class="content-row">
-              <h3 class="text-2xl text-center text-primary font-bold mt-12 mb-6">Additional Information</h3>
-              <p class="text-center font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor,
-                libero vel porttitor accumsan, erat ipsum pulvinar nisl, at euismod tellus nibh sit amet enim. Maecenas
-                at ligula velit. Integer in sapien euismod, semper turpis quis, volutpat neque. Duis commodo et sem non
-                ultrices. Aliquam et odio vitae ligula tempor cursus nec non nisl. Mauris nulla turpis, ornare quis nibh
-                non, tincidunt euismod nibh. Vestibulum id laoreet nibh, non tincidunt ante.<br><br>
-                Etiam sed libero mauris. In convallis dictum auctor. Curabitur nibh elit, condimentum id dapibus non,
-                sollicitudin nec lacus. Quisque nisi magna, tristique sed consectetur non, venenatis at tortor. In eu
-                dui eu urna tempus eleifend. Nunc at vestibulum arcu. Phasellus lacinia orci risus, quis dictum orci
-                porttitor at.</p>
-            </div>
+        <!-- Example form content (use your own form) -->
+        <section class="space-y-7 relative">
+          <div>
+            <label class="block font-bold text-lg mb-2 text-primary">Full Name</label>
+            <input type="text" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter Full Name" />
           </div>
+
+          <div>
+            <label class="block font-bold text-lg mb-2 text-primary">Email</label>
+            <input type="email" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter Email" />
+          </div>
+
+          <div>
+            <label class="block font-bold text-lg mb-2 text-primary">Phone Number</label>
+            <input type="tel" class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter Phone Number" />
+          </div>
+
+          <div>
+            <label class="block font-bold text-lg mb-2 text-primary">Billing Address</label>
+            <textarea class="w-full border border-[#1AFFE459] px-3 rounded py-4 bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200" placeholder="Enter Billing Details"></textarea>
+          </div>
+
+
+          <div class="text-center">
+          <button type="button" class="bg-secondary lg:px-[4rem] px-7 py-1 lg:py-2 text-white rounded-full profile-select-next cursor-pointer">Save</button>
+        </div>
+
         </section>
 
       </div>
-
     </main>
     <!-- END MAIN CONTENT -->
   </div>
@@ -322,7 +256,6 @@
 
   <!-- Scripts -->
   <script src="/src/site.js" type="module"></script>
-
 </body>
 
 </html>
