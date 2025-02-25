@@ -233,11 +233,11 @@
             <ul class="flex flex-wrap -mb-px">
               <li class="me-2">
                 <a href=".account-details"
-                  class="inline-block p-4 text-primary border-b-2 border-primary rounded-t-lg dark:text-primary dark:border-primary no-underline outline-none">Account Details</a>
+                  class="inline-block p-4 text-primary border-b-2 border-primary rounded-t-lg dark:text-primary dark:border-primary no-underline outline-none cursor-pointer">Account Details</a>
               </li>
               <li class="me-2">
                 <a href=".payment-details"
-                  class="inline-block p-4 text-gray-500 border-b-2 border-transparent rounded-t-lg no-underline outline-none">Payment
+                  class="inline-block p-4 text-gray-500 border-b-2 border-transparent rounded-t-lg no-underline outline-none cursor-pointer">Payment
                   Details</a>
               </li>
             </ul>
@@ -362,7 +362,7 @@
 
             <div class="">
               <label class="block font-bold md:text-lg mb-2 text-primary">Card Number</label>
-              <input type="text"
+              <input id="card-number" type="text"
                 class="w-full border border-[#1AFFE459] px-3 py-2 md:py-4 rounded bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200"
                 placeholder="MM/YY">
             </div>
@@ -370,14 +370,14 @@
             <div class="flex gap-4">
               <div class="w-4/6">
                 <label class="block font-bold md:text-lg mb-2 text-primary">Expiry (MM/YY)</label>
-                <input type="text"
+                <input id="card-expiry" type="text"
                   class="w-full border border-[#1AFFE459] px-3 py-2 md:py-4 rounded bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200"
                   placeholder="MM/YY">
               </div>
   
               <div class="w-2/6">
                 <label class="block font-bold md:text-lg mb-2 text-primary">CVV</label>
-                <input type="password"
+                <input id="card-cvv" type="password"
                   class="w-full border border-[#1AFFE459] px-3 py-2 md:py-4 rounded bg-[#F8F8F8] focus:outline-none focus:ring-2 focus:ring-teal-200"
                   placeholder="CVV">
               </div>

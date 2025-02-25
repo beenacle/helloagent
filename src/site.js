@@ -1,5 +1,6 @@
 import WaveSurfer from 'wavesurfer.js';
 import DataTable from 'datatables.net';
+import IMask from 'imask';
 import 'datatables.net-dt/css/dataTables.dataTables.min.css';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const audioElements = [];
   const selectButtons = document.querySelectorAll(".profile-card__select");
   const navLinks = document.querySelectorAll('nav a[href]');
+  const tabs = document.querySelectorAll(".tabs a");
+  const tabContents = document.querySelectorAll(".tab-pane");
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
@@ -311,15 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.table').forEach((table) => {
     new DataTable(table);
   });
-  
-
-});
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tabs a"); // Select all tab links
-  const tabContents = document.querySelectorAll(".tab-pane"); // Select all tab content
-
+  // Tabs
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
@@ -342,4 +339,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (target) target.classList.remove("hidden");
     });
   });
+
+  // Input Masks
+  const masks = [
+    { selector: '#card-number', mask: '0000-0000-0000-0000' },
+    { selector: '#card-expiry', mask: '00/00' },
+    { selector: '#card-cvv', mask: '0000' }
+  ];
+  
+  masks.forEach(({ selector, mask }) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      IMask(element, { mask });
+    }
+  });
+  
+  
+
 });
