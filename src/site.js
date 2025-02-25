@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const waveSurfers = [];
   const audioElements = [];
   const selectButtons = document.querySelectorAll(".profile-card__select");
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('nav a[href]');
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
@@ -245,9 +247,6 @@ document.addEventListener("DOMContentLoaded", () => {
           profileCard.classList.toggle("profile-card--selected");
           profileCard.classList.toggle("bg-primary");
           profileCard.classList.toggle("text-white");
-          button.classList.toggle("border-white");
-          button.classList.toggle("border-primary");
-          button.classList.toggle("bg-white");
           button.classList.toggle("bg-secondary");
 
           const profileSelectNext = document.querySelector('.profile-select-next');
@@ -263,5 +262,25 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Loop through each link
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      // Add bg-gray-100 to the active link
+      link.classList.add('bg-gray-100');
+
+      // Check if this link is in the Settings submenu
+      const submenu = link.closest('#settingsSubmenu');
+      if (submenu) {
+        // Add bg-gray-100 to the Settings button
+        const settingsBtn = document.getElementById('settingsBtn');
+        settingsBtn.classList.add('bg-gray-100');
+
+        // Expand the submenu by removing the 'hidden' class
+        submenu.classList.remove('hidden');
+      }
+    }
+  });
 
 });
