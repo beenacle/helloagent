@@ -265,19 +265,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // Loop through each nav link and add active class if it matches the current page
   let currentPage = window.location.pathname.split('/').pop() || 'index';
 
-  // Remove .html if present
-  currentPage = currentPage.replace(/\.html$/, '');
+  // Remove `.html` if present
+  currentPage = currentPage.replace(/\.html$/, '').toLowerCase();
 
   navLinks.forEach(link => {
-    let linkPage = link.getAttribute('href').replace(/\.html$/, '');
+    let linkPage = link.getAttribute('href') || '';
+
+    // Normalize link (remove .html and lowercase)
+    linkPage = linkPage.replace(/\.html$/, '').toLowerCase();
+
     if (linkPage === currentPage) {
         link.classList.add('bg-gray-100');
+
+        // Expand submenu if applicable
         const submenu = link.closest('#settingsSubmenu');
         if (submenu) {
             document.getElementById('settingsBtn').classList.add('bg-gray-100');
             submenu.classList.remove('hidden');
         }
     }
-});
+  });
 
 });
