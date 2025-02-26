@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebarArrow.classList.toggle("rotate-180");
       }
     }
-  });  
+  });
 
 
   // Tabs
@@ -375,110 +375,129 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // Check if there are any .table elements for DataTable initialization
-if (document.querySelector('.table')) {
-  document.querySelectorAll('.table').forEach((table) => {
-    new DataTable(table, {
-      paging: false,
-      searching: false,
-      info: false,
-      lengthChange: false,
-      responsive: false, 
-      autoWidth: false, 
-      scrollX: true, 
-    });
+  function parseDateForSorting(dateStr) {
+    if (!dateStr || typeof dateStr !== 'string' || !/^\d{1,2}\/\d{1,2}\/\d{2}$/.test(dateStr)) {
+      return '00000000'; // Return a sentinel value for invalid/empty dates
+    }
+    var parts = dateStr.split('/');
+    var month = parts[0].padStart(2, '0');
+    var day = parts[1].padStart(2, '0');
+    var year = parts[2].padStart(2, '0');
+    year = year.length === 2 ? '20' + year : year; // Assume 20XX for YY
+    return year + month + day; // Return YYYYMMDD
+  }
+
+  // Register custom type detection and ordering for MM/DD/YY dates
+  DataTable.ext.type.detect.unshift(
+    function (data) {
+      if (typeof data === 'string' && /^\d{1,2}\/\d{1,2}\/\d{2}$/.test(data)) {
+        return 'date-mmddyy';
+      }
+      return null;
+    }
+  );
+
+  DataTable.ext.type.order['date-mmddyy-pre'] = function (data) {
+    return data ? parseDateForSorting(data) : 0;
+  };
+
+
+  // Function to initialize DataTable and handle "Load More" for any table
+  function initializeDataTableWithLoadMore(tableSelector, customOptions = {}) {
+    if (document.querySelector(tableSelector)) {
+      document.querySelectorAll(tableSelector).forEach((table) => {
+        // Get the initial page length from data-row attribute, default to 5 if not set
+        let initialPageLength = parseInt(table.getAttribute('data-row')) || 5;
+
+        // Default DataTable options
+        const defaultOptions = {
+          paging: true,
+          pageLength: initialPageLength, // Dynamic initial rows
+          lengthChange: false,
+          searching: false,
+          info: false,
+          responsive: false,
+          autoWidth: false,
+          scrollX: true,
+          dom: 't', // Only show the table, no default pagination
+          columnDefs: [{
+              targets: 3,
+              orderable: false
+            },
+            {
+              targets: 4,
+              orderable: false
+            }
+          ]
+        };
+
+        // Merge default options with custom options (if any)
+        const options = {
+          ...defaultOptions,
+          ...customOptions
+        };
+
+        // Initialize DataTable
+        let dt = new DataTable(table, options);
+
+        // Get the "Load More" button (scoped to the table's wrapper)
+        let wrapper = table.closest('.datatable-wrapper');
+        let loadMoreBtn = wrapper ? wrapper.querySelector('.datatable__load-more') : null;
+
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', function () {
+            let currentLength = dt.page.len(); // Current rows per page
+            let totalRecords = dt.data().count(); // Total rows in the table
+
+            // Increase the page length by the initial page length
+            let newLength = currentLength + initialPageLength;
+
+            // If the new length exceeds total records, set it to total records
+            if (newLength >= totalRecords) {
+              newLength = totalRecords;
+              loadMoreBtn.style.display = 'none'; // Hide button when all rows are loaded
+            }
+
+            // Update the table to show the new number of rows
+            dt.page.len(newLength).draw('page');
+          });
+
+          // Initially hide the button if all rows are already visible
+          if (dt.data().count() <= initialPageLength) {
+            loadMoreBtn.style.display = 'none';
+          }
+        }
+      });
+    }
+  }
+
+  // Custom date parsing function for AI Voices table (assuming it exists elsewhere)
+  function parseDateForSorting(data) {
+    // Your date parsing logic here, e.g., converting "DD/MM/YYYY" to "YYYYMMDD"
+    const [day, month, year] = data.split('/');
+    return `${year}${month.padStart(2, '0')}${day.padStart(2, '0')}`;
+  }
+
+  // Initialize Call Logs Table
+  initializeDataTableWithLoadMore('.call-logs-table');
+
+  // Initialize AI Voices Table with custom columnDefs
+  initializeDataTableWithLoadMore('.ai-voice-table', {
+    columnDefs: [{
+        targets: 2, // "Creation Date" column
+        render: function (data, type, row) {
+          if (type === 'sort' || type === 'type') {
+            return parseDateForSorting(data); // Use YYYYMMDD for sorting
+          }
+          return data;
+        }
+      },
+      {
+        targets: 3,
+        orderable: false
+      }
+    ]
   });
-}
-
-// let table;
-// function initializeDataTable() {
-//     if (table) {
-//         table.destroy();
-//     }
-//   }
-
-//   initializeDataTable();
 
 
 });
-
-// let timeout;
-// window.addEventListener('resize', () => {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(initializeDataTable, 250); // Debounce the resize event
-// });
-
-
-if (document.querySelector('.datatable-wrapper')) {
-  document.querySelectorAll('.datatable-wrapper').forEach((wrapper) => {
-    const table = wrapper.querySelector('.table');
-    const loadMoreLink = wrapper.querySelector('.datatable__load-more');
-
-    // Ensure table and loadMoreLink exist
-    if (!table || !loadMoreLink) {
-      console.warn('Missing .table or .datatable__load-more in:', wrapper);
-      return;
-    }
-
-    // Try to find tbody, fall back to table if tbody is missing
-    const tbody = table.querySelector('tbody');
-    const rows = tbody ? tbody.querySelectorAll('tr') : table.querySelectorAll('tr');
-
-    if (!rows.length) {
-      console.warn('No rows found in datatable-wrapper:', wrapper);
-      return;
-    }
-
-    // Get the initial number of rows to display from data-row attribute
-    const initialRows = parseInt(table.getAttribute('data-row')) || 10;
-    // Get the number of rows to load more from data-load attribute
-    const loadMoreCount = parseInt(loadMoreLink.getAttribute('data-load')) || 1;
-
-    // Store the original text of the "Load More" link
-    const originalText = loadMoreLink.textContent;
-
-    let visibleRows = initialRows;
-
-    // Ensure all rows start hidden, then show only initialRows
-    rows.forEach((row, index) => {
-      row.style.display = 'none'; // Hide all rows initially
-      if (index < initialRows) {
-        row.style.display = ''; // Show only the initial rows
-      }
-    });
-
-    // Check if there are more rows to load and update the "Load More" link
-    function updateLoadMoreVisibility() {
-      if (visibleRows >= rows.length) {
-        loadMoreLink.textContent = 'All rows are loaded';
-        loadMoreLink.style.pointerEvents = 'none';
-        loadMoreLink.style.opacity = '0.5'; 
-      } else {
-        loadMoreLink.textContent = originalText;
-        loadMoreLink.style.pointerEvents = '';
-        loadMoreLink.style.opacity = '';
-      }
-    }
-
-    // Initial check for "Load More" visibility
-    updateLoadMoreVisibility();
-
-    // Add click event to "Load More" link specific to this table
-    loadMoreLink.addEventListener('click', () => {
-      const nextRowsLimit = visibleRows + loadMoreCount;
-
-      // Show the next set of rows
-      rows.forEach((row, index) => {
-        if (index >= visibleRows && index < nextRowsLimit) {
-          row.style.display = ''; // Show additional rows
-        }
-      });
-
-      // Update the count of visible rows
-      visibleRows = Math.min(nextRowsLimit, rows.length);
-
-      // Update the "Load More" link text and state
-      updateLoadMoreVisibility();
-    });
-  });
-}
