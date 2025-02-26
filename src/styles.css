@@ -139,6 +139,12 @@ table.dataTable>tbody>tr:nth-child(even) {
     background: #14B8A640;
 }
 
+.dt-column-title {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
 .dt-scroll-head {
     border-top-right-radius: 0.5rem;
 }
