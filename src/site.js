@@ -404,93 +404,97 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to initialize DataTable and handle "Load More" for any table
   function initializeDataTableWithLoadMore(tableSelector, customOptions = {}) {
-    if (document.querySelector(tableSelector)) {
-      document.querySelectorAll(tableSelector).forEach((table) => {
-        // Get the initial page length from data-row attribute, default to 5 if not set
-        let initialPageLength = parseInt(table.getAttribute('data-row')) || 5;
+    const tables = document.querySelectorAll(tableSelector);
+    if (!tables.length) return; // Exit if no tables found
 
-        // Default DataTable options
-        const defaultOptions = {
-          paging: true,
-          pageLength: initialPageLength, // Dynamic initial rows
-          lengthChange: false,
-          searching: false,
-          info: false,
-          responsive: false,
-          autoWidth: false,
-          scrollX: true,
-          dom: 't', // Only show the table, no default pagination
-          columnDefs: [{
-              targets: 3,
-              orderable: false
-            },
-            {
-              targets: 4,
-              orderable: false
-            }
-          ]
-        };
+    tables.forEach((table) => {
+      // Get initial page length from data-row, default to 5
+      const initialPageLength = parseInt(table.getAttribute('data-row')) || 5;
 
-        // Merge default options with custom options (if any)
-        const options = {
-          ...defaultOptions,
-          ...customOptions
-        };
-
-        // Initialize DataTable
-        let dt = new DataTable(table, options);
-
-        // Get the "Load More" button (scoped to the table's wrapper)
-        let wrapper = table.closest('.datatable-wrapper');
-        let loadMoreBtn = wrapper ? wrapper.querySelector('.datatable__load-more') : null;
-
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', function () {
-            let currentLength = dt.page.len(); // Current rows per page
-            let totalRecords = dt.data().count(); // Total rows in the table
-
-            // Increase the page length by the initial page length
-            let newLength = currentLength + initialPageLength;
-
-            // If the new length exceeds total records, set it to total records
-            if (newLength >= totalRecords) {
-              newLength = totalRecords;
-              loadMoreBtn.style.display = 'none'; // Hide button when all rows are loaded
-            }
-
-            // Update the table to show the new number of rows
-            dt.page.len(newLength).draw('page');
-          });
-
-          // Initially hide the button if all rows are already visible
-          if (dt.data().count() <= initialPageLength) {
-            loadMoreBtn.style.display = 'none';
+      // Default DataTable options
+      const defaultOptions = {
+        paging: true,
+        pageLength: initialPageLength,
+        lengthChange: false,
+        searching: false,
+        info: false,
+        responsive: false,
+        autoWidth: false,
+        scrollX: true,
+        dom: 't',
+        columnDefs: [{
+            targets: 3,
+            orderable: false
+          },
+          {
+            targets: 4,
+            orderable: false
           }
+        ]
+      };
+
+      // Merge with custom options
+      const options = {
+        ...defaultOptions,
+        ...customOptions
+      };
+
+      // Initialize DataTable
+      const dt = new DataTable(table, options);
+
+      // Find the wrapper and parent button
+      const wrapper = table.closest('.datatable-wrapper');
+      const loadMoreParentBtn = wrapper ? wrapper.querySelector('.load-more-btn') : null;
+
+      // Debug logs
+      console.log(`Table: ${tableSelector}`);
+      console.log(`Rows: ${dt.rows().count()}, Initial Length: ${initialPageLength}`);
+      console.log('Load More Parent Btn:', loadMoreParentBtn);
+
+      if (loadMoreParentBtn) {
+        // Handle "Load More" click (via datatable__load-more inside .load-more-btn)
+        const loadMoreBtn = loadMoreParentBtn.querySelector('.datatable__load-more');
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', () => {
+            const currentLength = dt.page.len();
+            const totalRecords = dt.rows().count();
+            const newLength = Math.min(currentLength + initialPageLength, totalRecords);
+
+            dt.page.len(newLength).draw('page');
+
+            if (newLength >= totalRecords) {
+              console.log(`Hiding .load-more-btn - All rows loaded (${totalRecords})`);
+              loadMoreParentBtn.style.display = 'none';
+            }
+          });
+        } else {
+          console.log('Inner .datatable__load-more not found inside .load-more-btn');
         }
-      });
-    }
+
+        // Initially hide if all rows are visible
+        const rowCount = dt.rows().count();
+        if (rowCount <= initialPageLength) {
+          console.log(`Hiding .load-more-btn initially - Rows (${rowCount}) <= ${initialPageLength}`);
+          loadMoreParentBtn.style.display = 'none';
+        }
+      } else {
+        console.log(`.load-more-btn not found in wrapper for ${tableSelector}`);
+      }
+    });
   }
 
-  // Custom date parsing function for AI Voices table (assuming it exists elsewhere)
+  // Custom date parsing for AI Voices (if needed)
   function parseDateForSorting(data) {
-    // Your date parsing logic here, e.g., converting "DD/MM/YYYY" to "YYYYMMDD"
     const [day, month, year] = data.split('/');
     return `${year}${month.padStart(2, '0')}${day.padStart(2, '0')}`;
   }
 
-  // Initialize Call Logs Table
+  // Initialize tables
   initializeDataTableWithLoadMore('.call-logs-table');
-
-  // Initialize AI Voices Table with custom columnDefs
   initializeDataTableWithLoadMore('.ai-voice-table', {
     columnDefs: [{
-        targets: 2, // "Creation Date" column
-        render: function (data, type, row) {
-          if (type === 'sort' || type === 'type') {
-            return parseDateForSorting(data); // Use YYYYMMDD for sorting
-          }
-          return data;
-        }
+        targets: 2,
+        render: (data, type) => type === 'sort' || type === 'type' ? parseDateForSorting(data) : data
       },
       {
         targets: 3,
