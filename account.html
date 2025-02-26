@@ -32,7 +32,7 @@
 
     <!-- SIDEBAR -->
     <aside id="sidebar"
-      class="bg-white border-r border-gray-200 dark:border-black w-64 h-screen transition duration-200
+      class="min-w-[260px] bg-white border-r border-gray-200 dark:border-black h-screen
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
       <div>
@@ -215,17 +215,16 @@
     <!-- END SIDEBAR -->
 
     <!-- MAIN CONTENT -->
-    <main class="flex-1 md:mx-auto p-5 md:p-10">
+    <main class="overflow-hidden flex-1 md:mx-auto p-5 md:p-10">
       <div class="sm:mx-auto sm:w-full sm:max-w-2xl">
 
-        <!-- Example content header -->
+        <!-- Content Header -->
         <header class="mb-6 relative text-center">
           <h1 class="text-3xl text-primary font-bold">Account</h1>
         </header>
 
         <!-- Section -->
         <section>
-
 
           <!-- Tabs -->
           <div
@@ -356,9 +355,49 @@
 
           <!-- Payment Details -->
           <div class="payment-details tab-pane hidden">
-          
-            <!-- Add New Payment Method -->
-            <div class="border-b border-gray-600 pb-6 mb-6 space-y-7">
+
+          <!-- Manage Payment Method -->
+          <label class="block font-bold md:text-lg mb-3 text-primary">Saved Cards</label>
+           <table class="w-full mx-auto text-primary dark:text-white text-sm text-center whitespace-nowrap rounded-b">
+          <thead>
+          <tr class="bg-primary text-white">
+          <th class="py-2 px-3 rounded-t-lg rounded-e-none">Payment Method</th>
+          <th class="py-2 px-3">Expiry</th>
+          <th class="py-2 px-3 rounded-t-lg rounded-s-none"></th>
+          </tr>
+          </thead>
+          <tbody class="bg-gray-100">
+          <tr>
+          <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
+          <td class="px-3 py-2 border-t border-gray-400">02/31</td>
+          <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
+          </tr>
+          <tr>
+            <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
+            <td class="px-3 py-2 border-t border-gray-400">02/31</td>
+            <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
+              <td class="px-3 py-2 border-t border-gray-400">02/31</td>
+              <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
+              </tr>
+          </tbody>
+           </table>
+          <!-- Manage Payment Method -->
+
+          <div class="text-end mt-5">
+            <button type="button"
+              class="add-payment-method-btn bg-secondary lg:px-[4rem] px-5 py-1 lg:py-2 text-white rounded-full profile-select-next cursor-pointer">
+              Add Payment Method
+            </button>
+          </div>
+
+          </div>
+          <!-- Payment Details -->
+
+           <!-- Add New Payment Method -->
+           <div class="add-new-payment-method border-t border-gray-400 pt-6 mt-9 space-y-7 hidden">
 
             <div class="">
               <label class="block font-bold md:text-lg mb-2 text-primary">Card Number</label>
@@ -392,39 +431,6 @@
 
           </div>
           <!-- Add New Payment Method -->
-
-          <!-- Manage Payment Method -->
-          <label class="block font-bold md:text-lg mb-3 text-primary">Saved Cards</label>
-           <table class="w-full mx-auto text-primary dark:text-white text-sm text-center whitespace-nowrap rounded-b">
-          <thead>
-          <tr class="bg-primary text-white">
-          <th class="py-2 px-3 rounded-t-lg rounded-e-none">Payment Method</th>
-          <th class="py-2 px-3">Expiry</th>
-          <th class="py-2 px-3 rounded-t-lg rounded-s-none"></th>
-          </tr>
-          </thead>
-          <tbody class="bg-gray-100">
-          <tr>
-          <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
-          <td class="px-3 py-2 border-t border-gray-400">02/31</td>
-          <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
-          </tr>
-          <tr>
-            <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
-            <td class="px-3 py-2 border-t border-gray-400">02/31</td>
-            <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
-            </tr>
-            <tr>
-              <td class="px-3 py-2 border-t border-gray-400">Visa ending in 8917</td>
-              <td class="px-3 py-2 border-t border-gray-400">02/31</td>
-              <td class="px-3 py-2 border-t border-gray-400"><span class="text-red-500 underline cursor-pointer">Remove</span></td>
-              </tr>
-          </tbody>
-           </table>
-          <!-- Manage Payment Method -->
-
-          </div>
-          <!-- Payment Details -->
           
            </div>
           <!-- Tab Content -->

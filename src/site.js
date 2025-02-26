@@ -2,13 +2,14 @@ import WaveSurfer from 'wavesurfer.js';
 import DataTable from 'datatables.net';
 import IMask from 'imask';
 import 'datatables.net-dt/css/dataTables.dataTables.min.css';
+import 'datatables.net-responsive';
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const settingsBtn = document.getElementById("settingsBtn");
   const settingsSubmenu = document.getElementById("settingsSubmenu");
-  const sidebarArrow = settingsBtn.querySelector(".sidebar-arrow"); 
+  const sidebarArrow = settingsBtn.querySelector(".sidebar-arrow");
   const themeToggleItems = document.querySelectorAll(".theme-toggle__item");
   const body = document.body;
   const html = document.documentElement;
@@ -23,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll('nav a[href]');
   const tabs = document.querySelectorAll(".tabs a");
   const tabContents = document.querySelectorAll(".tab-pane");
+  const addPaymentBtn = document.querySelector('.add-payment-method-btn');
+  const newPaymentMethod = document.querySelector('.add-new-payment-method');
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter Dropdown
   if (dropdownButton && dropdownMenu) {
     const dropdownArrow = dropdownButton.querySelector(".dropdown__arrow");
-  
+
     if (dropdownArrow) {
       // Toggle dropdown and arrow on button click
       dropdownButton.addEventListener("click", (event) => {
@@ -58,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownMenu.classList.toggle("hidden");
         dropdownArrow.classList.toggle("rotate-180");
       });
-  
+
       // Close dropdown when clicking on an item
       dropdownMenu.querySelectorAll(".cursor-pointer").forEach(item => {
         item.addEventListener("click", () => {
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
           dropdownArrow.classList.remove("rotate-180");
         });
       });
-  
+
       // Close dropdown when clicking outside
       document.addEventListener("click", (event) => {
         if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
@@ -121,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closePopup() {
     document.querySelector(".change-picture-popup").classList.add("hidden");
-      document.querySelector(".popup-overlay").classList.add("hidden");
+    document.querySelector(".popup-overlay").classList.add("hidden");
   }
 
 
@@ -298,22 +301,17 @@ document.addEventListener("DOMContentLoaded", () => {
     linkPage = linkPage.replace(/\.html$/, '').replace(/^\//, '').toLowerCase();
 
     if (linkPage === currentPage) {
-        link.classList.add('bg-gray-100');
+      link.classList.add('bg-gray-100');
 
-        // Expand submenu if applicable
-        const submenu = link.closest('#settingsSubmenu');
-        if (submenu) {
-            document.getElementById('settingsBtn').classList.add('bg-gray-100');
-            submenu.classList.remove('hidden');
-            sidebarArrow.classList.toggle("rotate-180");
-        }
+      // Expand submenu if applicable
+      const submenu = link.closest('#settingsSubmenu');
+      if (submenu) {
+        document.getElementById('settingsBtn').classList.add('bg-gray-100');
+        submenu.classList.remove('hidden');
+        sidebarArrow.classList.toggle("rotate-180");
+      }
     }
-  });
-
-  // Datatables
-  document.querySelectorAll('.table').forEach((table) => {
-    new DataTable(table);
-  });
+  });  
 
 
   // Tabs
@@ -341,19 +339,119 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Input Masks
-  const masks = [
-    { selector: '#card-number', mask: '0000-0000-0000-0000' },
-    { selector: '#card-expiry', mask: '00/00' },
-    { selector: '#card-cvv', mask: '0000' }
+  const masks = [{
+      selector: '#card-number',
+      mask: '0000-0000-0000-0000'
+    },
+    {
+      selector: '#card-expiry',
+      mask: '00/00'
+    },
+    {
+      selector: '#card-cvv',
+      mask: '0000'
+    }
   ];
-  
-  masks.forEach(({ selector, mask }) => {
+
+  masks.forEach(({
+    selector,
+    mask
+  }) => {
     const element = document.querySelector(selector);
     if (element) {
-      IMask(element, { mask });
+      IMask(element, {
+        mask
+      });
     }
   });
-  
-  
+
+
+  // Add Payment Method
+  if (addPaymentBtn && newPaymentMethod) {
+    addPaymentBtn.addEventListener("click", function () {
+      addPaymentBtn.classList.add('hidden');
+      newPaymentMethod.classList.remove('hidden');
+    });
+  }
+
+
+  // Check if there are any .table elements for DataTable initialization
+if (document.querySelector('.table')) {
+  document.querySelectorAll('.table').forEach((table) => {
+    new DataTable(table, {
+      paging: false,
+      searching: false,
+      info: false,
+      lengthChange: false,
+      responsive: false, // Disable auto-hiding of columns
+      autoWidth: false, // Let columns adjust naturally
+      scrollX: true, // Enable horizontal scrolling instead of hiding columns
+    });
+  });
+}
+
 
 });
+
+
+// Check if there are any .datatable-wrapper elements for "Load More" functionality
+if (document.querySelector('.datatable-wrapper')) {
+  document.querySelectorAll('.datatable-wrapper').forEach((wrapper) => {
+    const table = wrapper.querySelector('.table');
+    const loadMoreLink = wrapper.querySelector('.datatable__load-more');
+    const tbody = table.querySelector('tbody');
+    const rows = tbody.querySelectorAll('tr');
+    
+    // Ensure all required elements exist within this wrapper
+    if (!table || !loadMoreLink || !tbody || !rows.length) {
+      console.warn('Missing required elements in a datatable-wrapper:', wrapper);
+      return; // Skip this wrapper if something is missing
+    }
+
+    // Get the initial number of rows to display from data-row attribute
+    const initialRows = parseInt(table.getAttribute('data-row')) || 10; // Default to 10 if not set
+    // Get the number of rows to load more from data-load attribute
+    const loadMoreCount = parseInt(loadMoreLink.getAttribute('data-load')) || 1; // Default to 1 if not set
+
+    let visibleRows = initialRows;
+
+    // Initially hide all rows
+    rows.forEach((row, index) => {
+      if (index < initialRows) {
+        row.style.display = ''; // Show initial rows
+      } else {
+        row.style.display = 'none'; // Hide remaining rows
+      }
+    });
+
+    // Check if there are more rows to load and show/hide the "Load More" button
+    function updateLoadMoreVisibility() {
+      if (visibleRows >= rows.length) {
+        loadMoreLink.parentElement.style.display = 'none'; // Hide if no more rows
+      } else {
+        loadMoreLink.parentElement.style.display = ''; // Show if more rows available
+      }
+    }
+
+    // Initial check
+    updateLoadMoreVisibility();
+
+    // Add click event to "Load More" link specific to this table
+    loadMoreLink.addEventListener('click', () => {
+      const nextRowsLimit = visibleRows + loadMoreCount;
+      
+      // Show the next set of rows
+      rows.forEach((row, index) => {
+        if (index >= visibleRows && index < nextRowsLimit) {
+          row.style.display = '';
+        }
+      });
+
+      // Update the count of visible rows
+      visibleRows = Math.min(nextRowsLimit, rows.length);
+
+      // Update the visibility of the "Load More" link
+      updateLoadMoreVisibility();
+    });
+  });
+}

@@ -32,7 +32,7 @@
 
     <!-- SIDEBAR -->
     <aside id="sidebar"
-      class="bg-white border-r border-gray-200 dark:border-black w-64 h-screen transition duration-200
+      class="min-w-[260px] bg-white border-r border-gray-200 dark:border-black h-screen
                overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
       <div>
@@ -211,9 +211,9 @@
     <!-- END SIDEBAR -->
 
     <!-- MAIN CONTENT -->
-    <main class="flex-1 md:mx-auto p-5 md:p-10">
+    <main class="overflow-hidden flex-1 md:mx-auto p-5 md:p-10">
 
-      <!-- Example content header -->
+      <!-- Content Header -->
       <header class="mb-6 relative md:flex-row flex-col flex justify-between lg:items-center">
         <div class="left-col">
           <h1 class="text-3xl lg:text-3xl text-primary font-bold mb-2">Home</h1>
@@ -236,7 +236,7 @@
 
         <!-- Box -->
         <div
-          class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
+          class="info-box rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
           <div class="px-2 py-4 rounded-lg">
             <p class="text-lg md:text-xl leading-relaxed text-primary mb-2">Total Call</p>
             <h2 class="font-bold text-5xl md:text-6xl leading-none">100</h2>
@@ -246,7 +246,7 @@
 
         <!-- Box -->
         <div
-          class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
+          class="info-box rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
           <div class="px-2 py-4 rounded-lg">
             <p class="text-lg md:text-xl leading-relaxed text-primary mb-2">Call Status</p>
             <h2 class="font-bold text-5xl md:text-6xl leading-none">100</h2>
@@ -256,7 +256,7 @@
 
         <!-- Box -->
         <div
-          class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
+          class="info-box rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
           <div class="px-2 py-4 rounded-lg">
             <p class="text-lg md:text-xl leading-relaxed text-primary mb-2">Total Leads</p>
             <h2 class="font-bold text-5xl md:text-6xl leading-none">100</h2>
@@ -266,7 +266,7 @@
 
         <!-- Box -->
         <div
-          class="colls rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
+          class="info-box rounded-2xl md:mt-0 mt-2 p-4 md:py-7 bg-gray hover:bg-[#0A574E] hover:text-tertiary transition duration-500">
           <div class="px-2 py-4 rounded-lg">
             <p class="text-lg md:text-xl leading-relaxed text-primary mb-2">Total Costs</p>
             <h2 class="font-bold text-5xl md:text-6xl leading-none">100</h2>
@@ -285,7 +285,7 @@
           <!-- Card Header -->
           <div class="flex items-center justify-between border-b-2 border-primary pb-6 mb-6 border-dashed">
             <h2 class="text-xl font-bold text-primary">AI Voices</h2>
-            <button
+            <a href="voice-creations.html"
               class="flex items-center justify-between bg-secondary text-sm ps-6 lh-1 pe-5 py-2 text-white font-bold rounded-full gap-5"><span>Add
                 AI Voice</span>
               <svg width="18" height="18" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -303,12 +303,13 @@
                   </clipPath>
                 </defs>
               </svg>
-            </button>
+            </a>
           </div>
           <!-- Card Header -->
 
-          <div class="overflow-x-auto rounded-t-lg">
-            <table class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
+          <!-- Table -->
+          <div class="datatable-wrapper">
+            <table data-row="7" class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
               <thead>
                 <tr class="bg-primary text-white">
                   <th class="py-2 px-3 border-r border-gray rounded-t-lg rounded-e-none">Voice Name</th>
@@ -318,8 +319,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Grace</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -349,8 +350,8 @@
 
                   </td>
                 </tr>
-                <tr class="bg-[#14B8A640] border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Leslie</td>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
                   <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -378,40 +379,12 @@
                     <!-- Wave Player -->
                   </td>
                 </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Kai</td>
-                  <td class="px-3 py-2 border-r border-primary">004</td>
-                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
-                  <td class="px-3 py-2">
-                    <!-- Wave Player -->
-                    <div
-                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
-                      <div
-                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
-                        <!-- Play Icon (visible by default) -->
-                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
-                        </svg>
-                        <!-- Pause Icon (hidden by default) -->
-                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
-                        </svg>
-                      </div>
-                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
-                        <div class="w-full waveform"></div>
-                      </div>
-                      <audio src="/audio/1.mp3" preload="auto"></audio>
-                    </div>
-                    <!-- Wave Player -->
-                  </td>
-                </tr>
-                <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Sean</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
+
                     <!-- Wave Player -->
                     <div
                       class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
@@ -434,10 +407,11 @@
                       <audio src="/audio/1.mp3" preload="auto"></audio>
                     </div>
                     <!-- Wave Player -->
+
                   </td>
                 </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Rob</td>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
                   <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
@@ -460,14 +434,45 @@
                       <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
-                      <audio src="/audio/2.mp3" preload="auto"></audio>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
                     </div>
                     <!-- Wave Player -->
                   </td>
                 </tr>
-                <tr class="bg-[#14B8A640] border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Tina</td>
-                  <td class="px-3 py-2 border-r border-primary">003</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+
+                  </td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
+                  <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
                     <!-- Wave Player -->
@@ -494,9 +499,40 @@
                     <!-- Wave Player -->
                   </td>
                 </tr>
-                <tr class="bg-white border-b">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Fionna</td>
-                  <td class="px-3 py-2 border-r border-primary">004</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+
+                  </td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
+                  <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                   <td class="px-3 py-2">
                     <!-- Wave Player -->
@@ -518,18 +554,137 @@
                       <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
                         <div class="w-full waveform"></div>
                       </div>
-                      <audio src="/audio/3.mp3" preload="auto"></audio>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+                  </td>
+                </tr>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+
+                  </td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
+                  <td class="px-3 py-2 border-r border-primary">002</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+                  </td>
+                </tr>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">Grace</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                    </div>
+                    <!-- Wave Player -->
+
+                  </td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-3 py-2 border-r border-primary">Leslie</td>
+                  <td class="px-3 py-2 border-r border-primary">002</td>
+                  <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                  <td class="px-3 py-2">
+                    <!-- Wave Player -->
+                    <div
+                      class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                      <div
+                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z" fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z" fill="white" />
+                        </svg>
+                      </div>
+                      <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                        <div class="w-full waveform"></div>
+                      </div>
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
                     </div>
                     <!-- Wave Player -->
                   </td>
                 </tr>
               </tbody>
             </table>
+            <div class="text-center bg-primary py-3 text-sm rounded-b-lg"><a href="javascript:;" data-load="5"
+              class="font-bold underline text-white datatable__load-more">Listen to more AI Voice...</a></div>
           </div>
           <!-- Table -->
-
-          <div class="text-center bg-primary py-3 text-sm rounded-b-lg"><a href="#"
-              class="font-bold underline text-white">Listen to more AI Voice...</a></div>
 
         </div>
         <!-- Card -->
@@ -546,7 +701,7 @@
 
               <!-- Filter Button -->
               <div
-                class="dropdown__button bg-secondary text-sm text-white py-2 px-3 flex justify-between items-center rounded-full gap-4 cursor-pointe">
+                class="dropdown__button bg-secondary text-sm text-white py-2 px-3 flex justify-between items-center rounded-full gap-4 cursor-pointer">
                 <svg width="20" height="19" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.71521 4.40708H13.1694C13.5147 6.03887 14.9179 7.26392 16.5914 7.26392C18.265 7.26392 19.6682 6.03892 20.0134 4.40708H24.2846C24.7001 4.40708 25.037 4.05728 25.037 3.62583C25.037 3.19438 24.7001 2.84458 24.2846 2.84458H20.0131C19.6672 1.21362 18.262 -0.012207 16.5914 -0.012207C14.92 -0.012207 13.5155 1.21343 13.1697 2.84458H1.71521C1.29974 2.84458 0.962891 3.19438 0.962891 3.62583C0.962891 4.05728 1.29974 4.40708 1.71521 4.40708ZM14.5928 3.62788C14.5928 3.6251 14.5929 3.62227 14.5929 3.61948C14.5962 2.47852 15.4927 1.55034 16.5914 1.55034C17.6886 1.55034 18.5852 2.47725 18.59 3.61768L18.5901 3.62915C18.5884 4.77207 17.6924 5.70146 16.5914 5.70146C15.4909 5.70146 14.5953 4.773 14.5928 3.63076L14.5928 3.62788ZM24.2846 20.5927H20.0131C19.6671 18.9618 18.262 17.7359 16.5914 17.7359C14.92 17.7359 13.5155 18.9616 13.1697 20.5927H1.71521C1.29974 20.5927 0.962891 20.9424 0.962891 21.3739C0.962891 21.8054 1.29974 22.1552 1.71521 22.1552H13.1694C13.5147 23.787 14.9179 25.012 16.5914 25.012C18.265 25.012 19.6682 23.787 20.0134 22.1552H24.2846C24.7001 22.1552 25.037 21.8054 25.037 21.3739C25.037 20.9424 24.7001 20.5927 24.2846 20.5927ZM16.5914 23.4495C15.4909 23.4495 14.5953 22.521 14.5928 21.3788L14.5928 21.376C14.5928 21.3731 14.5929 21.3704 14.5929 21.3676C14.5962 20.2266 15.4927 19.2984 16.5914 19.2984C17.6886 19.2984 18.5852 20.2253 18.59 21.3657L18.5901 21.3771C18.5885 22.5202 17.6925 23.4495 16.5914 23.4495ZM24.2846 11.7187H12.8304C12.4852 10.0869 11.0819 8.86187 9.40842 8.86187C7.7349 8.86187 6.33164 10.0869 5.98643 11.7187H1.71521C1.29974 11.7187 0.962891 12.0685 0.962891 12.4999C0.962891 12.9314 1.29974 13.2812 1.71521 13.2812H5.9868C6.33273 14.9121 7.73786 16.1379 9.40842 16.1379C11.0799 16.1379 12.4844 14.9123 12.8301 13.2812H24.2846C24.7001 13.2812 25.037 12.9314 25.037 12.4999C25.037 12.0685 24.7001 11.7187 24.2846 11.7187ZM11.407 12.4979C11.407 12.5007 11.407 12.5035 11.407 12.5062C11.4037 13.6472 10.5072 14.5754 9.40842 14.5754C8.31122 14.5754 7.41465 13.6485 7.4099 12.5081L7.40976 12.4967C7.4114 11.3536 8.30736 10.4244 9.40842 10.4244C10.509 10.4244 11.4046 11.3528 11.4071 12.4951L11.407 12.4979Z"
@@ -586,8 +741,8 @@
           <!-- Card Header -->
 
           <!-- Table -->
-          <div class="overflow-x-auto rounded-t-lg">
-            <table class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
+          <div class="datatable-wrapper">
+            <table data-row="7" class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
               <thead>
                 <tr class="bg-primary text-white">
                   <th class="py-2 px-3 border-r border-gray rounded-t-lg rounded-e-none">Time</th>
@@ -598,8 +753,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -639,8 +794,8 @@
                   </td>
 
                 </tr>
-                <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">002</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -678,8 +833,8 @@
                   </td>
 
                 </tr>
-                <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">003</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -717,8 +872,8 @@
                   </td>
 
                 </tr>
-                <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">004</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -756,8 +911,8 @@
                   </td>
 
                 </tr>
-                <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -795,8 +950,8 @@
                   </td>
 
                 </tr>
-                <tr class="bg-[#14B8A640] border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -834,8 +989,125 @@
                   </td>
 
                 </tr>
-                <tr class="bg-white border-b border-r">
-                  <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">12:00:00 PM</td>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
+                  <td class="p-2 border-r border-primary">
+                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
+                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/eye+file.svg"
+                        alt="Image">
+                      <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
+                  </td>
+                  <td class="p-2 border-r border-primary">
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
+                  <td class="p-2 border-r border-primary">
+                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
+                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/eye+file.svg"
+                        alt="Image">
+                      <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
+                  </td>
+                  <td class="p-2 border-r border-primary">
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
+                  <td class="px-3 py-2 border-r border-primary">001</td>
+                  <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
+                  <td class="p-2 border-r border-primary">
+                    <a class="bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem]"
+                      href="#"><img class="white-play-icon lg:block hidden size-4" src="/images/icons/eye+file.svg"
+                        alt="Image">
+                      <span class="text-white font-bold text-[10px]">Read Transcript</span></a>
+                  </td>
+                  <td class="p-2 border-r border-primary">
+                    <div
+                      class="play-recording-btn bg-secondary py-1 px-2 rounded-lg gap-2 inline-flex items-center justify-center min-w-[7.7rem] cursor-pointer">
+                      <audio src="/audio/1.mp3" preload="auto"></audio>
+                      <span>
+                        <!-- Play Icon (visible by default) -->
+                        <svg class="play-icon" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path
+                            d="M17.0462 11.625L10.9842 8.12496C10.1507 7.64396 9.46875 8.03747 9.46875 8.99997V16C9.46875 16.9625 10.1507 17.3565 10.9842 16.875L17.0462 13.375C17.8797 12.894 17.8797 12.106 17.0462 11.625Z"
+                            fill="white" />
+                        </svg>
+                        <!-- Pause Icon (hidden by default) -->
+                        <svg class="pause-icon hidden" width="16" height="16" viewBox="0 0 25 25" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.5 0C5.59648 0 0 5.59648 0 12.5C0 19.4035 5.59648 25 12.5 25C19.404 25 25 19.4035 25 12.5C25 5.59648 19.404 0 12.5 0ZM12.5 22.5C6.98599 22.5 2.5 18.014 2.5 12.5C2.5 6.98599 6.98599 2.5 12.5 2.5C18.014 2.5 22.5 6.98599 22.5 12.5C22.5 18.014 18.014 22.5 12.5 22.5Z"
+                            fill="white" />
+                          <path d="M10 8H12V17H10V8ZM13 8H15V17H13V8Z" fill="white" />
+                        </svg>
+                      </span>
+                      <span class="text-white font-bold text-[10px]">Play Recording</span>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr class="border-b border-r">
+                  <td class="px-3 py-2 border-r border-primary">12:00:00 PM</td>
                   <td class="px-3 py-2 border-r border-primary">001</td>
                   <td class="px-3 py-2 border-r border-primary">12:34 minutes</td>
                   <td class="p-2 border-r border-primary">
@@ -875,11 +1147,11 @@
                 </tr>
               </tbody>
             </table>
+            <div class="text-center bg-primary py-3 text-sm rounded-b-lg"><a href="javascript:;" data-load="5"
+              class="font-bold underline text-white datatable__load-more">Load More Calls...</a></div>
           </div>
           <!-- Table -->
 
-          <div class="text-center bg-primary py-3 text-sm rounded-b-lg"><a href="#"
-              class="font-bold underline text-white">Load More Calls...</a></div>
         </div>
         <!-- Card -->
 

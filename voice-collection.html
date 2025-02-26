@@ -29,7 +29,7 @@
         <!-- Header -->
 
         <!-- SIDEBAR -->
-        <aside id="sidebar" class="bg-white border-r border-gray-200 dark:border-black w-64 h-screen transition duration-200
+        <aside id="sidebar" class="min-w-[260px] bg-white border-r border-gray-200 dark:border-black h-screen
     overflow-hidden hidden xl:flex flex-col justify-between fixed xl:sticky left-0 top-0 justify-start shadow-xl z-10">
 
             <div>
@@ -215,7 +215,7 @@
         <!-- END SIDEBAR -->
 
         <!-- MAIN CONTENT -->
-        <main class="flex-1 md:mx-auto p-5 md:p-10">
+        <main class="overflow-hidden flex-1 md:mx-auto p-5 md:p-10">
 
             <div class="mb-6 flex justify-center p-[2px] border-black border w-fit mx-auto rounded-lg overflow-hidden">
                 <input type="text" placeholder="Search here..."
@@ -227,13 +227,13 @@
                             d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
                     </svg></button>
             </div>
-            <!-- Example content header -->
+            <!-- Content Header -->
             <header class="lg:mb-6 md:mb-4 lg:mt-20 mt-10 mb-2 relative">
                 <h1 class="text-3xl text-center text-primary font-bold">AI Voice Collection</h1>
             </header>
-            <div class="mt-6 overflow-x-auto rounded-t-lg">
 
-                <table class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
+            <div class="datatable-wrapper mt-6 overflow-x-auto rounded-t-lg">
+                <table data-row="10" class="table w-full mx-auto text-primary text-sm text-center whitespace-nowrap">
                     <thead>
                         <tr class="bg-primary text-white">
                             <th class="py-2 px-3 border-r border-gray rounded-t-lg rounded-e-none">Voice Name</th>
@@ -243,8 +243,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b border-r">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Grace</td>
+                        <tr class="border-b border-r">
+                            <td class="px-3 py-2 border-r border-primary">Grace</td>
                             <td class="px-3 py-2 border-r border-primary">001</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -274,8 +274,8 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-[#14B8A640] border-b">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Leslie</td>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Leslie</td>
                             <td class="px-3 py-2 border-r border-primary">002</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -305,8 +305,8 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-white border-b">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Kai</td>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Kai</td>
                             <td class="px-3 py-2 border-r border-primary">004</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -336,8 +336,8 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-[#14B8A640] border-b border-r">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Sean</td>
+                        <tr class="border-b border-r">
+                            <td class="px-3 py-2 border-r border-primary">Sean</td>
                             <td class="px-3 py-2 border-r border-primary">001</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -367,8 +367,8 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-white border-b">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Rob</td>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Rob</td>
                             <td class="px-3 py-2 border-r border-primary">002</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -398,8 +398,8 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-[#14B8A640] border-b">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Tina</td>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Tina</td>
                             <td class="px-3 py-2 border-r border-primary">003</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -429,8 +429,225 @@
                                 <!-- Wave Player -->
                             </td>
                         </tr>
-                        <tr class="bg-white border-b">
-                            <td class="px-3 py-2 border-r border-primary text-dark dark:text-white">Fionna</td>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Fionna</td>
+                            <td class="px-3 py-2 border-r border-primary">004</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/1.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b border-r">
+                            <td class="px-3 py-2 border-r border-primary">Grace</td>
+                            <td class="px-3 py-2 border-r border-primary">001</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/1.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Leslie</td>
+                            <td class="px-3 py-2 border-r border-primary">002</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/2.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Kai</td>
+                            <td class="px-3 py-2 border-r border-primary">004</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/3.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b border-r">
+                            <td class="px-3 py-2 border-r border-primary">Sean</td>
+                            <td class="px-3 py-2 border-r border-primary">001</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/1.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Rob</td>
+                            <td class="px-3 py-2 border-r border-primary">002</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/2.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Tina</td>
+                            <td class="px-3 py-2 border-r border-primary">003</td>
+                            <td class="px-3 py-2 border-r border-primary">1/28/25</td>
+                            <td class="px-3 py-2">
+                                <!-- Wave Player -->
+                                <div
+                                    class="player-box flex lg:justify-between justify-center align-middle items-center w-[100%] gap-2 mx-auto">
+                                    <div
+                                        class="play-icon min-w-7 h-7 flex justify-center items-center rounded-full cursor-pointer bg-secondary">
+                                        <!-- Play Icon (visible by default) -->
+                                        <svg class="play-btn" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.29 6.77462L0.932558 12.7545L0.932559 0.794722L11.29 6.77462Z"
+                                                fill="white" />
+                                        </svg>
+                                        <!-- Pause Icon (hidden by default) -->
+                                        <svg class="pause-btn hidden" width="12" height="13" viewBox="0 0 12 13"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 0.79472H5V12.7545H2V0.79472ZM7 0.79472H10V12.7545H7V0.79472Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="eco-box w-full bg-gray dark:bg-white rounded-lg flex justify-center px-1">
+                                        <div class="w-full waveform"></div>
+                                    </div>
+                                    <audio src="/audio/3.mp3" preload="auto"></audio>
+                                </div>
+                                <!-- Wave Player -->
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 border-r border-primary">Fionna</td>
                             <td class="px-3 py-2 border-r border-primary">004</td>
                             <td class="px-3 py-2 border-r border-primary">1/28/25</td>
                             <td class="px-3 py-2">
@@ -462,10 +679,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
 
-            <div class="text-center bg-primary py-3 text-sm rounded-b-lg text-white">To create Custom voices click here:
-                <a href="#" class="font-bold underline text-white">Listen to more AI Voice...</a>
+                <div class="text-center bg-primary py-3 text-sm rounded-b-lg text-white">To create Custom voices click here:<a href="javascript:;" data-load="10"
+                    class="font-bold underline text-white datatable__load-more">Listen to more AI Voice...</a></div>
             </div>
 
         </main>
