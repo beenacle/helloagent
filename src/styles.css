@@ -132,7 +132,7 @@ table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataT
 }
 
 table.dataTable>tbody>tr:nth-child(odd) {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 table.dataTable>tbody>tr:nth-child(even) {
