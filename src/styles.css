@@ -16,6 +16,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*, ::before, ::after {
+    border-color: transparent;
+}
+
 
 body {
     font-family: "Inter", sans-serif;
@@ -170,10 +174,9 @@ table.dataTable>tbody>tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.dark .bg-\[\#F8F8F8\] {
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
+.dark .bg-\[\#F8F8F8\], .dark table.dataTable>tbody>tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.02);
+} 
 
 .dark td, .dark th, .dark tr {
     border: 0 !important;

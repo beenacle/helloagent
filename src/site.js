@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Sidebar Collapse
   hamburgerBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("w-64");
+    sidebar.classList.toggle("min-w-[260px]");
     sidebar.classList.toggle("w-16");
     body.classList.toggle("sidebar--collapsed");
 
@@ -383,74 +383,101 @@ if (document.querySelector('.table')) {
       searching: false,
       info: false,
       lengthChange: false,
-      responsive: false, // Disable auto-hiding of columns
-      autoWidth: false, // Let columns adjust naturally
-      scrollX: true, // Enable horizontal scrolling instead of hiding columns
+      responsive: false, 
+      autoWidth: false, 
+      scrollX: true, 
     });
   });
 }
 
+// let table;
+// function initializeDataTable() {
+//     if (table) {
+//         table.destroy();
+//     }
+//   }
+
+//   initializeDataTable();
+
 
 });
 
+// let timeout;
+// window.addEventListener('resize', () => {
+//     clearTimeout(timeout);
+//     timeout = setTimeout(initializeDataTable, 250); // Debounce the resize event
+// });
 
-// Check if there are any .datatable-wrapper elements for "Load More" functionality
+
 if (document.querySelector('.datatable-wrapper')) {
   document.querySelectorAll('.datatable-wrapper').forEach((wrapper) => {
     const table = wrapper.querySelector('.table');
     const loadMoreLink = wrapper.querySelector('.datatable__load-more');
+
+    // Ensure table and loadMoreLink exist
+    if (!table || !loadMoreLink) {
+      console.warn('Missing .table or .datatable__load-more in:', wrapper);
+      return;
+    }
+
+    // Try to find tbody, fall back to table if tbody is missing
     const tbody = table.querySelector('tbody');
-    const rows = tbody.querySelectorAll('tr');
-    
-    // Ensure all required elements exist within this wrapper
-    if (!table || !loadMoreLink || !tbody || !rows.length) {
-      console.warn('Missing required elements in a datatable-wrapper:', wrapper);
-      return; // Skip this wrapper if something is missing
+    const rows = tbody ? tbody.querySelectorAll('tr') : table.querySelectorAll('tr');
+
+    if (!rows.length) {
+      console.warn('No rows found in datatable-wrapper:', wrapper);
+      return;
     }
 
     // Get the initial number of rows to display from data-row attribute
-    const initialRows = parseInt(table.getAttribute('data-row')) || 10; // Default to 10 if not set
+    const initialRows = parseInt(table.getAttribute('data-row')) || 10;
     // Get the number of rows to load more from data-load attribute
-    const loadMoreCount = parseInt(loadMoreLink.getAttribute('data-load')) || 1; // Default to 1 if not set
+    const loadMoreCount = parseInt(loadMoreLink.getAttribute('data-load')) || 1;
+
+    // Store the original text of the "Load More" link
+    const originalText = loadMoreLink.textContent;
 
     let visibleRows = initialRows;
 
-    // Initially hide all rows
+    // Ensure all rows start hidden, then show only initialRows
     rows.forEach((row, index) => {
+      row.style.display = 'none'; // Hide all rows initially
       if (index < initialRows) {
-        row.style.display = ''; // Show initial rows
-      } else {
-        row.style.display = 'none'; // Hide remaining rows
+        row.style.display = ''; // Show only the initial rows
       }
     });
 
-    // Check if there are more rows to load and show/hide the "Load More" button
+    // Check if there are more rows to load and update the "Load More" link
     function updateLoadMoreVisibility() {
       if (visibleRows >= rows.length) {
-        loadMoreLink.parentElement.style.display = 'none'; // Hide if no more rows
+        loadMoreLink.textContent = 'All rows are loaded';
+        loadMoreLink.style.pointerEvents = 'none';
+        loadMoreLink.style.opacity = '0.5'; 
       } else {
-        loadMoreLink.parentElement.style.display = ''; // Show if more rows available
+        loadMoreLink.textContent = originalText;
+        loadMoreLink.style.pointerEvents = '';
+        loadMoreLink.style.opacity = '';
       }
     }
 
-    // Initial check
+    // Initial check for "Load More" visibility
     updateLoadMoreVisibility();
 
     // Add click event to "Load More" link specific to this table
     loadMoreLink.addEventListener('click', () => {
       const nextRowsLimit = visibleRows + loadMoreCount;
-      
+
       // Show the next set of rows
       rows.forEach((row, index) => {
         if (index >= visibleRows && index < nextRowsLimit) {
-          row.style.display = '';
+          row.style.display = ''; // Show additional rows
         }
       });
 
       // Update the count of visible rows
       visibleRows = Math.min(nextRowsLimit, rows.length);
 
-      // Update the visibility of the "Load More" link
+      // Update the "Load More" link text and state
       updateLoadMoreVisibility();
     });
   });
